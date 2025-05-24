@@ -1,0 +1,111 @@
+@use 'config' as *;
+
+.footer-contact {
+  @include mq_up {
+    max-width: 1080px;
+    padding-right: 1px;
+    margin-inline: auto;
+  }
+}
+
+.footer-contact__link {
+  @include font-config($font-size: 20, $line-height: 33);
+
+  width: get_em(335, 20);
+  height: get_em(60, 20);
+  padding-top: get_em(8, 20);
+  margin-inline: auto;
+  letter-spacing: get_em(4, 20);
+
+  @include mq_up {
+    width: 300px;
+    padding-top: 10px;
+    margin-inline: auto 0;
+  }
+}
+
+.footer-contact__span {
+  margin-right: get_em(-4, 20);
+}
+
+.footer__container {
+  padding: get_em(45) get_em(20) get_em(51);
+  color: white;
+  background: var(--main-color);
+
+  @include mq_up {
+    padding-top: 44px;
+    padding-bottom: 51px;
+  }
+}
+
+.footer__list {
+  @include font-config($font-size: 17, $line-height: 33);
+  @include flex-config($justify-content: center, $align-items: center);
+
+  column-gap: get_em(29, 17);
+  margin-bottom: get_em(18, 17);
+
+  @include mq_up {
+    column-gap: 33px;
+  }
+}
+
+.footer__link[class] {
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.5;
+  }
+}
+
+.footer__logo {
+  display: block;
+  width: get_em(32);
+  height: get_em(49);
+  margin: 0 auto get_em(28);
+  fill: white;
+
+  @include mq_up {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__copy {
+  line-height: get_em(20, 15); // smallにline-heightを指定できないので、ここで指定
+  text-align: center;
+
+  small {
+    @include font-config($font-size: 15, $line-height: false, $font-weight: false);
+  }
+}
+
+.footer-sns {
+  display: grid;
+  width: get_em(126);
+  height: get_em(22);
+  margin: get_em(15) auto 0;
+
+  @include mq_up {
+    margin-top: 2px;
+  }
+}
+
+.footer-sns__icons {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-sns__links {
+  @include flex-config($justify-content: space-between);
+
+  grid-area: 1 / 1;
+}
+
+.footer-sns__link {
+  display: block;
+  width: 24%;
+  height: 100%;
+}

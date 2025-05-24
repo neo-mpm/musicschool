@@ -1,0 +1,124 @@
+@charset "utf-8";
+@use 'sass:math';
+@use 'sass:map';
+
+// YuGothic
+$sans_serif_font: 'Yu Gothic', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+
+// default font size
+$default_font_size: 16;
+$font-sizes: (
+  'sm': $default_font_size,
+  'md': 18,
+  'lg': 18,
+  'xl': 20,
+);
+
+// breakpoints media query
+$breakpoints: (
+  'sm': 375,
+  'md': 768,
+  'lg': 1080,
+  'xl': 1280,
+  '2xl': 1440,
+  '3xl': 1920,
+) !default;
+$breakpoints_up: (
+  'md': '(width >= #{map.get($breakpoints, 'md')}px)',
+  'lg': '(width >= #{map.get($breakpoints, 'lg')}px)',
+  'xl': '(width >= #{map.get($breakpoints, 'xl')}px)',
+  '2xl': '(width >= #{map.get($breakpoints, '2xl')}px)',
+  '3xl': '(width >= #{map.get($breakpoints, '3xl')}px)',
+) !default;
+$breakpoints_down: (
+  'sm': '(width < #{map.get($breakpoints, 'sm')}px)',
+) !default;
+
+@mixin mq_up($breakpoint: md) {
+  @media #{map.get($breakpoints_up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq_down($breakpoint: sm) {
+  @media #{map.get($breakpoints_down, $breakpoint)} {
+    @content;
+  }
+}
+
+@function get_rem($length, $root_length: $default_font_size) {
+  @return math.div(round(math.div($length, $root_length) * 10000), 10000) * 1rem;
+}
+
+@function get_em($length, $parent_length: $default_font_size) {
+  @return math.div(round(math.div($length, $parent_length) * 10000), 10000) * 1em;
+}
+
+@function get_vw($length, $viewport: sm) {
+  @return math.div(round(math.div(100, map.get($breakpoints, $viewport)) * $length * 10000), 10000) * 1vw;
+}
+
+@function clamp_vw($default_length: 10, $max_length: 16, $viewport: sm) {
+  @return clamp($default_length * 1px, get_vw($default_length, $viewport), $max_length * 1px);
+}
+
+@function fluid_clamp($min_length, $max_length, $min_viewport: sm, $max_viewport: md) {
+  $min_viewport_value: map.get($breakpoints, $min_viewport);
+  $max_viewport_value: map.get($breakpoints, $max_viewport);
+  $variable_part: calc(($max_length - $min_length) / ($max_viewport_value - $min_viewport_value));
+  $constant: calc(($max_length - $max_viewport_value * $variable_part) / $default_font_size);
+  $min_rem: get_rem($min_length);
+  $max_rem: get_rem($max_length);
+  $variable_rem: calc($constant * 1rem);
+  $variable_vw: calc(100 * $variable_part * 1vw);
+
+  @return clamp($min_rem, $variable_rem + $variable_vw, $max_rem);
+}
+
+@mixin flex-config($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+
+  @if $flex != false {
+    flex: $flex;
+  }
+
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+}
+
+@mixin font-config($font-size: false, $line-height: false, $font-weight: 700, $viewport: sm) {
+  @if $font-size != false {
+    font-size: get_em($font-size, map.get($font-sizes, $viewport));
+  }
+
+  @if $font-weight != false {
+    font-weight: $font-weight;
+  }
+
+  @if $line-height != false {
+    line-height: math.div(round(math.div($line-height, $font-size) * 10000), 10000);
+  }
+}
+
+@mixin font-config-rem($font-size: false, $line-height: false, $font-weight: 700, $viewport: sm) {
+  @if $font-size != false {
+    font-size: get_rem($font-size, map.get($font-sizes, $viewport));
+  }
+
+  @if $font-weight != false {
+    font-weight: $font-weight;
+  }
+
+  @if $line-height != false {
+    line-height: math.div(round(math.div($line-height, $font-size) * 10000), 10000);
+  }
+}

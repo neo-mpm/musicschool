@@ -1,0 +1,3 @@
+# 全てのクローラーを対象
+User-agent: *
+Disallow: /

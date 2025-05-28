@@ -1,0 +1,577 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// index
+// ==========================================================================
+
+/* --------------------------------------------------
+index-hero
+-------------------------------------------------- */
+
+.index-hero__inner {
+  height: get_em(550);
+  background-image: url('../img/index/hero-sp.jpg');
+
+  @include mq_up {
+    height: 470px;
+    background-image: url('../img/index/hero-pc.jpg');
+  }
+}
+
+.index-hero__h2 {
+  @include font-config($font-size: 30, $line-height: 50);
+
+  margin-top: get_em(18, 30);
+
+  @include mq_up {
+    margin-top: 22px;
+    font-size: 40px;
+    line-height: get_em(60, 40);
+  }
+}
+
+/* --------------------------------------------------
+index-topic
+-------------------------------------------------- */
+.index-topic__inner {
+  padding: get_em(47) get_em(20) get_em(36);
+
+  @include mq_up {
+    padding: 68px 20px 57px;
+  }
+}
+
+.index-topic__head {
+  color: var(--main-color);
+
+  @include mq_up {
+    @include font-config($font-size: 35, $line-height: 50, $viewport: md);
+  }
+}
+
+.index-topic__text {
+  @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(7, 18);
+
+  @include mq_up {
+    margin-top: 17px;
+    text-align: center;
+  }
+}
+
+.index-topic__semicircle {
+  height: get_em(37);
+  margin-top: get_em(20);
+
+  @include mq_up {
+    max-width: 858px;
+    height: auto;
+    aspect-ratio: 858 / 56;
+    margin: 32px auto 0;
+  }
+}
+
+.index-topic__table {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+  gap: get_em(17) get_em(80);
+  padding: get_em(30) get_em(10) 0 0;
+  margin-top: get_em(9);
+  background-image: url('../img/topic/arrow.svg'), url('../img/topic/circle.svg');
+  background-repeat: no-repeat;
+  background-position:
+    center top,
+    center top get_em(39);
+  background-size:
+    get_em(34) get_em(190),
+    get_em(20) get_em(160);
+
+  @include mq_up {
+    column-gap: 78px;
+    padding: 28px 28px 0 0;
+    margin-top: -8px;
+    font-size: 16px;
+  }
+}
+
+.index-topic__data {
+  @include font-config($font-size: 20, $line-height: 50, $font-weight: false);
+  @include flex-config($align-items: center);
+
+  height: get_em(50, 20);
+
+  @include mq_up {
+    @include font-config($font-size: 25, $line-height: 50, $font-weight: false, $viewport: md);
+
+    height: 50px;
+  }
+}
+
+.index-topic__data--left {
+  justify-self: end;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.index-topic__data--right {
+  justify-self: start;
+
+  @include mq_up {
+    font-size: 23px;
+  }
+}
+
+.index-topic__data--bottom {
+  padding-top: get_em(5, 20);
+}
+
+/* --------------------------------------------------
+index-about
+-------------------------------------------------- */
+.index-about {
+  @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false);
+  @include flex-config($flex-direction: column, $align-items: center);
+
+  row-gap: get_em(14, 18);
+  padding: get_em(51, 18) 0 get_em(37, 18);
+  color: white;
+  text-align: center;
+  background: var(--main-color);
+
+  @include mq_up {
+    row-gap: 30px;
+    padding: 70px 0 60px;
+  }
+}
+
+/* --------------------------------------------------
+index-reason
+-------------------------------------------------- */
+.index-reason {
+  padding: get_em(51) get_em(20) get_em(37);
+
+  @include mq_up {
+    padding: 64px 20px 90px;
+  }
+}
+
+.index-reason__list {
+  @include flex-config($flex-direction: column);
+
+  row-gap: get_em(39);
+  margin-top: get_em(36);
+
+  @include mq_up {
+    row-gap: 50px;
+    max-width: 880px;
+    margin: 27px auto 0;
+  }
+}
+
+.index-reason__item {
+  @include flex-config($flex-direction: column);
+
+  row-gap: get_em(30);
+
+  @include mq_up {
+    flex-direction: unset;
+  }
+}
+
+.index-reason__image {
+  @include mq_up {
+    flex-shrink: 0;
+
+    .img-w-100 {
+      width: 350px;
+      height: 247px;
+      object-fit: cover;
+    }
+  }
+}
+
+.index-reason__title {
+  @include font-config-rem($font-size: 20, $line-height: 30);
+
+  padding-bottom: get_em(7, 20);
+  border-bottom: get_em(2, 20) solid var(--main-color);
+
+  @include mq_up {
+    @include font-config-rem($font-size: 22, $line-height: 33, $font-weight: false, $viewport: md);
+
+    padding-bottom: 8px;
+    padding-left: fluid_clamp(20, 50, md, lg);
+    margin-top: -2px;
+
+    .index-reason__list .index-reason__item:first-child & {
+      @include flex-config($align-items: center);
+
+      padding-top: 8px;
+      padding-bottom: 9px;
+      margin-top: unset;
+    }
+  }
+}
+
+.index-reason__text {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(18);
+
+  @include mq_up {
+    padding-left: fluid_clamp(20, 50, md, lg);
+    margin-top: 38px;
+
+    .index-reason__list .index-reason__item:first-child & {
+      margin-top: 37px;
+    }
+  }
+}
+
+/* --------------------------------------------------
+index-voice
+-------------------------------------------------- */
+.index-voice {
+  --swiper-navigation-sides-offset: 0;
+  --swiper-navigation-top-offset: 42%;
+
+  padding: get_em(48) get_em(20) get_em(50);
+  color: white;
+  background: var(--main-color);
+
+  @include mq_up {
+    --swiper-navigation-top-offset: 145px;
+
+    padding: 44px 20px 80px;
+  }
+
+  .swiper {
+    margin-top: get_em(39);
+
+    @include mq_up {
+      max-width: 882px;
+      margin-top: 36px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: get_em(30);
+    aspect-ratio: 30 / 38;
+
+    @include mq_up {
+      width: 28px;
+    }
+
+    // @media (width >= 920px) {
+    //   opacity: 0.5;
+    // }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: url('../img/voice/arrow-left.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .swiper-button-next::after {
+    rotate: 180deg;
+  }
+}
+
+.index-voice__container {
+  position: relative;
+  max-width: 966px;
+  margin-inline: auto;
+}
+
+.index-voice__image {
+  aspect-ratio: 335 / 200;
+
+  @include mq_up {
+    height: 190px;
+    aspect-ratio: unset;
+  }
+
+  .img-100 {
+    object-fit: cover;
+  }
+}
+
+.index-voice__name {
+  @include font-config-rem($font-size: 22, $line-height: 33);
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: 22px;
+  justify-content: center;
+  width: 100%;
+  margin-top: get_em(27, 22);
+
+  @include mq_up {
+    margin-top: 18px;
+  }
+}
+
+.index-voice__text {
+  @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(10, 18);
+}
+
+/* --------------------------------------------------
+index-guide
+-------------------------------------------------- */
+.index-guide {
+  padding: get_em(46) get_em(20) 0;
+
+  @include mq_up {
+    max-width: 840px;
+    padding-top: 34px;
+    margin-inline: auto;
+  }
+}
+
+.index-guide__container {
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: get_em(36);
+  background-image: url('../img/guide/arrow-sp.png');
+  background-repeat: no-repeat;
+  background-position: top get_em(12) left;
+  background-size: get_em(35) get_em(674);
+
+  @include mq_up {
+    width: unset;
+    padding-bottom: 16px;
+    margin-top: 41px;
+    background-image: url('../img/guide/arrow-pc.png');
+    background-position: top 40px left;
+    background-size: 35px 91%;
+  }
+}
+
+.index-guide__list {
+  @include flex-config($flex-direction: column, $justify-content: space-between);
+
+  row-gap: get_em(36);
+  min-height: get_em(696);
+
+  @include mq_up {
+    row-gap: 48px;
+    min-height: unset;
+  }
+}
+
+.index-guide__item {
+  padding-left: get_em(48);
+  background-image: url('../img/guide/circle.svg');
+  background-repeat: no-repeat;
+  background-position: top get_em(4) left get_em(8);
+  background-size: get_em(20) get_em(20);
+
+  @include mq_up {
+    @include flex-config($align-items: center);
+
+    column-gap: 38px;
+    padding-left: 78px;
+    background-position: top 42% left 8px;
+    background-size: 20px 20px;
+  }
+}
+
+.index-guide__title {
+  @include font-config($font-size: 22, $line-height: 33);
+
+  color: var(--main-color);
+
+  @include mq_up {
+    width: 154px;
+    padding-top: 1px;
+  }
+}
+
+.index-guide__text {
+  @include font-config($font-size: 16, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(9, 16);
+
+  @include mq_up {
+    @include font-config($font-size: 18, $line-height: 30, $font-weight: false, $viewport: md);
+  }
+}
+
+/* --------------------------------------------------
+index-faq
+-------------------------------------------------- */
+.index-faq {
+  padding: get_em(55) get_em(20) 0;
+
+  @include mq_up {
+    padding: 92px 20px 0;
+  }
+}
+
+.index-faq__list {
+  margin-top: get_em(38);
+  border-top: 1px solid black;
+
+  @include mq_up {
+    max-width: 876px;
+    margin-inline: auto;
+    margin-top: 35px;
+  }
+}
+
+.index-faq__item {
+  margin-bottom: 1px;
+  border-bottom: 1px solid black;
+}
+
+.index-faq__question {
+  cursor: pointer;
+}
+
+.index-faq__box {
+  @include flex-config($align-items: center);
+
+  position: relative;
+
+  @include mq_up {
+    padding: 2px 0 0 18px;
+  }
+}
+
+.index-faq__icon {
+  @include font-config($font-size: 20, $line-height: 30);
+
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: get_em(35, 20);
+  height: get_em(35, 20);
+  padding-top: get_em(2, 20);
+  color: white;
+  background: black;
+  border-radius: 50%;
+
+  @include mq_up {
+    padding-top: 0;
+  }
+}
+
+.index-faq__icon--red {
+  background: var(--main-color);
+}
+
+.index-faq__text {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
+  @include flex-config($align-items: center);
+
+  min-width: get_em(233);
+  padding: get_em(17) get_em(47) get_em(7) get_em(20);
+
+  @include mq_up {
+    @include font-config-rem($font-size: 17, $line-height: 30, $font-weight: false);
+
+    padding: 18px 0 14px 9px;
+
+    .index-faq__answer & {
+      padding-top: 19px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.index-faq__text--red {
+  padding-top: get_em(19);
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.index-faq__arrow {
+  @include flex-config($align-items: center);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: get_em(14);
+  height: 100%;
+  margin: get_em(2) get_em(14) 0;
+  transition: transform 0.3s ease;
+
+  @include mq_up {
+    right: 10px;
+  }
+
+  .index-faq__item.is-open & {
+    transform: scaleY(-1);
+  }
+}
+
+.index-faq__answer {
+  align-items: start;
+  height: 0;
+  overflow: hidden;
+  background: rgba(203, 0, 0, 10%);
+  opacity: 0;
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
+
+  &.is-open {
+    height: unset;
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------
+index-blog
+-------------------------------------------------- */
+.index-blog__container {
+  padding: get_em(50) get_em(20) 0;
+
+  @include mq_up {
+    max-width: 926px;
+    padding-top: 68px;
+    margin-inline: auto;
+  }
+}
+
+.index-blog__list {
+  @include flex-config($flex-direction: column, $align-items: center);
+
+  row-gap: get_em(41);
+  margin-top: get_em(38);
+
+  @include mq_up {
+    flex-direction: unset;
+    column-gap: 20px;
+    align-items: unset;
+    justify-content: center;
+    margin-top: 34px;
+  }
+
+  @include mq_up('lg') {
+    column-gap: 50px;
+  }
+}
+
+.index-blog__link[class] {
+  @include font-config($font-size: 18, $line-height: 30, $font-weight: false);
+
+  display: block;
+  width: fit-content;
+  padding-top: get_em(37, 18);
+  padding-left: get_em(3, 18);
+  margin-inline: auto;
+  text-decoration: underline;
+
+  @include mq_up {
+    margin-inline: auto 0;
+  }
+}

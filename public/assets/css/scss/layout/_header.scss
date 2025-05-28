@@ -1,13 +1,16 @@
-@use 'config' as *;
+@use '../base/config' as *;
 
+// ==========================================================================
+// header
+// ==========================================================================
 .header__container {
   display: grid;
   height: get_em(50);
 
   @include mq_up {
-    max-width: 1080px;
-    height: 80px;
-    padding-inline: fluid_clamp(20, 100, md, lg);
+    max-width: 920px;
+    height: get_em(80);
+    padding-inline: get_em(20);
     margin-inline: auto;
   }
 }
@@ -230,12 +233,6 @@
 /* --------------------------------------------------
 hero
 -------------------------------------------------- */
-.hero {
-  @include mq_up('3xl') {
-    background-color: var(--main-color);
-  }
-}
-
 .hero__inner {
   display: grid;
   place-items: center;

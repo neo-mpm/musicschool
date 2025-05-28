@@ -1,0 +1,92 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// blog-card
+// ==========================================================================
+.blog-card__image-box {
+  display: grid;
+
+  @include mq_up {
+    max-width: 260px;
+  }
+}
+
+a.blog-card__image-box {
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.blog-card__tag,
+.blog-card__image {
+  grid-area: 1 / 1;
+}
+
+.blog-card__image {
+  aspect-ratio: 335 / 200;
+
+  @include mq_up {
+    height: 200px;
+    aspect-ratio: unset;
+  }
+
+  .img-w-100 {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.blog-card__tag {
+  @include font-config($font-size: 15, $line-height: 25);
+
+  display: grid;
+  place-items: center;
+  width: get_em(90, 15);
+  height: get_em(30, 15);
+  color: white;
+  text-align: center;
+  background: var(--main-color);
+
+  @include mq_up {
+    width: 80px;
+  }
+}
+
+.blog-card__title {
+  @include font-config-rem($font-size: 20, $line-height: 30);
+
+  margin-top: get_em(30, 20);
+
+  @include mq_up {
+    @include font-config-rem($font-size: 20, $line-height: 25, $font-weight: false);
+
+    margin-top: 20px;
+  }
+}
+
+.blog-card__title-link {
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    opacity: 0.5;
+  }
+}
+
+.blog-card__date {
+  @include font-config-rem($font-size: 17, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(6, 17);
+  text-align: right;
+
+  @include mq_up {
+    margin-top: 12px;
+  }
+}
+
+.blog-card__text {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(5);
+  margin-top: 10px;
+}

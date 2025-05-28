@@ -1,0 +1,200 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// contact
+// ==========================================================================
+.contact {
+  padding: get_em(48) get_em(20) get_em(108);
+
+  @include mq_up {
+    padding: 69px 20px 100px;
+  }
+
+  & ~ .footer > .footer__contact {
+    display: none;
+  }
+}
+
+.contact__text {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false, $viewport: md);
+
+  @include mq_up {
+    @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false, $viewport: md);
+  }
+
+  @media (width > 813px) {
+    text-align: center;
+  }
+}
+
+.contact__container {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
+
+  @include mq_up {
+    max-width: 880px;
+    margin-inline: auto;
+  }
+}
+
+/* --------------------------------------------------
+contact-hero
+-------------------------------------------------- */
+.contact-hero__inner {
+  background-image: url('../img/contact/hero-sp.jpg');
+
+  @include mq_up {
+    background-image: url('../img/contact/hero-pc.jpg');
+  }
+}
+
+/* --------------------------------------------------
+contact__form
+-------------------------------------------------- */
+.contact__form {
+  @include flex-config($flex-direction: column);
+
+  row-gap: get_em(16);
+  margin-top: get_em(34);
+
+  @include mq_up {
+    row-gap: 30px;
+    margin-top: 65px;
+  }
+}
+
+.contact-form__fieldset {
+  @include flex-config($flex-direction: column);
+
+  row-gap: get_em(2);
+  border: none;
+
+  @include mq_up {
+    flex-direction: unset;
+    column-gap: get_em(30);
+    align-items: center;
+  }
+
+  &:nth-child(3) {
+    margin-top: get_em(1);
+
+    @include mq_up {
+      margin-top: unset;
+    }
+  }
+
+  &:nth-child(5) {
+    @include mq_up {
+      margin-top: -5px;
+    }
+  }
+
+  &:nth-child(6) {
+    margin-top: get_em(-9);
+
+    @include mq_up {
+      margin-top: -5px;
+    }
+  }
+}
+
+.contact-form__fieldset--checkboxes,
+.contact-form__fieldset--textarea {
+  @include mq_up {
+    @include flex-config($align-items: flex-start);
+  }
+}
+
+.contact-form__label,
+.contact-form__legend {
+  @include mq_up {
+    @include font-config($font-size: 20, $line-height: 33, $font-weight: false);
+
+    min-width: 140px;
+    margin-top: 7px;
+  }
+}
+
+.contact-form__label--checkbox {
+  @include mq_up {
+    @include font-config($font-size: 18, $line-height: 30, $font-weight: false);
+
+    margin-top: unset;
+  }
+}
+
+.contact-form__legend {
+  @include mq_up {
+    @include font-config($font-size: 20, $line-height: 30, $font-weight: false);
+
+    margin-top: 5px;
+  }
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  @include font-config($font-size: 15, $line-height: 33, $font-weight: false);
+
+  width: 100%;
+  font-family: $sans_serif_font;
+  border: 1px solid;
+}
+
+.contact-form__input {
+  padding: get_em(5) get_em(20) 0;
+}
+
+.contact-form__checkbox-wrapper {
+  @include flex-config($flex-direction: column);
+
+  row-gap: get_em(10);
+  margin-top: get_em(1);
+
+  // @include mq_up {
+  //   flex-direction: unset;
+  //   column-gap: get_em(20);
+  // }
+}
+
+.contact-form__checkbox {
+  @include font-config($font-size: 16, $line-height: 33, $font-weight: false);
+
+  width: get_em(20);
+  aspect-ratio: 1 / 1;
+  margin-right: get_em(10);
+
+  @include mq_up {
+    margin-right: 20px;
+  }
+}
+
+.contact-form__text-space {
+  letter-spacing: get_em(15);
+}
+
+.contact-form__textarea {
+  @include font-config($font-size: 15, $line-height: 25, $font-weight: false);
+
+  height: get_em(190, 15);
+  padding: get_em(12, 15) get_em(20, 15);
+
+  @include mq_up {
+    height: 300px;
+    padding: 16px 20px;
+  }
+}
+
+.contact-form__button {
+  @include font-config($font-size: 20, $line-height: 26);
+
+  height: get_em(50, 20);
+  margin-top: get_em(34, 20);
+
+  @include mq_up {
+    @include font-config($font-size: 25, $line-height: 33, $viewport: md);
+
+    width: 250px;
+    height: 50px;
+    margin: 20px auto 0;
+    letter-spacing: 5px;
+  }
+}

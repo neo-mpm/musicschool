@@ -1,12 +1,17 @@
-@charset "utf-8";
 @use 'sass:math';
 @use 'sass:map';
+
+// ==========================================================================
+// variables
+// ==========================================================================
 
 // YuGothic
 $sans_serif_font: 'Yu Gothic', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 
 // default font size
 $default_font_size: 16;
+
+// font size lists
 $font-sizes: (
   'sm': $default_font_size,
   'md': 18,
@@ -18,33 +23,23 @@ $font-sizes: (
 $breakpoints: (
   'sm': 375,
   'md': 768,
-  'lg': 1080,
-  'xl': 1280,
-  '2xl': 1440,
-  '3xl': 1920,
+  'lg': 920,
 ) !default;
+
+// breakpoints up
 $breakpoints_up: (
   'md': '(width >= #{map.get($breakpoints, 'md')}px)',
   'lg': '(width >= #{map.get($breakpoints, 'lg')}px)',
-  'xl': '(width >= #{map.get($breakpoints, 'xl')}px)',
-  '2xl': '(width >= #{map.get($breakpoints, '2xl')}px)',
-  '3xl': '(width >= #{map.get($breakpoints, '3xl')}px)',
 ) !default;
+
+// breakpoints down
 $breakpoints_down: (
   'sm': '(width < #{map.get($breakpoints, 'sm')}px)',
 ) !default;
 
-@mixin mq_up($breakpoint: md) {
-  @media #{map.get($breakpoints_up, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq_down($breakpoint: sm) {
-  @media #{map.get($breakpoints_down, $breakpoint)} {
-    @content;
-  }
-}
+// ==========================================================================
+// functions
+// ==========================================================================
 
 @function get_rem($length, $root_length: $default_font_size) {
   @return math.div(round(math.div($length, $root_length) * 10000), 10000) * 1rem;
@@ -54,8 +49,16 @@ $breakpoints_down: (
   @return math.div(round(math.div($length, $parent_length) * 10000), 10000) * 1em;
 }
 
+@function get_lh($font-size: $default_font_size, $line-height: 30) {
+  @return math.div(round(math.div($line-height, $font-size) * 10000), 10000);
+}
+
 @function get_vw($length, $viewport: sm) {
   @return math.div(round(math.div(100, map.get($breakpoints, $viewport)) * $length * 10000), 10000) * 1vw;
+}
+
+@function min_vw_eq($default_length: 16, $viewport: sm) {
+  @return min(get_vw($default_length, $viewport), $default_length * 1px);
 }
 
 @function clamp_vw($default_length: 10, $max_length: 16, $viewport: sm) {
@@ -73,6 +76,22 @@ $breakpoints_down: (
   $variable_vw: calc(100 * $variable_part * 1vw);
 
   @return clamp($min_rem, $variable_rem + $variable_vw, $max_rem);
+}
+
+// ==========================================================================
+// mixins
+// ==========================================================================
+
+@mixin mq_up($breakpoint: md) {
+  @media #{map.get($breakpoints_up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq_down($breakpoint: sm) {
+  @media #{map.get($breakpoints_down, $breakpoint)} {
+    @content;
+  }
 }
 
 @mixin flex-config($justify-content: false, $flex: false, $flex-direction: false, $align-items: false) {

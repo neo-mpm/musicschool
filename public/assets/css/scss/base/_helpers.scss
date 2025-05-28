@@ -1,0 +1,38 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// helpers
+// ==========================================================================
+.br-sp {
+  @include mq_up {
+    display: none;
+  }
+}
+
+.br-pc {
+  display: none;
+
+  @include mq_up {
+    display: inline;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  @include font-config($font-size: 25, $line-height: 40);
+
+  text-align: center;
+
+  @include mq_up {
+    @include font-config($font-size: 30, $line-height: 50, $viewport: md);
+  }
+}
+
+.page-title {
+  @include font-config($font-size: 25, $line-height: 40);
+
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// button
+// ==========================================================================
+.button[class] {
+  display: grid;
+  place-items: center;
+  color: white;
+  appearance: none;
+  background: var(--main-color);
+  border: none;
+  transition: 0.2s all;
+
+  &:hover,
+  &:active {
+    color: var(--main-color);
+    text-decoration: none;
+    background: white;
+    border: 1px solid;
+  }
+}

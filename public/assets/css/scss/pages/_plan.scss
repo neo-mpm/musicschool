@@ -1,0 +1,301 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// plan
+// ==========================================================================
+.plan {
+  padding-bottom: get_em(125);
+
+  @include mq_up {
+    padding-bottom: 163px;
+  }
+}
+
+/* --------------------------------------------------
+plan-hero
+-------------------------------------------------- */
+
+.plan-hero__inner {
+  background-image: url('../img/plan/hero-sp.jpg');
+
+  @include mq_up {
+    background-image: url('../img/plan/hero-pc.jpg');
+  }
+}
+
+/* --------------------------------------------------
+plan-topic
+-------------------------------------------------- */
+.plan-topic {
+  @include flex-config($flex-direction: column, $align-items: center);
+
+  padding: get_em(47) get_em(20) 0;
+
+  @include mq_up {
+    padding-top: 66px;
+  }
+}
+
+.plan-topic__container {
+  @include flex-config($flex-direction: column, $align-items: center);
+
+  row-gap: get_em(20);
+  margin-top: get_em(38);
+
+  @include mq_up {
+    flex-direction: unset;
+    column-gap: 29px;
+    margin-top: 38px;
+  }
+}
+
+.plan-topic__box {
+  @include font-config($font-size: 20, $line-height: 33);
+
+  display: grid;
+  place-items: center;
+  width: get_em(210, 20);
+  height: get_em(60, 20);
+  padding-top: get_em(5, 20);
+  color: white;
+  background: var(--main-color);
+}
+
+.plan-topic__image {
+  width: get_em(19);
+
+  @include mq_up {
+    width: 19px;
+    margin-top: 9px;
+  }
+}
+
+.plan-topic__text {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(47);
+
+  @include mq_up {
+    @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false, $viewport: 'md');
+
+    max-width: 890px;
+    margin-top: 48px;
+  }
+}
+
+/* --------------------------------------------------
+plan-content
+-------------------------------------------------- */
+.plan-content {
+  padding: get_em(38) get_em(20) 0;
+
+  @include mq_up {
+    padding-top: 57px;
+  }
+}
+
+.plan-content__head {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.plan-content__container {
+  padding: get_em(16) 0 get_em(18);
+  overflow-x: auto;
+
+  @include mq_up {
+    padding: 48px 0 18px;
+  }
+
+  &::-webkit-scrollbar {
+    height: get_em(25);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(80, 80, 80, 15%);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(80, 80, 80, 25%);
+  }
+}
+
+.plan-content__table {
+  @include font-config($font-size: 16, $line-height: 30, $font-weight: false);
+
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-bottom: 1px solid;
+
+  @include mq_up {
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  // @include mq_up('lg') {
+  //   padding-left: 20px;
+  // }
+}
+
+.plan-content__tr {
+  tbody &:nth-child(even) {
+    background-color: rgba(80, 80, 80, 15%);
+  }
+}
+
+.plan-content__th,
+.plan-content__td {
+  height: get_em(85);
+  padding: 0;
+  text-align: center;
+
+  @include mq_up {
+    height: 85px;
+  }
+}
+
+.plan-content__th {
+  width: get_em(169);
+  vertical-align: bottom;
+  color: white;
+  border-bottom: 1px solid black;
+
+  @include mq_up {
+    width: 220px;
+    height: 80px;
+  }
+
+  &:first-child {
+    width: get_em(167);
+
+    @include mq_up {
+      width: 220px;
+    }
+  }
+
+  &:nth-child(3) {
+    background: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+}
+
+.plan-content__td {
+  padding-top: get_em(7);
+  border-right: 1px solid black;
+
+  @include mq_up {
+    padding-top: 4px;
+  }
+
+  &:first-child {
+    padding-left: get_em(9);
+    text-align: left;
+
+    @include mq_up {
+      padding-left: 20px;
+    }
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.plan-content__text {
+  @include font-config($font-size: 17, $line-height: 27, $font-weight: false);
+
+  margin-top: get_em(-1);
+
+  .plan-content__td & {
+    @include font-config($font-size: 16, $line-height: 25, $font-weight: false);
+
+    @include mq_up {
+      @include font-config($font-size: 17, $line-height: 25, $font-weight: false, $viewport: 'md');
+
+      margin-top: 2px;
+    }
+  }
+
+  .plan-content__th & {
+    @include font-config($font-size: 20, $line-height: 25);
+
+    margin-top: get_em(2);
+
+    @include mq_up {
+      @include font-config($font-size: 20, $line-height: 33, $font-weight: false, $viewport: 'md');
+
+      margin-top: 2px;
+    }
+  }
+
+  .plan-content__th:nth-child(3) & {
+    position: relative;
+    top: get_em(-3);
+
+    @include mq_up {
+      top: -5px;
+    }
+  }
+
+  tbody .plan-content__tr:first-child & {
+    @include font-config($font-size: 22, $line-height: 33);
+  }
+
+  tbody .plan-content__tr:first-child .plan-content__td:first-child & {
+    @include font-config($font-size: 16, $line-height: 30);
+  }
+
+  tbody .plan-content__tr:first-child .plan-content__td:nth-child(3) & {
+    color: var(--main-color);
+  }
+}
+
+.plan-content__small {
+  font-size: 0.8em;
+}
+
+.plan-content__box {
+  display: grid;
+  place-items: center;
+  height: get_em(66);
+  background: black;
+  border: 1px solid black;
+
+  @include mq_up {
+    height: 49px;
+  }
+}
+
+.plan-content__circle {
+  display: inline-block;
+  width: get_em(15);
+  height: get_em(15);
+  background: black;
+  border-radius: 50%;
+
+  tbody .plan-content__td:nth-child(3) & {
+    background: var(--main-color);
+  }
+}
+
+.plan-content__line {
+  display: inline-block;
+  width: get_em(30);
+  height: 10px;
+  border-top: 1px solid black;
+}
+
+.plan-content__notice {
+  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
+
+  margin-top: get_em(16);
+
+  @include mq_up {
+    @include font-config-rem($font-size: 17, $line-height: 25, $font-weight: false, $viewport: 'md');
+
+    max-width: 880px;
+    margin-inline: auto;
+    margin-top: 10px;
+  }
+}

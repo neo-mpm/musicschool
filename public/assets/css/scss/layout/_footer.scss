@@ -138,6 +138,11 @@
     bottom: get_rem(30px);
   }
 
+  &:hover,
+  &:active {
+    opacity: 0;
+  }
+
   &.active {
     pointer-events: auto;
     opacity: 1;

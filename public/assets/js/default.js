@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', accordions);
 
 // back-to-top
 function handleScrollTopBtn() {
-  const spFooterMargin = 10;
+  const spFooterMargin = 20;
   const pcFooterMargin = 30;
   const SCROLL_THRESHOLD = 100;
 

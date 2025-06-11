@@ -4,22 +4,17 @@
 // blog
 // ==========================================================================
 .blog {
-  padding-bottom: get_em(143);
+  padding-bottom: get_rem(143px);
 
   @include mq_up {
-    padding-bottom: 151px;
+    padding-bottom: get_rem(151px);
   }
 }
 
-/* --------------------------------------------------
-blog-hero
--------------------------------------------------- */
-
-.blog-hero__inner {
-  background-image: url('../img/blog/hero-sp.jpg');
-
+.blog__container {
   @include mq_up {
-    background-image: url('../img/blog/hero-pc.jpg');
+    max-width: 880px;
+    margin-inline: auto;
   }
 }
 
@@ -27,61 +22,59 @@ blog-hero
 blog-content
 -------------------------------------------------- */
 .blog-content {
-  padding: get_em(47) get_em(20) 0;
+  padding-top: get_rem(47px);
 
   @include mq_up {
-    padding-top: 66px;
+    padding-top: get_rem(66px);
   }
 }
 
 .blog-content__container {
-  padding-top: get_em(38);
+  padding-top: get_rem(38px);
 
   @include mq_up {
-    @include flex-config($flex-direction: column, $align-items: center);
-
-    row-gap: 70px;
-    padding-top: 38px;
+    display: flex;
+    flex-direction: column;
+    row-gap: get_rem(70px);
+    align-items: center;
   }
 }
 
-.blog-content__card.blog-card {
-  padding-bottom: get_em(37);
+.blog-content__card.card {
+  padding-bottom: get_rem(37px);
 
   @include mq_up {
     display: grid;
-    grid-template: 27px 42px 1fr / repeat(2, auto);
+    grid-template: get_rem(27px) get_rem(42px) 1fr / repeat(2, auto);
     grid-auto-flow: column;
-    column-gap: fluid_clamp(20, 50, md, lg);
+    column-gap: get_rem(50px);
     align-items: start;
     justify-content: center;
-    height: 184px; // TODO: pf確認用の為後で削除
     padding-bottom: unset;
-    overflow: hidden; // TODO: pf確認用の為後で削除
 
-    .blog-card__image-box {
+    .card__image-box {
       grid-row: span 3;
-      min-width: 260px;
+      min-width: get_rem(260px);
     }
 
-    .blog-card__image {
-      height: 184px;
+    .card__image {
+      height: get_rem(184px);
     }
 
-    .blog-card__title {
+    .card__title {
       margin-top: unset;
     }
 
-    .blog-card__date {
+    .card__date {
       margin-top: unset;
       text-align: unset;
     }
 
-    .blog-card__text {
-      @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false, $viewport: md);
-
-      max-width: 570px;
+    .card__text {
+      max-width: get_rem(570px);
       margin-top: unset;
+      font-size: get_rem(18px);
+      line-height: get_lh(30px, 18px);
     }
   }
 }
@@ -91,73 +84,5 @@ blog-content
 
   @include mq_up {
     display: block;
-  }
-}
-
-/* --------------------------------------------------
-blog-pager
--------------------------------------------------- */
-.blog-pager {
-  @include font-config($font-size: 16, $line-height: 28);
-
-  margin-top: get_em(20);
-
-  @include mq_up {
-    margin-top: 70px;
-  }
-}
-
-.blog-pager__list {
-  @include flex-config($justify-content: center);
-
-  column-gap: get_em(5);
-
-  @include mq_up {
-    column-gap: 10px;
-  }
-}
-
-.blog-pager__inner {
-  display: grid;
-  place-items: center;
-  min-width: get_em(44);
-  height: get_em(44);
-  padding: get_em(2) get_em(5) 0;
-  border: 1px solid black;
-
-  @include mq_up {
-    min-width: 50px;
-    height: 50px;
-  }
-
-  .blog-pager__item--dot & {
-    min-width: get_em(17);
-    padding: get_em(2) 0 0;
-    border: none;
-  }
-}
-
-.blog-pager__item--active {
-  color: white;
-  background: black;
-}
-
-.blog-pager__item--dot {
-  margin: 0 get_em(7) 0 get_em(6);
-
-  @include mq_up {
-    margin: 0 11px 0 10px;
-  }
-}
-
-.blog-pager__link {
-  width: 100%;
-  height: 100%;
-
-  &:hover,
-  &:active {
-    color: white;
-    background: black;
-    opacity: 0.7;
   }
 }

@@ -4,10 +4,10 @@
 // contact
 // ==========================================================================
 .contact {
-  padding: get_em(48) get_em(20) get_em(108);
+  padding: get_rem(48px) 0 get_rem(108px);
 
   @include mq_up {
-    padding: 69px 20px 100px;
+    padding: get_rem(69px) 0 get_rem(100px);
   }
 
   & ~ .footer > .footer__contact {
@@ -15,11 +15,21 @@
   }
 }
 
-.contact__text {
-  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false, $viewport: md);
+.contact--send {
+  padding-bottom: get_rem(50px);
 
   @include mq_up {
-    @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false, $viewport: md);
+    padding-bottom: get_rem(89px);
+  }
+}
+
+.contact__text {
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
   }
 
   @media (width > 813px) {
@@ -28,22 +38,18 @@
 }
 
 .contact__container {
-  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
-
   @include mq_up {
     max-width: 880px;
     margin-inline: auto;
   }
 }
 
-/* --------------------------------------------------
-contact-hero
--------------------------------------------------- */
-.contact-hero__inner {
-  background-image: url('../img/contact/hero-sp.jpg');
+.contact__button--send {
+  margin-top: get_rem(38px);
 
   @include mq_up {
-    background-image: url('../img/contact/hero-pc.jpg');
+    margin-top: 40px;
+    letter-spacing: unset;
   }
 }
 
@@ -51,31 +57,31 @@ contact-hero
 contact__form
 -------------------------------------------------- */
 .contact__form {
-  @include flex-config($flex-direction: column);
-
-  row-gap: get_em(16);
-  margin-top: get_em(34);
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(16px);
+  margin-top: get_rem(34px);
 
   @include mq_up {
-    row-gap: 30px;
-    margin-top: 65px;
+    row-gap: get_rem(30px);
+    margin-top: get_rem(65px);
   }
 }
 
 .contact-form__fieldset {
-  @include flex-config($flex-direction: column);
-
-  row-gap: get_em(2);
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(2px);
   border: none;
 
   @include mq_up {
     flex-direction: unset;
-    column-gap: get_em(30);
+    column-gap: get_rem(30px);
     align-items: center;
   }
 
   &:nth-child(3) {
-    margin-top: get_em(1);
+    margin-top: get_rem(1px);
 
     @include mq_up {
       margin-top: unset;
@@ -84,15 +90,15 @@ contact__form
 
   &:nth-child(5) {
     @include mq_up {
-      margin-top: -5px;
+      margin-top: get_rem(-5px);
     }
   }
 
   &:nth-child(6) {
-    margin-top: get_em(-9);
+    margin-top: get_rem(-9px);
 
     @include mq_up {
-      margin-top: -5px;
+      margin-top: get_rem(-5px);
     }
   }
 }
@@ -100,101 +106,97 @@ contact__form
 .contact-form__fieldset--checkboxes,
 .contact-form__fieldset--textarea {
   @include mq_up {
-    @include flex-config($align-items: flex-start);
+    display: flex;
+    align-items: flex-start;
   }
 }
 
 .contact-form__label,
 .contact-form__legend {
   @include mq_up {
-    @include font-config($font-size: 20, $line-height: 33, $font-weight: false);
-
-    min-width: 140px;
-    margin-top: 7px;
+    min-width: get_rem(140px);
+    margin-top: get_rem(7px);
+    font-size: get_rem(20px);
+    line-height: get_lh(33px, 20px);
   }
 }
 
 .contact-form__label--checkbox {
   @include mq_up {
-    @include font-config($font-size: 18, $line-height: 30, $font-weight: false);
-
     margin-top: unset;
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
   }
 }
 
 .contact-form__legend {
   @include mq_up {
-    @include font-config($font-size: 20, $line-height: 30, $font-weight: false);
-
-    margin-top: 5px;
+    margin-top: get_rem(5px);
+    font-size: get_rem(20px);
+    line-height: get_lh(30px, 20px);
   }
 }
 
 .contact-form__input,
 .contact-form__textarea {
-  @include font-config($font-size: 15, $line-height: 33, $font-weight: false);
-
   width: 100%;
   font-family: $sans_serif_font;
+  font-size: get_rem(15px);
+  line-height: get_lh(33px, 15px);
   border: 1px solid;
 }
 
 .contact-form__input {
-  padding: get_em(5) get_em(20) 0;
+  padding: get_rem(5px) get_rem(20px) 0;
 }
 
 .contact-form__checkbox-wrapper {
-  @include flex-config($flex-direction: column);
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(10px);
+  margin-top: get_rem(-1px);
 
-  row-gap: get_em(10);
-  margin-top: get_em(1);
-
-  // @include mq_up {
-  //   flex-direction: unset;
-  //   column-gap: get_em(20);
-  // }
+  @include mq_up {
+    margin-top: get_rem(1px);
+  }
 }
 
 .contact-form__checkbox {
-  @include font-config($font-size: 16, $line-height: 33, $font-weight: false);
-
-  width: get_em(20);
+  width: get_rem(20px);
   aspect-ratio: 1 / 1;
-  margin-right: get_em(10);
+  margin-right: get_rem(10px);
+  font-size: get_rem(16px);
+  line-height: get_lh(33px, 16px);
 
   @include mq_up {
-    margin-right: 20px;
+    margin-right: get_rem(20px);
   }
 }
 
 .contact-form__text-space {
-  letter-spacing: get_em(15);
-}
-
-.contact-form__textarea {
-  @include font-config($font-size: 15, $line-height: 25, $font-weight: false);
-
-  height: get_em(190, 15);
-  padding: get_em(12, 15) get_em(20, 15);
+  letter-spacing: get_rem(15px);
 
   @include mq_up {
-    height: 300px;
-    padding: 16px 20px;
+    letter-spacing: get_rem(20px);
   }
 }
 
-.contact-form__button {
-  @include font-config($font-size: 20, $line-height: 26);
-
-  height: get_em(50, 20);
-  margin-top: get_em(34, 20);
+.contact-form__textarea {
+  height: get_rem(190px);
+  padding: get_rem(12px) get_rem(20px);
+  font-size: get_rem(15px);
+  line-height: get_lh(25px, 15px);
 
   @include mq_up {
-    @include font-config($font-size: 25, $line-height: 33, $viewport: md);
+    height: get_rem(300px);
+    padding: get_rem(16px);
+  }
+}
 
-    width: 250px;
-    height: 50px;
-    margin: 20px auto 0;
-    letter-spacing: 5px;
+.contact.send {
+  padding-bottom: get_rem(50px);
+
+  @include mq_up {
+    padding-bottom: get_rem(90px);
   }
 }

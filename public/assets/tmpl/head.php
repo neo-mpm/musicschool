@@ -3,7 +3,6 @@ $meta_tags = set_meta_tags($title, SITE_NAME);
 
 $default_css_path = get_file_url_with_timestamp(ASSETS . '/css/style.css', '/assets/css/style.css');
 $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '/assets/js/default.js');
-$back_to_top_js_path = 'https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js';
 ?>
 <!doctype html>
 <html lang="ja">
@@ -34,7 +33,6 @@ $back_to_top_js_path = 'https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla
     }
   }
   ?>
-  <script src="<?= $back_to_top_js_path ?>" defer></script>
   <script src="<?= $default_js_path ?>" defer></script>
 </head>
 

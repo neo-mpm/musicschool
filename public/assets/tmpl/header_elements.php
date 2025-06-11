@@ -1,17 +1,17 @@
+  <div class="overlay"></div>
   <div class="header__container">
     <a class="header__link" href="/">
       <svg class="header__logo">
         <use xlink:href="#logo"></use>
       </svg>
-      <h1 class="header__head"><span>きたむら</span><br class="br-pc">ミュージックスクール</h1>
+      <h1 class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</h1>
     </a>
     <nav class="header__nav header-nav">
-      <input id="header-nav__toggle" type="checkbox">
-      <label class="header-nav__button" for="header-nav__toggle">
-        <span class="header-nav__box">
+      <p class="header-nav__box">
+        <span class="header-nav__button">
           <span class="header-nav__line"></span>
         </span>
-      </label>
+      </p>
       <div class="header-nav__container">
         <ul class="header-nav__list">
           <?php foreach ($navMenu as $key => $value) :

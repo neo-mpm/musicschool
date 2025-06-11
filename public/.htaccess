@@ -1,0 +1,7 @@
+
+AuthUserFile "/home/neompm/mypcmemo.com/htpasswd/test/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user
+
+ErrorDocument 404 /404.php

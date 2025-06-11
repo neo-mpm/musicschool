@@ -16,9 +16,11 @@ require_once $head_path;
   require_once $header_elements_path;
   ?>
   <section class="blog__hero blog-hero hero">
-    <div class="blog-hero__inner hero__inner">
-      <h2 class="hero__h2"><?= $title; ?></h2>
-    </div>
+    <picture class="index-hero__image hero__image">
+      <source srcset="../assets/img/blog/hero-pc.jpg" media="(min-width: 768px)">
+      <img class="img-w-100" src="../assets/img/blog/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
+    </picture>
+    <h2 class="hero__h2"><?= $title; ?></h2>
   </section>
   <nav class="blog__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
@@ -29,44 +31,42 @@ require_once $head_path;
 </header>
 <main class="<?= $class_name; ?>">
   <section class="blog__content blog-content">
-    <h3 class="blog-content__head page-title">ブログ一覧</h3>
-    <div class="blog-content__container">
-      <?php
-      require_once $blog_data_path;
-
-      $blog = array_merge($blog, $blog, $blog);
-      $blog[] = $blog[0];
-      $extra_text = '<span class="blog-content__extra-text">本文が入ります。本文が入ります。本文が入ります。本文が入ります。</span>';
-      $blog[0]['text'] .= $extra_text;
-
-      foreach ($blog as $index => $value) :
-      ?>
-        <article class="blog-content__item">
-          <div class="blog-content__card blog-card">
-            <a class="blog-card__image-box" href="detail.php">
-              <picture class="blog-card__image">
-                <source srcset="/assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="/assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600">
-              </picture>
-              <p class="blog-card__tag"><?= $value['tag'] ?></p>
-            </a>
-            <h4 class="blog-card__title"><a class="blog-card__title-link" href="detail.php"><?= $value['title'] ?></a></h4>
-            <p class="blog-card__date"><?= $value['date'] ?></p>
-            <p class="blog-card__text"><?= $value['text'] ?></p>
-          </div>
-        </article>
-      <?php
-      endforeach;
-      ?>
+    <div class="blog__inner inner">
+      <h3 class="blog-content__head page-title">ブログ一覧</h3>
+      <div class="blog-content__container">
+        <?php
+        require_once $blog_data_path;
+        $blog = array_merge($blog, $blog, $blog);
+        $blog[] = $blog[0];
+        foreach ($blog as $index => $value) :
+        ?>
+          <article class="blog-content__item">
+            <div class="blog-content__card card">
+              <a class="card__image-box" href="details.php">
+                <picture class="card__image">
+                  <source srcset="/assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                  <img class="img-100" src="/assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
+                </picture>
+                <p class="card__tag"><?= $value['tag'] ?></p>
+              </a>
+              <h4 class="card__title"><a class="card__title-link" href="details.php"><?= $value['title'] ?></a></h4>
+              <p class="card__date"><?= $value['date'] ?></p>
+              <p class="card__text"><?= $value['text'] ?></p>
+            </div>
+          </article>
+        <?php
+        endforeach;
+        ?>
+      </div>
     </div>
   </section>
-  <nav class="blog__pager blog-pager">
-    <ul class="blog-pager__list">
-      <li class="blog-pager__item blog-pager__item--active"><span class="blog-pager__inner">1</span></li>
-      <li class="blog-pager__item"><a class="blog-pager__inner blog-pager__link" href="">2</a></li>
-      <li class="blog-pager__item"><a class="blog-pager__inner blog-pager__link" href="">3</a></li>
-      <li class="blog-pager__item blog-pager__item--dot"><span class="blog-pager__inner">…</span></li>
-      <li class="blog-pager__item"><a class="blog-pager__inner blog-pager__link" href="">9</a></li>
+  <nav class="blog__pager pager">
+    <ul class="pager__list">
+      <li class="pager__item pager__item--active"><span class="pager__inner">1</span></li>
+      <li class="pager__item"><a class="pager__inner pager__link" href="">2</a></li>
+      <li class="pager__item"><a class="pager__inner pager__link" href="">3</a></li>
+      <li class="pager__item pager__item--dot"><span class="pager__inner">…</span></li>
+      <li class="pager__item"><a class="pager__inner pager__link" href="">9</a></li>
     </ul>
   </nav>
 </main>

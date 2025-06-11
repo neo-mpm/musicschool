@@ -1,0 +1,45 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// result
+// ==========================================================================
+.result {
+  padding: get_rem(50px) 0 get_rem(137px);
+
+  @include mq_up {
+    padding: get_rem(67px) 0 get_rem(127px);
+    padding: 67px 0 127px;
+  }
+}
+
+.blog__container {
+  @include mq_up {
+    max-width: 880px;
+    margin-inline: auto;
+  }
+}
+
+/* --------------------------------------------------
+result-content
+-------------------------------------------------- */
+.result-content__container {
+  display: grid;
+  row-gap: get_rem(37px);
+  padding-top: get_rem(38px);
+
+  @include mq_up {
+    grid-template-columns: repeat(2, 1fr);
+    gap: get_rem(71px) get_rem(106px);
+    max-width: 880px;
+    margin-inline: auto;
+  }
+}
+
+.result-content__item {
+  @include mq_up {
+  }
+}
+
+.result-content__card .card__tag {
+  min-width: get_rem(100px);
+}

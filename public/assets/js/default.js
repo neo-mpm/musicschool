@@ -1,23 +1,42 @@
+const breakpoint = 768;
+
+// Nav Toggle Button
+const body = document.querySelector('body');
+const overlay = document.querySelector('.overlay');
+const navToggle = document.querySelector('.header-nav__button');
+const navContainer = document.querySelector('.header-nav__container');
+
+if (overlay && navToggle && navContainer) {
+  const navContainerLinks = navContainer.querySelectorAll('a');
+
+  function toggleNav() {
+    if (window.innerWidth >= breakpoint) return;
+
+    if (overlay && navToggle && navContainer) {
+      body.classList.toggle('open');
+      overlay.classList.toggle('over');
+      navToggle.classList.toggle('open');
+      navContainer.classList.toggle('open');
+    }
+  }
+
+  navToggle.addEventListener('click', toggleNav);
+  overlay.addEventListener('click', toggleNav);
+  navContainerLinks.forEach((link) => {
+    link.addEventListener('click', toggleNav);
+  });
+}
+
 // index-voice
 const voiceSwiperBlock = '.index-voice';
 const voiceSwiperElement = document.querySelector(voiceSwiperBlock);
 if (voiceSwiperElement) {
   const voiceSwiper = new Swiper(voiceSwiperBlock + ' .swiper', {
-    breakpoints: {
-      768: {
-        slidesPerView: 3,
-      },
-      920: {
-        slidesPerView: 3,
-        spaceBetween: 35,
-      },
-    },
     navigation: {
       nextEl: voiceSwiperBlock + ' .swiper-button-next',
       prevEl: voiceSwiperBlock + ' .swiper-button-prev',
     },
-    spaceBetween: 20,
-    // loop: true,
+    slidesPerView: 'auto',
   });
 }
 
@@ -26,8 +45,8 @@ function accordions() {
   const accordions = document.querySelectorAll('.index-faq__item');
 
   accordions.forEach(function (accordion) {
-    const accordionTarget = accordion.querySelector('.index-faq__answer');
     const accordionBtn = accordion.querySelector('.index-faq__question');
+    const accordionTarget = accordion.querySelector('.index-faq__answer');
 
     accordionBtn.addEventListener('click', function () {
       const isOpen = accordion.classList.contains('is-open');
@@ -42,14 +61,63 @@ function accordions() {
       accordion.classList.toggle('is-open');
       accordionTarget.classList.toggle('is-open');
     });
+
+    accordionTarget.addEventListener('click', function () {
+      accordionTarget.style.height = '0px';
+
+      accordion.classList.toggle('is-open');
+      accordionTarget.classList.toggle('is-open');
+    });
   });
 }
 
 document.addEventListener('DOMContentLoaded', accordions);
 
 // back-to-top
-addBackToTop({
-  innerHTML: '<svg viewBox="0 0 68 68"><circle cx="34" cy="34" r="34"/><path d="M45.6527 42.2031L34.0764 26.4995L22.5 42.2031" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  scrollDuration: 500,
-  textColor: 'transparent',
+function handleScrollTopBtn() {
+  const spFooterMargin = 10;
+  const pcFooterMargin = 30;
+  const SCROLL_THRESHOLD = 100;
+
+  const scrollTopBtn = document.querySelector('.to-top');
+  const footer = document.querySelector('footer');
+
+  let FOOTER_MARGIN;
+  if (window.innerWidth <= breakpoint) {
+    FOOTER_MARGIN = spFooterMargin;
+  } else {
+    FOOTER_MARGIN = pcFooterMargin;
+  }
+
+  if (!scrollTopBtn || !footer) return;
+
+  const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+  console.log(footerTop);
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+
+  if (scrollY > SCROLL_THRESHOLD) {
+    scrollTopBtn.classList.add('active');
+  } else {
+    scrollTopBtn.classList.remove('active');
+  }
+
+  if (scrollY + windowHeight > footerTop) {
+    scrollTopBtn.style.bottom = `${windowHeight - (footerTop - scrollY) + FOOTER_MARGIN}px`;
+  } else {
+    scrollTopBtn.style.removeProperty('bottom');
+  }
+}
+
+window.addEventListener('scroll', handleScrollTopBtn);
+window.addEventListener('DOMContentLoaded', handleScrollTopBtn);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollTopBtn = document.querySelector('.to-top');
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });

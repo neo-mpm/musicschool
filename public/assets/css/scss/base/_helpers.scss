@@ -3,6 +3,10 @@
 // ==========================================================================
 // helpers
 // ==========================================================================
+.inner {
+  padding-inline: 20px;
+}
+
 .br-sp {
   @include mq_up {
     display: none;
@@ -22,17 +26,21 @@
 }
 
 .title {
-  @include font-config($font-size: 25, $line-height: 40);
-
+  font-size: get_rem(25px);
+  font-weight: 700;
+  line-height: get_lh(40px, 25px);
   text-align: center;
 
   @include mq_up {
-    @include font-config($font-size: 30, $line-height: 50, $viewport: md);
+    font-size: get_rem(30px);
+    font-weight: 700;
+    line-height: get_lh(50px, 30px);
   }
 }
 
 .page-title {
-  @include font-config($font-size: 25, $line-height: 40);
-
+  font-size: get_rem(25px);
+  font-weight: 700;
+  line-height: get_lh(40px, 25px);
   text-align: center;
 }

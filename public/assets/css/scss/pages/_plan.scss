@@ -4,22 +4,10 @@
 // plan
 // ==========================================================================
 .plan {
-  padding-bottom: get_em(125);
+  padding-bottom: get_rem(125px);
 
   @include mq_up {
-    padding-bottom: 163px;
-  }
-}
-
-/* --------------------------------------------------
-plan-hero
--------------------------------------------------- */
-
-.plan-hero__inner {
-  background-image: url('../img/plan/hero-sp.jpg');
-
-  @include mq_up {
-    background-image: url('../img/plan/hero-pc.jpg');
+    padding-bottom: get_rem(163px);
   }
 }
 
@@ -27,59 +15,61 @@ plan-hero
 plan-topic
 -------------------------------------------------- */
 .plan-topic {
-  @include flex-config($flex-direction: column, $align-items: center);
-
-  padding: get_em(47) get_em(20) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: get_rem(47px);
 
   @include mq_up {
-    padding-top: 66px;
+    padding-top: get_rem(66px);
   }
 }
 
 .plan-topic__container {
-  @include flex-config($flex-direction: column, $align-items: center);
-
-  row-gap: get_em(20);
-  margin-top: get_em(38);
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(20px);
+  align-items: center;
+  margin-top: get_rem(38px);
 
   @include mq_up {
     flex-direction: unset;
-    column-gap: 29px;
-    margin-top: 38px;
+    column-gap: get_rem(29px);
+    width: fit-content;
+    margin-inline: auto;
   }
 }
 
 .plan-topic__box {
-  @include font-config($font-size: 20, $line-height: 33);
-
   display: grid;
   place-items: center;
-  width: get_em(210, 20);
-  height: get_em(60, 20);
-  padding-top: get_em(5, 20);
+  width: get_rem(210px);
+  height: get_rem(60px);
+  padding-top: get_rem(5px);
+  font-size: get_rem(20px);
+  line-height: get_lh(33px, 20px);
   color: white;
   background: var(--main-color);
 }
 
 .plan-topic__image {
-  width: get_em(19);
+  width: get_rem(19px);
 
   @include mq_up {
-    width: 19px;
-    margin-top: 9px;
+    margin-top: get_rem(9px);
   }
 }
 
 .plan-topic__text {
-  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
-
-  margin-top: get_em(47);
+  margin-top: get_rem(47px);
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
 
   @include mq_up {
-    @include font-config-rem($font-size: 18, $line-height: 30, $font-weight: false, $viewport: 'md');
-
     max-width: 890px;
-    margin-top: 48px;
+    margin: get_rem(50px) 0 0 get_rem(2px);
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
   }
 }
 
@@ -87,10 +77,10 @@ plan-topic
 plan-content
 -------------------------------------------------- */
 .plan-content {
-  padding: get_em(38) get_em(20) 0;
+  padding-top: get_rem(38px);
 
   @include mq_up {
-    padding-top: 57px;
+    padding-top: get_rem(57px);
   }
 }
 
@@ -100,15 +90,15 @@ plan-content
 }
 
 .plan-content__container {
-  padding: get_em(16) 0 get_em(18);
+  padding: get_rem(16px) 0 get_rem(18px);
   overflow-x: auto;
 
   @include mq_up {
-    padding: 48px 0 18px;
+    padding-top: get_rem(46px);
   }
 
   &::-webkit-scrollbar {
-    height: get_em(25);
+    height: get_rem(25px);
   }
 
   &::-webkit-scrollbar-track {
@@ -121,9 +111,9 @@ plan-content
 }
 
 .plan-content__table {
-  @include font-config($font-size: 16, $line-height: 30, $font-weight: false);
-
   width: 100%;
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
   table-layout: fixed;
   border-collapse: collapse;
   border-bottom: 1px solid;
@@ -132,10 +122,6 @@ plan-content
     width: fit-content;
     margin-inline: auto;
   }
-
-  // @include mq_up('lg') {
-  //   padding-left: 20px;
-  // }
 }
 
 .plan-content__tr {
@@ -146,31 +132,27 @@ plan-content
 
 .plan-content__th,
 .plan-content__td {
-  height: get_em(85);
+  height: get_rem(85px);
   padding: 0;
   text-align: center;
-
-  @include mq_up {
-    height: 85px;
-  }
 }
 
 .plan-content__th {
-  width: get_em(169);
+  width: get_rem(169px);
   vertical-align: bottom;
   color: white;
   border-bottom: 1px solid black;
 
   @include mq_up {
-    width: 220px;
-    height: 80px;
+    width: get_rem(218px);
+    height: get_rem(80px);
   }
 
   &:first-child {
-    width: get_em(167);
+    width: get_rem(167px);
 
     @include mq_up {
-      width: 220px;
+      width: get_rem(220px);
     }
   }
 
@@ -181,7 +163,7 @@ plan-content
 }
 
 .plan-content__td {
-  padding-top: get_em(7);
+  padding-top: get_rem(7px);
   border-right: 1px solid black;
 
   @include mq_up {
@@ -189,11 +171,11 @@ plan-content
   }
 
   &:first-child {
-    padding-left: get_em(9);
+    padding-left: get_rem(9px);
     text-align: left;
 
     @include mq_up {
-      padding-left: 20px;
+      padding-left: get_rem(20px);
     }
   }
 
@@ -203,47 +185,48 @@ plan-content
 }
 
 .plan-content__text {
-  @include font-config($font-size: 17, $line-height: 27, $font-weight: false);
-
-  margin-top: get_em(-1);
+  margin-top: get_rem(-1px);
+  font-size: get_rem(17px);
+  line-height: get_lh(27px, 17px);
 
   .plan-content__td & {
-    @include font-config($font-size: 16, $line-height: 25, $font-weight: false);
+    font-size: get_rem(16px);
+    line-height: get_lh(25px, 16px);
 
     @include mq_up {
-      @include font-config($font-size: 17, $line-height: 25, $font-weight: false, $viewport: 'md');
-
-      margin-top: 2px;
+      margin-top: get_rem(3px);
+      font-size: get_rem(17px);
+      line-height: get_lh(25px, 17px);
     }
   }
 
   .plan-content__th & {
-    @include font-config($font-size: 20, $line-height: 25);
-
-    margin-top: get_em(2);
+    margin-top: get_rem(2px);
+    font-size: get_rem(20px);
+    line-height: get_lh(25px, 20px);
 
     @include mq_up {
-      @include font-config($font-size: 20, $line-height: 33, $font-weight: false, $viewport: 'md');
-
-      margin-top: 2px;
+      margin-top: get_rem(6px);
+      font-size: get_rem(20px);
+      line-height: get_lh(33px, 20px);
     }
   }
 
   .plan-content__th:nth-child(3) & {
     position: relative;
-    top: get_em(-3);
-
-    @include mq_up {
-      top: -5px;
-    }
+    top: get_rem(-3px);
   }
 
   tbody .plan-content__tr:first-child & {
-    @include font-config($font-size: 22, $line-height: 33);
+    font-size: get_rem(22px);
+    font-weight: 700;
+    line-height: get_lh(33px, 22px);
   }
 
   tbody .plan-content__tr:first-child .plan-content__td:first-child & {
-    @include font-config($font-size: 16, $line-height: 30);
+    font-size: get_rem(16px);
+    font-weight: 700;
+    line-height: get_lh(30px, 16px);
   }
 
   tbody .plan-content__tr:first-child .plan-content__td:nth-child(3) & {
@@ -258,7 +241,7 @@ plan-content
 .plan-content__box {
   display: grid;
   place-items: center;
-  height: get_em(66);
+  height: get_rem(66px);
   background: black;
   border: 1px solid black;
 
@@ -269,8 +252,8 @@ plan-content
 
 .plan-content__circle {
   display: inline-block;
-  width: get_em(15);
-  height: get_em(15);
+  width: get_rem(15px);
+  height: get_rem(15px);
   background: black;
   border-radius: 50%;
 
@@ -281,21 +264,21 @@ plan-content
 
 .plan-content__line {
   display: inline-block;
-  width: get_em(30);
-  height: 10px;
+  width: get_rem(30px);
+  height: get_rem(10px);
   border-top: 1px solid black;
 }
 
 .plan-content__notice {
-  @include font-config-rem($font-size: 16, $line-height: 30, $font-weight: false);
-
-  margin-top: get_em(16);
+  margin-top: get_rem(16px);
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
 
   @include mq_up {
-    @include font-config-rem($font-size: 17, $line-height: 25, $font-weight: false, $viewport: 'md');
-
     max-width: 880px;
     margin-inline: auto;
-    margin-top: 10px;
+    margin-top: get_rem(10px);
+    font-size: get_rem(17px);
+    line-height: get_lh(25px, 17px);
   }
 }

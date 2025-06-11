@@ -4,63 +4,66 @@
 // header
 // ==========================================================================
 .header__container {
+  position: relative;
+  z-index: 60;
   display: grid;
-  height: get_em(50);
+  height: get_rem(50px);
 
   @include mq_up {
     max-width: 920px;
-    height: get_em(80);
-    padding-inline: get_em(20);
+    height: get_rem(80px);
+    padding-inline: get_rem(20px);
     margin-inline: auto;
   }
 }
 
-// .header__inner {
-//   @include flex-config($align-items: center);
-
-//   grid-area: 1 / 1;
-
-//   @include mq_up {
-//     padding-inline: 100px;
-//   }
-// }
-
 .header__link {
-  @include flex-config($align-items: center);
-
+  display: flex;
   grid-area: 1 / 1;
-  column-gap: get_em(7);
+  column-gap: get_rem(7px);
+  align-items: center;
   width: fit-content;
   height: 100%;
-  padding-left: get_em(20);
+  padding-left: get_rem(20px);
 
   @include mq_up {
     padding-left: unset;
   }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    opacity: unset;
+  }
 }
 
 .header__logo {
-  width: get_em(20);
-  height: get_em(31);
+  width: get_rem(20px);
+  height: get_rem(31px);
   fill: var(--main-color);
 
   @include mq_up {
-    width: 32px;
-    height: 49px;
+    width: get_rem(32px);
+    height: get_rem(49px);
   }
 }
 
 .header__head {
-  @include font-config($font-size: 13, $line-height: 14);
+  font-size: get_rem(13px);
+  font-weight: 700;
+  line-height: get_lh(14px, 13px);
 
   @include mq_up {
-    @include font-config($font-size: 15, $line-height: 23, $font-weight: false);
+    padding: get_rem(5px) 0 0 get_rem(3px);
+    font-size: get_rem(15px);
+    line-height: get_lh(23px, 15px);
+  }
+}
 
-    padding: 5px 0 0 3px;
-
-    span {
-      @include font-config($font-size: 20, $line-height: 23);
-    }
+.header__head--large {
+  @include mq_up {
+    font-size: get_rem(20px);
+    line-height: get_lh(23px, 20px);
   }
 }
 
@@ -70,39 +73,11 @@
   height: 100%;
 }
 
-#header-nav__toggle {
-  display: none;
-
-  &:checked ~ .header-nav__button .header-nav__box > span {
-    transform: rotate(45deg);
-  }
-
-  &:checked ~ .header-nav__button .header-nav__box > span::before,
-  &:checked ~ .header-nav__button .header-nav__box > span::after {
-    top: 0;
-
-    // background: #caaf6b;
-  }
-
-  &:checked ~ .header-nav__button .header-nav__box > span::before {
-    transform: rotate(0);
-  }
-
-  &:checked ~ .header-nav__button .header-nav__box > span::after {
-    transform: rotate(90deg);
-  }
-
-  &:checked ~ .header-nav__container {
-    visibility: visible;
-    margin-right: 0;
-  }
-}
-
-.header-nav__button {
+.header-nav__box {
   z-index: 2;
   display: grid;
   place-items: center;
-  width: get_em(71);
+  width: get_rem(71px);
   height: 100%;
   cursor: pointer;
   background: var(--main-color);
@@ -112,21 +87,38 @@
   }
 }
 
-.header-nav__box {
+.header-nav__button {
   position: relative;
-
-  // top: get_em(12);
   display: block;
-  width: get_em(33);
-  padding-bottom: get_em(2);
+  width: get_rem(33px);
+  padding-bottom: get_rem(2px);
   transition-duration: 0.25s;
+
+  &.open {
+    span {
+      transform: rotate(45deg);
+    }
+
+    span::before,
+    span::after {
+      top: 0;
+    }
+
+    span::before {
+      transform: rotate(0);
+    }
+
+    span::after {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 @mixin burgerSpan {
   position: absolute;
   display: inline-block;
   width: 100%;
-  height: get_em(3);
+  height: get_rem(3px);
   background: white;
   border-radius: 1px;
 }
@@ -143,65 +135,78 @@
   }
 
   &::before {
-    bottom: get_em(12);
+    bottom: get_rem(12px);
   }
 
   &::after {
-    top: get_em(12);
+    top: get_rem(12px);
   }
 }
 
-.header-nav__container[class] {
+.header-nav__container {
   position: fixed;
-  top: get_em(50);
+  top: get_rem(50px);
   right: 0;
   z-index: 3;
   visibility: hidden;
-  row-gap: get_em(40);
-  width: get_em(300);
+  row-gap: get_rem(40px);
+  width: get_rem(300px);
   margin-right: -100vw;
-
-  // margin-right: 0;
   transition-duration: 0.2s;
 
   @include mq_up {
-    @include flex-config($align-items: center);
-
     position: unset;
     top: unset;
+    display: flex;
     visibility: visible;
-    column-gap: 30px;
+    column-gap: get_rem(30px);
+    align-items: center;
     width: unset;
     height: 100%;
     margin-right: unset;
+  }
+
+  &.open {
+    visibility: visible;
+    margin-right: 0;
   }
 }
 
 .header-nav__list {
   @include mq_up {
-    @include flex-config($align-items: center);
-
-    column-gap: 30px;
+    display: flex;
+    column-gap: get_rem(30px);
+    align-items: center;
     height: 100%;
-    padding: 6px 2px 0 0;
+    padding: get_rem(6px) get_rem(2px) 0 0;
   }
 }
 
-.header-nav__link[class] {
-  @include font-config($font-size: 18, $line-height: 33);
-  @include flex-config($align-items: center);
-
+.header-nav__link {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: get_em(58, 18);
-  padding-left: get_em(20, 18);
-  color: white;
+  height: get_rem(58px);
+  padding-left: get_rem(20px);
+  font-size: get_rem(18px);
+  font-weight: 700;
+  line-height: get_lh(33px, 18px);
   background: var(--main-color);
 
   @include mq_up {
     height: 100%;
     padding-left: unset;
-    color: black;
     background: unset;
+  }
+
+  &:link,
+  &:visited {
+    color: white;
+    text-decoration: none;
+
+    @include mq_up {
+      color: inherit;
+    }
   }
 
   &:hover,
@@ -217,34 +222,26 @@
   }
 }
 
-.header-nav__contact[class] {
+.header-nav__contact {
   display: none;
 
   @include mq_up {
-    @include font-config($font-size: 15, $line-height: 23);
-
     display: grid;
-    width: 150px;
-    height: 45px;
-    padding-top: 4px;
+    width: get_rem(150px);
+    height: get_rem(45px);
+    padding-top: get_rem(4px);
+    font-size: get_rem(15px);
+    font-weight: 700;
+    line-height: get_lh(23px, 15px);
   }
 }
 
 /* --------------------------------------------------
 hero
 -------------------------------------------------- */
-.hero__inner {
+.hero {
   display: grid;
   place-items: center;
-  height: get_em(300);
-  background-position: top center;
-  background-size: cover;
-
-  @include mq_up {
-    max-width: 1920px;
-    height: 200px;
-    margin-inline: auto;
-  }
 
   &::before {
     display: grid;
@@ -258,12 +255,28 @@ hero
   }
 }
 
-.hero__h2 {
-  @include font-config($font-size: 25, $line-height: 60);
+.hero__image {
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
 
+  @include mq_up {
+    aspect-ratio: 1080 / 200;
+  }
+}
+
+.hero__image--index {
+  @include mq_up {
+    aspect-ratio: 1080 / 470;
+  }
+}
+
+.hero__h2 {
   z-index: 2;
   grid-area: 1 / 1;
-  margin-top: get_em(12, 25);
+  margin-top: get_rem(12px);
+  font-size: get_rem(25px);
+  line-height: get_lh(60px, 25px);
   color: white;
   text-align: center;
 }
@@ -276,23 +289,24 @@ breadcrumb
 }
 
 .breadcrumb__list {
-  @include font-config($font-size: 16, $line-height: 22, $font-weight: 500);
-  @include flex-config($align-items: center);
-
+  display: flex;
   flex-wrap: wrap;
-  column-gap: get_em(20);
-  padding: get_em(10) get_em(20) get_em(4);
+  column-gap: get_rem(20px);
+  align-items: center;
+  padding: get_rem(10px) get_rem(20px) get_rem(4px);
+  font-size: get_rem(16px);
+  line-height: get_lh(22px, 16px);
 
   @include mq_up {
-    max-width: 1080px;
-    padding: 16px fluid_clamp(20, 100, md, lg) 11px;
+    max-width: 920px;
+    padding: get_rem(16px) get_rem(20px) get_rem(11px);
     margin-inline: auto;
   }
 }
 
 .breadcrumb__item {
   display: inline-flex;
-  column-gap: get_em(20);
+  column-gap: get_rem(20px);
 }
 
 .breadcrumb__link {

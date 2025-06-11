@@ -11,8 +11,10 @@
 // components
 // ==========================================================================
 
-@use 'components/blog_card';
 @use 'components/button';
+@use 'components/card';
+@use 'components/details';
+@use 'components/pager';
 
 // ==========================================================================
 // layout
@@ -28,10 +30,9 @@
 @use 'pages/index';
 @use 'pages/plan';
 @use 'pages/blog';
+@use 'pages/blog-details';
 @use 'pages/contact';
-
-// ==========================================================================
-// vendors
-// ==========================================================================
-
-@use 'vendors/back_to_top';
+@use 'pages/page404';
+@use 'pages/search';
+@use 'pages/result';
+@use 'pages/result-details';

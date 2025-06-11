@@ -42,7 +42,7 @@ if (voiceSwiperElement) {
 
 // index-faq
 function accordions() {
-  const accordions = document.querySelectorAll('.index-faq__item');
+  const accordions = document.querySelectorAll('.index-faq__list');
 
   accordions.forEach(function (accordion) {
     const accordionBtn = accordion.querySelector('.index-faq__question');

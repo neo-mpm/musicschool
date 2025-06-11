@@ -48,7 +48,6 @@
           <a class="footer-sns__link" href="https://youtube.com/" target="_blank" rel="noreferrer"></a>
           <a class="footer-sns__link" href="https://instagram.com/" target="_blank" rel="noreferrer"></a>
         </div>
-        </a>
       </div>
     </div>
   </footer>

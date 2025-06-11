@@ -406,15 +406,23 @@ index-guide
   }
 }
 
-.index-guide__list {
+.index-guide__container {
   position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: get_rem(36px);
+
+  @include mq_up {
+    width: unset;
+    margin-top: get_rem(53px);
+  }
+}
+
+.index-guide__list {
   display: flex;
   flex-direction: column;
   row-gap: get_rem(36px);
   justify-content: space-between;
-  width: fit-content;
-  margin-inline: auto;
-  margin-top: get_rem(36px);
   background-image: url('../img/index/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: bottom get_rem(8px) left;
@@ -422,9 +430,7 @@ index-guide
 
   @include mq_up {
     row-gap: get_rem(58px);
-    width: unset;
     padding-bottom: get_rem(20px);
-    margin-top: get_rem(53px);
     background-position: bottom left get_rem(4px);
     background-size: get_rem(35px);
   }
@@ -512,7 +518,7 @@ index-faq
   }
 }
 
-.index-faq__list {
+.index-faq__container {
   margin-top: get_rem(38px);
   margin-top: 38px;
   border-top: 1px solid black;
@@ -524,7 +530,7 @@ index-faq
   }
 }
 
-.index-faq__item {
+.index-faq__list {
   margin-bottom: 1px;
   border-bottom: 1px solid black;
 }

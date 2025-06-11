@@ -51,9 +51,9 @@ require_once $head_path;
           <input type="tel" class="contact-form__input" name="tel" id="tel" placeholder="090-1234-5678">
         </fieldset>
         <fieldset class="contact-form__fieldset contact-form__fieldset--checkboxes">
-          <p class="contact-form__legend">
-            <legend><span class="contact-form__text-space">目的</span><br class="br-pc">(複数選択可)</legend>
-          </p>
+          <legend class="contact-form__legend">
+            <span class="contact-form__text-space">目的</span><br class="br-pc">(複数選択可)
+          </legend>
           <div class="contact-form__checkbox-wrapper">
             <label class="contact-form__label contact-form__label--checkbox">
               <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">プランについてのお問い合わせ

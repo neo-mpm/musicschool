@@ -121,6 +121,12 @@ contact__form
   }
 }
 
+.contact-form__legend {
+  @include mq_up {
+    float: left;
+  }
+}
+
 .contact-form__label--checkbox {
   @include mq_up {
     margin-top: unset;

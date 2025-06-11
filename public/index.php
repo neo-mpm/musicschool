@@ -153,44 +153,46 @@ require_once $head_path;
   <section class="index__guide index-guide">
     <div class="index-guide__inner inner">
       <h3 class="index-guide__head title">ご利用の流れ</h3>
-      <ul class="index-guide__list">
-        <?php
-        $guide = [
-          [
-            'title' => 'お問い合わせ',
-            'text' => 'まずはフォームまたはメールにてお問い合わせください。<br>ヒアリングの日程を調整します。',
-          ],
-          [
-            'title' => 'ヒアリング',
-            'text' => '現在の技術面や将来の目標などをお伺いします。<br>悩みや不安な事もお気軽にご相談ください。',
-          ],
-          [
-            'title' => 'プランのご提案',
-            'text' => 'ライフスタイルや目標によって最適なプランをご提案します。<br>継続できるようサポートいたします。',
-          ],
-          [
-            'title' => 'ご入学',
-            'text' => 'お申し込み完了後、レッスンがスタートします。<br>マンツーマン指導なので、いつからでもスタートが可能です。',
-          ],
-        ];
-        foreach ($guide as $value) :
-        ?>
-          <li class="index-guide__item">
-            <p class="index-guide__circle"></p>
-            <h4 class="index-guide__title"><?= $value['title'] ?></h4>
-            <p class="index-guide__text"><?= $value['text'] ?></p>
-          </li>
-        <?php
-        endforeach;
-        ?>
+      <div class="index-guide__container">
+        <ul class="index-guide__list">
+          <?php
+          $guide = [
+            [
+              'title' => 'お問い合わせ',
+              'text' => 'まずはフォームまたはメールにてお問い合わせください。<br>ヒアリングの日程を調整します。',
+            ],
+            [
+              'title' => 'ヒアリング',
+              'text' => '現在の技術面や将来の目標などをお伺いします。<br>悩みや不安な事もお気軽にご相談ください。',
+            ],
+            [
+              'title' => 'プランのご提案',
+              'text' => 'ライフスタイルや目標によって最適なプランをご提案します。<br>継続できるようサポートいたします。',
+            ],
+            [
+              'title' => 'ご入学',
+              'text' => 'お申し込み完了後、レッスンがスタートします。<br>マンツーマン指導なので、いつからでもスタートが可能です。',
+            ],
+          ];
+          foreach ($guide as $value) :
+          ?>
+            <li class="index-guide__item">
+              <p class="index-guide__circle"></p>
+              <h4 class="index-guide__title"><?= $value['title'] ?></h4>
+              <p class="index-guide__text"><?= $value['text'] ?></p>
+            </li>
+          <?php
+          endforeach;
+          ?>
+        </ul>
         <p class="index-guide__line"></p>
-      </ul>
+      </div>
     </div>
   </section>
   <section class="index__faq index-faq">
     <div class="index-faq__inner inner">
       <h3 class="index-faq__head title">よくあるご質問</h3>
-      <ul class="index-faq__list">
+      <div class="index-faq__container">
         <?php
         $faq = [
           [
@@ -212,7 +214,7 @@ require_once $head_path;
         ];
         foreach ($faq as $value) :
         ?>
-          <dl class="index-faq__item">
+          <dl class="index-faq__list">
             <dt class="index-faq__question">
               <div class="index-faq__box">
                 <p class="index-faq__icon">Q</p>
@@ -230,12 +232,12 @@ require_once $head_path;
         <?php
         endforeach;
         ?>
-      </ul>
+      </div>
     </div>
   </section>
   <section class="index__blog index-blog">
     <div class="index-blog__inner inner">
-      <h3 class="index-blog__head title">ブログ</h3>
+      <h3 class="index-blog__head title">ブログ</h3>
       <ul class="index-blog__list">
         <?php
         require_once $blog_data_path;

@@ -1,0 +1,88 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// blog
+// ==========================================================================
+.blog {
+  padding-bottom: get_rem(143px);
+
+  @include mq_up {
+    padding-bottom: get_rem(151px);
+  }
+}
+
+.blog__container {
+  @include mq_up {
+    max-width: 880px;
+    margin-inline: auto;
+  }
+}
+
+/* --------------------------------------------------
+blog-content
+-------------------------------------------------- */
+.blog-content {
+  padding-top: get_rem(47px);
+
+  @include mq_up {
+    padding-top: get_rem(66px);
+  }
+}
+
+.blog-content__container {
+  padding-top: get_rem(38px);
+
+  @include mq_up {
+    display: flex;
+    flex-direction: column;
+    row-gap: get_rem(70px);
+    align-items: center;
+  }
+}
+
+.blog-content__card.card {
+  padding-bottom: get_rem(37px);
+
+  @include mq_up {
+    display: grid;
+    grid-template: get_rem(27px) get_rem(42px) 1fr / repeat(2, auto);
+    grid-auto-flow: column;
+    column-gap: get_rem(50px);
+    align-items: start;
+    justify-content: center;
+    padding-bottom: unset;
+
+    .card__image-box {
+      grid-row: span 3;
+      min-width: get_rem(260px);
+    }
+
+    .card__image {
+      height: get_rem(184px);
+    }
+
+    .card__title {
+      margin-top: unset;
+    }
+
+    .card__date {
+      margin-top: unset;
+      text-align: unset;
+    }
+
+    .card__text {
+      max-width: get_rem(570px);
+      margin-top: unset;
+      font-size: get_rem(18px);
+      line-height: get_lh(30px, 18px);
+    }
+  }
+}
+
+.blog-content__extra-text {
+  display: none;
+
+  @include mq_up {
+    display: block;
+  }
+}

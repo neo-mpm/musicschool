@@ -1,0 +1,208 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// contact
+// ==========================================================================
+.contact {
+  padding: get_rem(48px) 0 get_rem(108px);
+
+  @include mq_up {
+    padding: get_rem(69px) 0 get_rem(100px);
+  }
+
+  & ~ .footer > .footer__contact {
+    display: none;
+  }
+}
+
+.contact--send {
+  padding-bottom: get_rem(50px);
+
+  @include mq_up {
+    padding-bottom: get_rem(89px);
+  }
+}
+
+.contact__text {
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
+  }
+
+  @media (width > 813px) {
+    text-align: center;
+  }
+}
+
+.contact__container {
+  @include mq_up {
+    max-width: 880px;
+    margin-inline: auto;
+  }
+}
+
+.contact__button--send {
+  margin-top: get_rem(38px);
+
+  @include mq_up {
+    margin-top: 40px;
+    letter-spacing: unset;
+  }
+}
+
+/* --------------------------------------------------
+contact__form
+-------------------------------------------------- */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(16px);
+  margin-top: get_rem(34px);
+
+  @include mq_up {
+    row-gap: get_rem(30px);
+    margin-top: get_rem(65px);
+  }
+}
+
+.contact-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(2px);
+  border: none;
+
+  @include mq_up {
+    flex-direction: unset;
+    column-gap: get_rem(30px);
+    align-items: center;
+  }
+
+  &:nth-child(3) {
+    margin-top: get_rem(1px);
+
+    @include mq_up {
+      margin-top: unset;
+    }
+  }
+
+  &:nth-child(5) {
+    @include mq_up {
+      margin-top: get_rem(-5px);
+    }
+  }
+
+  &:nth-child(6) {
+    margin-top: get_rem(-9px);
+
+    @include mq_up {
+      margin-top: get_rem(-5px);
+    }
+  }
+}
+
+.contact-form__fieldset--checkboxes,
+.contact-form__fieldset--textarea {
+  @include mq_up {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.contact-form__label,
+.contact-form__legend {
+  @include mq_up {
+    min-width: get_rem(140px);
+    margin-top: get_rem(7px);
+    font-size: get_rem(20px);
+    line-height: get_lh(33px, 20px);
+  }
+}
+
+.contact-form__legend {
+  @include mq_up {
+    float: left;
+  }
+}
+
+.contact-form__label--checkbox {
+  @include mq_up {
+    margin-top: unset;
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
+  }
+}
+
+.contact-form__legend {
+  @include mq_up {
+    margin-top: get_rem(5px);
+    font-size: get_rem(20px);
+    line-height: get_lh(30px, 20px);
+  }
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  font-family: $sans_serif_font;
+  font-size: get_rem(15px);
+  line-height: get_lh(33px, 15px);
+  border: 1px solid;
+}
+
+.contact-form__input {
+  padding: get_rem(5px) get_rem(20px) 0;
+}
+
+.contact-form__checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(10px);
+  margin-top: get_rem(-1px);
+
+  @include mq_up {
+    margin-top: get_rem(1px);
+  }
+}
+
+.contact-form__checkbox {
+  width: get_rem(20px);
+  aspect-ratio: 1 / 1;
+  margin-right: get_rem(10px);
+  font-size: get_rem(16px);
+  line-height: get_lh(33px, 16px);
+
+  @include mq_up {
+    margin-right: get_rem(20px);
+  }
+}
+
+.contact-form__text-space {
+  letter-spacing: get_rem(15px);
+
+  @include mq_up {
+    letter-spacing: get_rem(20px);
+  }
+}
+
+.contact-form__textarea {
+  height: get_rem(190px);
+  padding: get_rem(12px) get_rem(20px);
+  font-size: get_rem(15px);
+  line-height: get_lh(25px, 15px);
+
+  @include mq_up {
+    height: get_rem(300px);
+    padding: get_rem(16px);
+  }
+}
+
+.contact.send {
+  padding-bottom: get_rem(50px);
+
+  @include mq_up {
+    padding-bottom: get_rem(90px);
+  }
+}

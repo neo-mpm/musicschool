@@ -1,0 +1,39 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// page404
+// ==========================================================================
+.page404 {
+  padding: get_rem(43px) 0 get_rem(50px);
+
+  @include mq_up {
+    padding: get_rem(69px) 0 get_rem(89px);
+  }
+
+  & ~ .footer > .footer__contact {
+    display: none;
+  }
+}
+
+.page404__text {
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
+  }
+
+  @media (width > 813px) {
+    text-align: center;
+  }
+}
+
+.page404__button {
+  margin-top: get_rem(9px);
+
+  @include mq_up {
+    margin-top: 40px;
+    letter-spacing: unset;
+  }
+}

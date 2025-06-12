@@ -1,0 +1,162 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// footer
+// ==========================================================================
+
+.footer-contact__link {
+  width: get_rem(335px);
+  height: get_rem(60px);
+  padding-top: get_rem(8px);
+  margin-inline: auto;
+  font-size: get_rem(20px);
+  font-weight: 700;
+  line-height: get_lh(33px, 20px);
+  letter-spacing: get_rem(4px);
+
+  @include mq_up {
+    width: get_rem(300px);
+    padding-top: get_rem(10px);
+    margin-inline: auto 0;
+  }
+
+  &:hover,
+  &:active {
+    border-bottom: unset;
+  }
+}
+
+.footer-contact__span {
+  margin-right: get_rem(-4px);
+}
+
+.footer__container {
+  padding: get_rem(45px) get_rem(20px) get_rem(51px);
+  color: white;
+  background: var(--main-color);
+}
+
+.footer__list {
+  display: flex;
+  column-gap: get_rem(29px);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: get_rem(18px);
+  font-size: get_rem(17px);
+  font-weight: 700;
+  line-height: get_lh(33px, 17px);
+
+  @include mq_up {
+    column-gap: get_rem(33px);
+  }
+}
+
+.footer__link[class] {
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.5;
+  }
+}
+
+.footer__logo {
+  display: block;
+  width: get_rem(32px);
+  aspect-ratio: 32 / 49;
+  margin: 0 auto get_rem(28px);
+  fill: white;
+
+  @include mq_up {
+    width: get_rem(35px);
+    margin-bottom: get_rem(28px);
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    opacity: unset;
+  }
+}
+
+.footer__copy {
+  line-height: get_rem(20px); // smallにline-heightを指定できないので、ここで指定
+  text-align: center;
+
+  small {
+    font-size: get_rem(15px);
+  }
+}
+
+.footer-sns {
+  display: grid;
+  width: get_rem(126px);
+  height: get_rem(22px);
+  margin: get_rem(15px) auto 0;
+
+  @include mq_up {
+    margin-top: get_rem(5px);
+  }
+}
+
+.footer-sns__icons {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-sns__links {
+  display: flex;
+  grid-area: 1 / 1;
+  justify-content: space-between;
+}
+
+.footer-sns__link {
+  display: block;
+  width: 24%;
+  height: 100%;
+}
+
+// ==========================================================================
+// back-to-top
+// ==========================================================================
+.to-top {
+  position: fixed;
+  right: get_rem(20px);
+  bottom: get_rem(20px);
+  z-index: 100;
+  width: get_rem(68px);
+  height: get_rem(68px);
+  pointer-events: none;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  @include mq_up {
+    right: get_rem(116px);
+    bottom: get_rem(30px);
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0;
+  }
+
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  svg {
+    width: 99%;
+    height: 99%;
+    margin: 0;
+    opacity: 0.502;
+  }
+}

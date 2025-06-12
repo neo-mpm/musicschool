@@ -1,0 +1,46 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// button
+// ==========================================================================
+.button {
+  display: grid;
+  place-items: center;
+  color: white;
+  appearance: none;
+  cursor: pointer;
+  background: var(--main-color);
+  border: none;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:active {
+    color: var(--main-color);
+    text-decoration: none;
+    background: white;
+    border: 1px solid;
+    opacity: 0.7;
+    transition: 0.2s all;
+  }
+}
+
+.button--bottom {
+  height: get_rem(50px);
+  margin-top: get_rem(34px);
+  font-size: get_rem(20px);
+  line-height: get_lh(26px, 20px);
+
+  @include mq_up {
+    width: get_rem(250px);
+    height: get_rem(50px);
+    margin: get_rem(20px) auto 0;
+    font-size: get_rem(25px);
+    font-weight: 700;
+    line-height: get_lh(33px, 25px);
+    letter-spacing: get_rem(5px);
+  }
+}

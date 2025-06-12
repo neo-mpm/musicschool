@@ -2559,6 +2559,9 @@ blog-details-sns
   width: 100%;
   height: 100%;
 }
+.blog-details-sns__link:hover, .blog-details-sns__link:active {
+  text-decoration: none;
+}
 
 .blog-details-sns__text {
   display: none;

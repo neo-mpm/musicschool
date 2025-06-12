@@ -104,6 +104,11 @@ blog-details-sns
   justify-content: center;
   width: 100%;
   height: 100%;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .blog-details-sns__text {

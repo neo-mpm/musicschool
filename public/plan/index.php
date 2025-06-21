@@ -5,6 +5,12 @@ $head_path = ASSETS . '/tmpl/head.php';
 $header_elements_path = ASSETS . '/tmpl/header_elements.php';
 $footer_path = ASSETS . '/tmpl/footer.php';
 
+$simplebar_css_path = 'https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css';
+$css_paths = [$simplebar_css_path];
+
+$simplebar_js_path = 'https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js';
+$js_paths = [$simplebar_js_path];
+
 $class_name = 'plan';
 $title = 'プラン・料金';
 
@@ -23,7 +29,7 @@ require_once $head_path;
   </section>
   <nav class="blog__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
       <li class="breadcrumb__item"><?= $title; ?></li>
     </ul>
   </nav>
@@ -34,7 +40,7 @@ require_once $head_path;
       <h3 class="plan-topic__head page-title">料金体系</h3>
       <div class="plan-topic__container">
         <p class="plan-topic__box">入会金 39,000円</p>
-        <p class="plan-topic__image"><img class="img-w-100" src="../assets/img/plan/plus.jpg" alt="" width="57" height="57" loading="lazy"></p>
+        <p class="plan-topic__image"><img class="img-w-100" src="../assets/img/plan/plus.svg" alt="" width="57" height="57" loading="lazy"></p>
         <p class="plan-topic__box">月額料金</p>
       </div>
       <p class="plan-topic__text">きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>
@@ -43,7 +49,7 @@ require_once $head_path;
   <section class="plan__content plan-content">
     <div class="plan-content__inner inner">
       <h3 class="plan-content__head page-title">プラン内容・月額料金</h3>
-      <div class="plan-content__container">
+      <div class="plan-content__container" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-min-size="112" data-simplebar-scrollbar-max-size="112">
         <table class="plan-content__table">
           <thead>
             <tr class="plan-content__tr">

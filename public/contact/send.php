@@ -23,7 +23,7 @@ require_once $head_path;
   </section>
   <nav class="contact__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
       <li class="breadcrumb__item">送信完了</li>
     </ul>
   </nav>
@@ -33,7 +33,7 @@ require_once $head_path;
     <div class="contact__container">
       <p class="contact__text">お問い合わせいただきありがとうございました。<br>
         内容確認後、担当者よりメールにてご連絡いたします。</p>
-      <a class="button button--bottom contact__button--send " href="/">ホームへ戻る</a>
+      <a class="button button--bottom contact__button--send " href="../top/">ホームへ戻る</a>
     </div>
   </div>
 </main>

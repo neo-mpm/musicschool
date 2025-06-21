@@ -27,7 +27,7 @@ require_once $head_path;
     <div class="page404__container">
       <p class="page404__text">申し訳ございませんが、お探しのページが見つかりませんでした。<br>
         お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。</p>
-      <a class="button button--bottom page404__button" href="/">ホームへ戻る</a>
+      <a class="button button--bottom page404__button" href="../top/">ホームへ戻る</a>
     </div>
   </div>
 </main>

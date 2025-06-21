@@ -1,8 +1,8 @@
 <?php
 $meta_tags = set_meta_tags($title, SITE_NAME);
 
-$default_css_path = get_file_url_with_timestamp(ASSETS . '/css/style.css', '/assets/css/style.css');
-$default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '/assets/js/default.js');
+$default_css_path = get_file_url_with_timestamp(ASSETS . '/css/style.css', '../assets/css/style.css');
+$default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../assets/js/default.js');
 ?>
 <!doctype html>
 <html lang="ja">
@@ -10,13 +10,13 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '/asse
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta content="https://<?= $_SERVER['SERVER_NAME'] ?>/assets/img/og-image.png" property="og:image">
+  <meta content="https://<?= $_SERVER['SERVER_NAME'] ?>/assets/img/og-image.jpg" property="og:image">
   <meta content="website" property="og:type">
   <meta content="<?= $meta_tags['page_title'] ?>" property="og:title">
   <meta content="<?= KEYWORDS ?>" name="keywords">
   <meta content="<?= $meta_tags['description'] ?>" name="description">
   <meta content="telephone=metaTags" name="format-detection">
-  <link rel="icon" href="/assets/img/favicon.svg">
+  <link rel="icon" href="../assets/img/favicon.svg">
   <?php
   if (isset($css_paths) && $css_paths) {
     foreach ($css_paths as $path) {

@@ -24,7 +24,7 @@ require_once $head_path;
   </section>
   <nav class="blog__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
       <li class="breadcrumb__item"><?= $title; ?></li>
     </ul>
   </nav>
@@ -44,8 +44,8 @@ require_once $head_path;
             <div class="blog-content__card card">
               <a class="card__image-box" href="details.php">
                 <picture class="card__image">
-                  <source srcset="/assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="/assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
+                  <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                  <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </a>

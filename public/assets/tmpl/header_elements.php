@@ -1,6 +1,6 @@
   <div class="overlay"></div>
   <div class="header__container">
-    <a class="header__link" href="/">
+    <a class="header__link" href="../top/">
       <svg class="header__logo">
         <use xlink:href="#logo"></use>
       </svg>
@@ -17,11 +17,11 @@
           <?php foreach ($navMenu as $key => $value) :
             if ($key === 'index') continue; ?>
             <li class="header-nav__item">
-              <a class="header-nav__link" href="/<?= $key ?>/"><?= $value ?></a>
+              <a class="header-nav__link" href="../<?= $key ?>/"><?= $value ?></a>
             </li>
           <?php endforeach; ?>
         </ul>
-        <a class="header-nav__contact button" href="/contact/"><span class="button__span">お問い合わせ</span></a>
+        <a class="header-nav__contact button" href="../contact/"><span class="button__span">お問い合わせ</span></a>
       </div>
     </nav>
   </div>

@@ -30,7 +30,7 @@ require_once $head_path;
   </section>
   <nav class="result__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
       <li class="breadcrumb__item"><?= $title; ?></li>
     </ul>
   </nav>
@@ -48,7 +48,7 @@ require_once $head_path;
           <article class="result-content__item">
             <div class="result-content__card card">
               <a class="card__image-box" href="../result/details.php">
-                <p class="card__image"><img class="img-100" src="/assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></p>
+                <p class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></p>
                 <p class="card__tag"><?= $value ?></p>
               </a>
               <h4 class="card__title"><a class="card__title-link" href="../result/details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>

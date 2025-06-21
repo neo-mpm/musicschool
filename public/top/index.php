@@ -20,49 +20,49 @@ require_once $head_path;
   <?php
   require_once $header_elements_path;
   ?>
-  <section class="index__hero index-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="assets/img/index/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="assets/img/index/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
+  <section class="top__hero top-hero hero">
+    <picture class="top-hero__image hero__image">
+      <source srcset="../assets/img/index/hero-pc.jpg" media="(min-width: 768px)">
+      <img class="img-w-100" src="../assets/img/index/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
     </picture>
-    <h2 class="index-hero__h2 hero__h2">「音楽で生きる」<br class="br-sp">を叶える<br>
+    <h2 class="top-hero__h2 hero__h2">「音楽で生きる」<br class="br-sp">を叶える<br>
       ミュージックスクール</h2>
   </section>
 </header>
 <main class="index" id="main">
-  <section class="index__topic index-topic">
-    <div class="index-topic__inner inner">
-      <h3 class="index-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h3>
-      <p class="index-topic__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
-      <p class="index-topic__semicircle">
+  <section class="top__topic top-topic">
+    <div class="top-topic__inner inner">
+      <h3 class="top-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h3>
+      <p class="top-topic__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
+      <p class="top-topic__semicircle">
         <picture>
-          <source srcset="assets/img/index/semicircle-pc.svg" media="(min-width: 768px)">
-          <img class="img-w-100" src="assets/img/index/semicircle-sp.svg" alt="" width="335" height="37" loading="lazy">
+          <source srcset="../assets/img/index/semicircle-pc.svg" media="(min-width: 768px)">
+          <img class="img-w-100" src="../assets/img/index/semicircle-sp.svg" alt="" width="335" height="37" loading="lazy">
         </picture>
       </p>
-      <div class="index-topic__table">
-        <p class="index-topic__data index-topic__data--left">Enthusiasm</p>
-        <p class="index-topic__data index-topic__data--circle"></p>
-        <p class="index-topic__data index-topic__data--right">熱狂し</p>
-        <p class="index-topic__data index-topic__data--left">Envision</p>
-        <p class="index-topic__data index-topic__data--circle"></p>
-        <p class="index-topic__data index-topic__data--right">想像し</p>
-        <p class="index-topic__data index-topic__data--left index-topic__data--bottom">Effulgent</p>
-        <p class="index-topic__data index-topic__data--circle"></p>
-        <p class="index-topic__data index-topic__data--right index-topic__data--bottom">輝く存在へ</p>
+      <div class="top-topic__table">
+        <p class="top-topic__data top-topic__data--left">Enthusiasm</p>
+        <p class="top-topic__data top-topic__data--circle"></p>
+        <p class="top-topic__data top-topic__data--right">熱狂し</p>
+        <p class="top-topic__data top-topic__data--left">Envision</p>
+        <p class="top-topic__data top-topic__data--circle"></p>
+        <p class="top-topic__data top-topic__data--right">想像し</p>
+        <p class="top-topic__data top-topic__data--left top-topic__data--bottom">Effulgent</p>
+        <p class="top-topic__data top-topic__data--circle"></p>
+        <p class="top-topic__data top-topic__data--right top-topic__data--bottom">輝く存在へ</p>
       </div>
     </div>
   </section>
-  <section class="index__about index-about">
-    <h3 class="index-about__head title">音楽業界初！<br>
+  <section class="top__about top-about">
+    <h3 class="top-about__head title">音楽業界初！<br>
       収益化までサポートする<br class="br-sp">ミュージックスクール</h3>
-    <p class="index-about__text">楽器や作詞作曲などの<br class="br-sp">技術・知識はもちろんのこと<br>
+    <p class="top-about__text">楽器や作詞作曲などの<br class="br-sp">技術・知識はもちろんのこと<br>
       自分で稼ぎつづけるための<br class="br-sp">ビジネス面もサポートします！</p>
   </section>
-  <section class="index__reason index-reason">
-    <div class="index-reason__inner inner">
-      <h3 class="index-reason__head title">きたむらミュージック<br class="br-sp">スクールが選ばれる理由</h3>
-      <ul class="index-reason__list">
+  <section class="top__reason top-reason">
+    <div class="top-reason__inner inner">
+      <h3 class="top-reason__head title">きたむらミュージック<br class="br-sp">スクールが選ばれる理由</h3>
+      <ul class="top-reason__list">
         <?php
         $reason = [
           [
@@ -83,19 +83,19 @@ require_once $head_path;
         ];
         foreach ($reason as $value) :
         ?>
-          <li class="index-reason__item">
-            <p class="index-reason__image">
+          <li class="top-reason__item">
+            <p class="top-reason__image">
               <picture>
-                <source srcset="assets/img/index/reason/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="assets/img/index/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                <source srcset="../assets/img/index/reason/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                <img class="img-w-100" src="../assets/img/index/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
             </p>
-            <div class="index-reason__box">
-              <header class="index-reason__header">
-                <h4 class="index-reason__title"><?= $value['title'] ?></h4>
+            <div class="top-reason__box">
+              <header class="top-reason__header">
+                <h4 class="top-reason__title"><?= $value['title'] ?></h4>
               </header>
-              <div class="index-reason__content">
-                <p class="index-reason__text"><?= $value['text'] ?></p>
+              <div class="top-reason__content">
+                <p class="top-reason__text"><?= $value['text'] ?></p>
               </div>
             </div>
           </li>
@@ -105,10 +105,10 @@ require_once $head_path;
       </ul>
     </div>
   </section>
-  <section class="index__voice index-voice">
-    <div class="index-voice__inner inner">
-      <h3 class="index-voice__head title">生徒さんたちの声</h3>
-      <div class="index-voice__container">
+  <section class="top__voice top-voice">
+    <div class="top-voice__inner inner">
+      <h3 class="top-voice__head title">生徒さんたちの声</h3>
+      <div class="top-voice__container">
         <div class="swiper">
           <div class="swiper-wrapper">
             <?php
@@ -136,9 +136,9 @@ require_once $head_path;
             foreach ($voice as $value) :
             ?>
               <div class="swiper-slide">
-                <a class="index-voice__image" href="result/details.php"><img class="img-100" src="assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></a>
-                <h4 class="index-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h4>
-                <p class="index-voice__text"><?= $value['text'] ?></p>
+                <a class="top-voice__image" href="../result/details.php"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></a>
+                <h4 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h4>
+                <p class="top-voice__text"><?= $value['text'] ?></p>
               </div>
             <?php
             endforeach;
@@ -150,11 +150,11 @@ require_once $head_path;
       </div>
     </div>
   </section>
-  <section class="index__guide index-guide">
-    <div class="index-guide__inner inner">
-      <h3 class="index-guide__head title">ご利用の流れ</h3>
-      <div class="index-guide__container">
-        <ul class="index-guide__list">
+  <section class="top__guide top-guide">
+    <div class="top-guide__inner inner">
+      <h3 class="top-guide__head title">ご利用の流れ</h3>
+      <div class="top-guide__container">
+        <ul class="top-guide__list">
           <?php
           $guide = [
             [
@@ -176,23 +176,23 @@ require_once $head_path;
           ];
           foreach ($guide as $value) :
           ?>
-            <li class="index-guide__item">
-              <p class="index-guide__circle"></p>
-              <h4 class="index-guide__title"><?= $value['title'] ?></h4>
-              <p class="index-guide__text"><?= $value['text'] ?></p>
+            <li class="top-guide__item">
+              <p class="top-guide__circle"></p>
+              <h4 class="top-guide__title"><?= $value['title'] ?></h4>
+              <p class="top-guide__text"><?= $value['text'] ?></p>
             </li>
           <?php
           endforeach;
           ?>
         </ul>
-        <p class="index-guide__line"></p>
+        <p class="top-guide__line"></p>
       </div>
     </div>
   </section>
-  <section class="index__faq index-faq">
-    <div class="index-faq__inner inner">
-      <h3 class="index-faq__head title">よくあるご質問</h3>
-      <div class="index-faq__container">
+  <section class="top__faq top-faq">
+    <div class="top-faq__inner inner">
+      <h3 class="top-faq__head title">よくあるご質問</h3>
+      <div class="top-faq__container">
         <?php
         $faq = [
           [
@@ -214,18 +214,16 @@ require_once $head_path;
         ];
         foreach ($faq as $value) :
         ?>
-          <dl class="index-faq__list">
-            <dt class="index-faq__question">
-              <div class="index-faq__box">
-                <p class="index-faq__icon">Q</p>
-                <p class="index-faq__text"><?= $value['question'] ?></p>
-                <p class="index-faq__arrow"><img class="img-w-100" src="assets/img/index/faq-arrow-sp.svg" alt="" width="15" height="11" loading="lazy"></p>
+          <dl class="top-faq__list">
+            <dt class="top-faq__question">
+              <div class="top-faq__box">
+                <p class="top-faq__text"><?= $value['question'] ?></p>
+                <p class="top-faq__arrow"><img class="img-w-100" src="../assets/img/index/faq-arrow-sp.svg" alt="" width="15" height="11" loading="lazy"></p>
               </div>
             </dt>
-            <dd class="index-faq__answer">
-              <div class="index-faq__box">
-                <p class="index-faq__icon index-faq__icon--red">A</p>
-                <p class="index-faq__text index-faq__text--red"><?= $value['answer'] ?></p>
+            <dd class="top-faq__answer">
+              <div class="top-faq__box">
+                <p class="top-faq__text"><?= $value['answer'] ?></p>
               </div>
             </dd>
           </dl>
@@ -235,10 +233,10 @@ require_once $head_path;
       </div>
     </div>
   </section>
-  <section class="index__blog index-blog">
-    <div class="index-blog__inner inner">
-      <h3 class="index-blog__head title">ブログ</h3>
-      <ul class="index-blog__list">
+  <section class="top__blog top-blog">
+    <div class="top-blog__inner inner">
+      <h3 class="top-blog__head title">ブログ</h3>
+      <ul class="top-blog__list">
         <?php
         require_once $blog_data_path;
 
@@ -246,16 +244,16 @@ require_once $head_path;
 
         foreach ($blog as $value) :
         ?>
-          <li class="index-blog__item">
-            <div class="index-blog__card card">
-              <a class="card__image-box" href="blog/details.php">
+          <li class="top-blog__item">
+            <div class="top-blog__card card">
+              <a class="card__image-box" href="../blog/details.php">
                 <picture class="card__image">
-                  <source srcset="assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
+                  <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                  <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </a>
-              <h4 class="card__title"><a href="blog/details.php"><?= $value['title'] ?></a></h4>
+              <h4 class="card__title"><a href="../blog/details.php"><?= $value['title'] ?></a></h4>
               <p class="card__date"><?= $value['date'] ?></p>
             </div>
           </li>
@@ -263,7 +261,7 @@ require_once $head_path;
         endforeach;
         ?>
       </ul>
-      <a class="index-blog__link" href="blog">ブログ一覧へ</a>
+      <a class="top-blog__link" href="../blog">ブログ一覧へ</a>
     </div>
   </section>
 </main>

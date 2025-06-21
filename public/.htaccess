@@ -4,4 +4,4 @@ AuthName "Member Site"
 AuthType BASIC
 require valid-user
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /404/index.html

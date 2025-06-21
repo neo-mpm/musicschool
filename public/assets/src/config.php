@@ -22,7 +22,7 @@ define('SERVER_NAME', 'https://' . $_SERVER['SERVER_NAME']);
 // nav menu
 global $navMenu;
 $navMenu = [
-  'index' => 'ホーム',
+  'top' => 'ホーム',
   'plan' => '料金',
   'blog' => 'ブログ',
   'result' => '卒業実績'

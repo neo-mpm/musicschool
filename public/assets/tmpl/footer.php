@@ -17,19 +17,19 @@
   </a>
   <footer class="footer">
     <div class="footer__contact footer-contact">
-      <a class="footer-contact__link button" href="/contact/"><span class="footer-contact__span">お問い合わせ</span></a>
+      <a class="footer-contact__link button" href="../contact/"><span class="footer-contact__span">お問い合わせ</span></a>
     </div>
     <div class="footer__container">
       <ul class="footer__list">
         <?php foreach ($navMenu as $key => $value) : ?>
           <li class="footer__item">
-            <a class="footer__link" href="/<?= $key ?>/">
+            <a class="footer__link" href="../<?= $key ?>/">
               <span><?= $value ?></span>
             </a>
           </li>
         <?php endforeach; ?>
       </ul>
-      <a class="footer__logo" href="/">
+      <a class="footer__logo" href="../top/">
         <svg class="img-100">
           <use href="#logo"></use>
         </svg>

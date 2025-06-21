@@ -20,12 +20,12 @@ require_once $head_path;
   ?>
   <nav class="blog-details__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/blog/">ブログ</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../blog/">ブログ</a>></li>
       <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">ギター</a>></li>
       <li class="breadcrumb__item">
         <span class="breadcrumb__text breadcrumb__text--sp"><?= $title_another; ?></span>
-        <span class="breadcrumb__text breadcrumb__text--pc"><?= $title; ?></span>
+        <span class="breadcrumb__text breadcrumb__text--pc"><?= $title_another; ?></span>
       </li>
     </ul>
   </nav>
@@ -101,8 +101,8 @@ require_once $head_path;
             <h2 class="details-content__head2">H2見出しが入ります。H2見出しが入ります。</h2>
             <p class="details-content__text details-content__text">本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
             <picture class="details-content__image">
-              <source srcset="/assets/img/index/reason/01-pc.jpg" media="(min-width: 768px)">
-              <img class="img-w-100" src="/assets/img/index/reason/01-sp.jpg" alt="" width="1005" height="600" loading="lazy">
+              <source srcset="../assets/img/index/reason/01-pc.jpg" media="(min-width: 768px)">
+              <img class="img-w-100" src="../assets/img/index/reason/01-sp.jpg" alt="" width="1005" height="600" loading="lazy">
             </picture>
             <ul class="details-content__list">
               <?php

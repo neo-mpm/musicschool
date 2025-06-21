@@ -19,9 +19,9 @@ require_once $head_path;
   ?>
   <nav class="result-details__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/result/">卒業実績</a>></li>
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/result/">ポップス</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../result/">卒業実績</a>></li>
+      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../result/">ポップス</a>></li>
       <li class="breadcrumb__item"><span class="breadcrumb__text"><?= $title; ?></span></li>
     </ul>
   </nav>

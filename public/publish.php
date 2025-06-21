@@ -12,18 +12,18 @@ class HtmlPublish
 
   //.htmlへと変換するphpファイルを列挙
   private const PHP_FILE_LIST = [
-    '/blog/index.php',
-    '/blog/details.php',
-    '/contact/index.php',
-    '/contact/send.php',
-    '/plan/index.php',
-    '/result/index.php',
-    '/result/details.php',
-    '/search/index.php',
-    '/404.php',
-    '/index.php',
+    // '/404/index.php',
+    // '/blog/index.php',
+    // '/blog/details.php',
+    // '/contact/index.php',
+    // '/contact/send.php',
+    // '/plan/index.php',
+    // '/result/index.php',
+    // '/result/details.php',
+    // '/search/index.php',
+    '/top/index.php',
   ];
-  private const URL = 'http://localhost:5500';    //httpアクセスのドキュメントルート
+  private const URL = 'http://localhost:10004';    //httpアクセスのドキュメントルート
   private const DIR_SRC = '../public';    //ドキュメントルートのファイルパス
   private const DIR_DST = '../publish';    //出力場所
 

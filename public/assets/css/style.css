@@ -3272,4 +3272,25 @@ result-content
 }
 .result-details__related .details-related__card .card__title {
   margin-top: 0;
+}/*# sourceMappingURL=style.css.map */th: 6.25rem;
+  }
+}
+.result-details__related .details-related__card .card__title {
+  margin-top: 0;
+}
+
+.simplebar-scrollbar::before {
+  inset: 0;
+  left: 12px;
+  background: rgba(80, 80, 80, 0.25);
+  border-radius: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: 1.5625rem;
+  background: rgba(80, 80, 80, 0.15);
 }/*# sourceMappingURL=style.css.map */

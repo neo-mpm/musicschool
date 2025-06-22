@@ -221,15 +221,6 @@ top-reason
   @include mq_up {
     padding: 0 0 get_rem(8px) get_rem(50px);
     margin-top: get_rem(-2px);
-
-    // デザインカンプ通りの1番目だけ2番目以降と違うレイアウト
-    .top-reason__list .top-reason__item:first-child & {
-      display: flex;
-      align-items: center;
-      padding-top: get_rem(8px);
-      padding-bottom: get_rem(9px);
-      margin-top: unset;
-    }
   }
 }
 
@@ -250,11 +241,6 @@ top-reason
   @include mq_up {
     padding-left: get_rem(50px);
     margin-top: get_rem(38px);
-
-    // デザインカンプ通りの1番目だけ2番目以降と違うレイアウト
-    .top-reason__list .top-reason__item:first-child & {
-      margin-top: get_rem(37px);
-    }
   }
 }
 

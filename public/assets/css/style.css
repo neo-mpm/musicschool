@@ -3278,7 +3278,6 @@ result-content
 
 .simplebar-scrollbar::before {
   inset: 0;
-  left: 12px;
   background: rgba(80, 80, 80, 0.25);
   border-radius: 0;
 }

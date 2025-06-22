@@ -49,7 +49,7 @@ require_once $head_path;
   <section class="plan__content plan-content">
     <div class="plan-content__inner inner">
       <h3 class="plan-content__head page-title">プラン内容・月額料金</h3>
-      <div class="plan-content__container" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-min-size="112" data-simplebar-scrollbar-max-size="112">
+      <div class="plan-content__container" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-min-size="100" data-simplebar-scrollbar-max-size="100">
         <table class="plan-content__table">
           <thead>
             <tr class="plan-content__tr">

@@ -21,7 +21,7 @@ class HtmlPublish
     // '/result/index.php',
     // '/result/details.php',
     // '/search/index.php',
-    '/top/index.php',
+    // '/top/index.php',
   ];
   private const URL = 'http://localhost:10004';    //httpアクセスのドキュメントルート
   private const DIR_SRC = '../public';    //ドキュメントルートのファイルパス

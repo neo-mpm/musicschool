@@ -93,7 +93,7 @@ top-topic
     width: get_rem(34px);
     height: get_rem(19px);
     margin-inline: auto;
-    background-image: url('../img/index/arrow-up.svg');
+    background-image: url('../img/top/arrow-up.svg');
     background-repeat: no-repeat;
     background-size: get_rem(34px) get_rem(19px);
   }
@@ -333,7 +333,7 @@ top-voice
       width: 100%;
       height: 100%;
       content: '';
-      background: url('../img/index/arrow-left.svg') no-repeat center;
+      background: url('../img/top/arrow-left.svg') no-repeat center;
       background-size: contain;
     }
   }
@@ -423,7 +423,7 @@ top-guide
   flex-direction: column;
   row-gap: get_rem(36px);
   justify-content: space-between;
-  background-image: url('../img/index/arrow-down.svg');
+  background-image: url('../img/top/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: bottom get_rem(8px) left;
   background-size: get_rem(35px);

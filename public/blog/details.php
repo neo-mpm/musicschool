@@ -101,8 +101,8 @@ require_once $head_path;
             <h2 class="details-content__head2">H2見出しが入ります。H2見出しが入ります。</h2>
             <p class="details-content__text details-content__text">本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
             <picture class="details-content__image">
-              <source srcset="../assets/img/index/reason/01-pc.jpg" media="(min-width: 768px)">
-              <img class="img-w-100" src="../assets/img/index/reason/01-sp.jpg" alt="" width="1005" height="600" loading="lazy">
+              <source srcset="../assets/img/top/reason/01-pc.jpg" media="(min-width: 768px)">
+              <img class="img-w-100" src="../assets/img/top/reason/01-sp.jpg" alt="" width="1005" height="600" loading="lazy">
             </picture>
             <ul class="details-content__list">
               <?php

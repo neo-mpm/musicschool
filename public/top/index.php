@@ -22,8 +22,8 @@ require_once $head_path;
   ?>
   <section class="top__hero top-hero hero">
     <picture class="top-hero__image hero__image">
-      <source srcset="../assets/img/index/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/index/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
+      <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
+      <img class="img-w-100" src="../assets/img/top/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
     </picture>
     <h2 class="top-hero__h2 hero__h2">「音楽で生きる」<br class="br-sp">を叶える<br>
       ミュージックスクール</h2>
@@ -36,8 +36,8 @@ require_once $head_path;
       <p class="top-topic__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
       <p class="top-topic__semicircle">
         <picture>
-          <source srcset="../assets/img/index/semicircle-pc.svg" media="(min-width: 768px)">
-          <img class="img-w-100" src="../assets/img/index/semicircle-sp.svg" alt="" width="335" height="37" loading="lazy">
+          <source srcset="../assets/img/top/semicircle-pc.svg" media="(min-width: 768px)">
+          <img class="img-w-100" src="../assets/img/top/semicircle-sp.svg" alt="" width="335" height="37" loading="lazy">
         </picture>
       </p>
       <div class="top-topic__table">
@@ -86,8 +86,8 @@ require_once $head_path;
           <li class="top-reason__item">
             <p class="top-reason__image">
               <picture>
-                <source srcset="../assets/img/index/reason/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="../assets/img/index/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                <source srcset="../assets/img/top/reason/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                <img class="img-w-100" src="../assets/img/top/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
             </p>
             <div class="top-reason__box">
@@ -218,7 +218,7 @@ require_once $head_path;
             <dt class="top-faq__question">
               <div class="top-faq__box">
                 <p class="top-faq__text"><?= $value['question'] ?></p>
-                <p class="top-faq__arrow"><img class="img-w-100" src="../assets/img/index/faq-arrow-sp.svg" alt="" width="15" height="11" loading="lazy"></p>
+                <p class="top-faq__arrow"><img class="img-w-100" src="../assets/img/top/faq-arrow-sp.svg" alt="" width="15" height="11" loading="lazy"></p>
               </div>
             </dt>
             <dd class="top-faq__answer">

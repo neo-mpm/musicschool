@@ -67,7 +67,7 @@ top-topic
 .top-topic__table {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr get_rem(20px) 1fr;
+  grid-template-columns: get_rem(115px) get_rem(20px) get_rem(115px);
   gap: get_rem(17px) get_rem(30px);
   align-items: center;
   justify-content: center;

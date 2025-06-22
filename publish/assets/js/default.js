@@ -27,8 +27,8 @@ if (overlay && navToggle && navContainer) {
   });
 }
 
-// index-voice
-const voiceSwiperBlock = '.index-voice';
+// top-voice
+const voiceSwiperBlock = '.top-voice';
 const voiceSwiperElement = document.querySelector(voiceSwiperBlock);
 if (voiceSwiperElement) {
   const voiceSwiper = new Swiper(voiceSwiperBlock + ' .swiper', {
@@ -40,13 +40,13 @@ if (voiceSwiperElement) {
   });
 }
 
-// index-faq
+// top-faq
 function accordions() {
-  const accordions = document.querySelectorAll('.index-faq__list');
+  const accordions = document.querySelectorAll('.top-faq__list');
 
   accordions.forEach(function (accordion) {
-    const accordionBtn = accordion.querySelector('.index-faq__question');
-    const accordionTarget = accordion.querySelector('.index-faq__answer');
+    const accordionBtn = accordion.querySelector('.top-faq__question');
+    const accordionTarget = accordion.querySelector('.top-faq__answer');
 
     accordionBtn.addEventListener('click', function () {
       const isOpen = accordion.classList.contains('is-open');
@@ -82,19 +82,13 @@ function handleScrollTopBtn() {
   const scrollTopBtn = document.querySelector('.to-top');
   const footer = document.querySelector('footer');
 
-  let FOOTER_MARGIN;
-  if (window.innerWidth <= breakpoint) {
-    FOOTER_MARGIN = spFooterMargin;
-  } else {
-    FOOTER_MARGIN = pcFooterMargin;
-  }
+  let FOOTER_MARGIN = window.innerWidth <= breakpoint ? spFooterMargin : pcFooterMargin;
 
   if (!scrollTopBtn || !footer) return;
 
-  const footerTop = footer.getBoundingClientRect().top + window.scrollY;
-  console.log(footerTop);
-  const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY;
+  const scrollY = window.pageYOffset !== undefined ? window.pageYOffset : window.scrollY;
+  const windowHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  const footerTop = footer.getBoundingClientRect().top + scrollY;
 
   if (scrollY > SCROLL_THRESHOLD) {
     scrollTopBtn.classList.add('active');
@@ -102,15 +96,21 @@ function handleScrollTopBtn() {
     scrollTopBtn.classList.remove('active');
   }
 
-  if (scrollY + windowHeight > footerTop) {
-    scrollTopBtn.style.bottom = `${windowHeight - (footerTop - scrollY) + FOOTER_MARGIN}px`;
+  const overlap = scrollY + windowHeight - footerTop;
+  if (overlap > 0) {
+    scrollTopBtn.style.bottom = `${overlap + FOOTER_MARGIN}px`;
   } else {
     scrollTopBtn.style.removeProperty('bottom');
   }
 }
 
-window.addEventListener('scroll', handleScrollTopBtn);
+window.addEventListener('scroll', handleScrollTopBtn, { passive: true });
+window.addEventListener('resize', handleScrollTopBtn);
 window.addEventListener('DOMContentLoaded', handleScrollTopBtn);
+
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', handleScrollTopBtn);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   const scrollTopBtn = document.querySelector('.to-top');

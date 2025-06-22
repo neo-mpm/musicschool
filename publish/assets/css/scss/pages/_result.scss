@@ -7,8 +7,7 @@
   padding: get_rem(50px) 0 get_rem(137px);
 
   @include mq_up {
-    padding: get_rem(67px) 0 get_rem(127px);
-    padding: 67px 0 127px;
+    padding: get_rem(67px) 0 get_rem(151px);
   }
 }
 
@@ -37,6 +36,10 @@ result-content
 
 .result-content__item {
   @include mq_up {
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: get_rem(-10px);
+    }
   }
 }
 

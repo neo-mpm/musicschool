@@ -64,6 +64,18 @@
 }
 
 // ==========================================================================
+// result-details__content
+// ==========================================================================
+
+.result-details__content.details-content {
+  .details-content__card.card {
+    .card__tag {
+      min-width: get_rem(100px);
+    }
+  }
+}
+
+// ==========================================================================
 // result-details__table
 // ==========================================================================
 .result-details__table {
@@ -129,6 +141,8 @@
   }
 
   .details-related__card {
+    column-gap: get_rem(32px);
+
     .card__image {
       aspect-ratio: 160 / 113;
 
@@ -138,7 +152,7 @@
       }
     }
 
-    .card__tag {
+    .card__tag[class] {
       min-width: get_rem(80px);
 
       @include mq_up {

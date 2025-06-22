@@ -27,7 +27,7 @@
 // pages
 // ==========================================================================
 
-@use 'pages/index';
+@use 'pages/top';
 @use 'pages/plan';
 @use 'pages/blog';
 @use 'pages/blog-details';
@@ -36,3 +36,9 @@
 @use 'pages/search';
 @use 'pages/result';
 @use 'pages/result-details';
+
+// ==========================================================================
+// vendors
+// ==========================================================================
+
+@use 'vendors/simplebar';

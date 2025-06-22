@@ -4,114 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta content="https://localhost/assets/img/og-image.png" property="og:image">
+  <meta content="https://localhost/assets/img/og-image.jpg" property="og:image">
   <meta content="website" property="og:type">
   <meta content="お問い合わせ | きたむらミュージックスクール" property="og:title">
   <meta content="" name="keywords">
   <meta content="きたむらミュージックスクールのお問い合わせのページです。" name="description">
   <meta content="telephone=metaTags" name="format-detection">
-  <link rel="icon" href="/assets/img/favicon.svg">
-    <link rel="stylesheet" href="/assets/css/style.css?date=250611115458">
+  <link rel="icon" href="../assets/img/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css?date=250622205714">
   <title>お問い合わせ | きたむらミュージックスクール</title>
-    <script src="/assets/js/default.js?date=250611115203" defer></script>
+  <script src="../assets/js/default.js?date=250619223756" defer></script>
 </head>
 
 <body>
-<header class="header">
+  <header class="header">
     <div class="overlay"></div>
-  <div class="header__container">
-    <a class="header__link" href="/">
-      <svg class="header__logo">
-        <use xlink:href="#logo"></use>
-      </svg>
-      <h1 class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</h1>
-    </a>
-    <nav class="header__nav header-nav">
-      <p class="header-nav__box">
-        <span class="header-nav__button">
-          <span class="header-nav__line"></span>
-        </span>
-      </p>
-      <div class="header-nav__container">
-        <ul class="header-nav__list">
-                      <li class="header-nav__item">
-              <a class="header-nav__link" href="/plan/">料金</a>
+    <div class="header__container">
+      <a class="header__link" href="../top/">
+        <svg class="header__logo">
+          <use xlink:href="#logo"></use>
+        </svg>
+        <h1 class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</h1>
+      </a>
+      <nav class="header__nav header-nav">
+        <p class="header-nav__box">
+          <span class="header-nav__button">
+            <span class="header-nav__line"></span>
+          </span>
+        </p>
+        <div class="header-nav__container">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="../top/">ホーム</a>
             </li>
-                      <li class="header-nav__item">
-              <a class="header-nav__link" href="/blog/">ブログ</a>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="../plan/">料金</a>
             </li>
-                      <li class="header-nav__item">
-              <a class="header-nav__link" href="/result/">卒業実績</a>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="../blog/">ブログ</a>
             </li>
-                  </ul>
-        <a class="header-nav__contact button" href="/contact/"><span class="button__span">お問い合わせ</span></a>
-      </div>
-    </nav>
-  </div>
-  <section class="contact__hero contact-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/contact/hero-sp.jpg" alt="お問い合わせ" width="1125" height="1650">
-    </picture>
-    <h2 class="hero__h2">お問い合わせ</h2>
-  </section>
-  <nav class="contact__breadcrumb breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a>></li>
-      <li class="breadcrumb__item">お問い合わせ</li>
-    </ul>
-  </nav>
-</header>
-<main class="contact">
-  <div class="contact__inner inner">
-    <div class="contact__container">
-      <p class="contact__text">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>
-        通常３営業日以内にメールにてご連絡させていただきます。</p>
-      <form class="contact__form contact-form" action="send.html" method="post">
-        <fieldset class="contact-form__fieldset">
-          <label class="contact-form__label" for="company_name">会社名</label>
-          <input type="text" class="contact-form__input" name="company_name" id="company_name" placeholder="きたむらミュージックスクール">
-        </fieldset>
-        <fieldset class="contact-form__fieldset">
-          <label class="contact-form__label" for="name">お名前</label>
-          <input type="text" class="contact-form__input" name="name" id="name" placeholder="北村　翔平">
-        </fieldset>
-        <fieldset class="contact-form__fieldset">
-          <label class="contact-form__label" for="email">メールアドレス</label>
-          <input type="email" class="contact-form__input" name="email" id="email" placeholder="info@kitamura.musicschool.jp">
-        </fieldset>
-        <fieldset class="contact-form__fieldset">
-          <label class="contact-form__label" for="tel">電話番号</label>
-          <input type="tel" class="contact-form__input" name="tel" id="tel" placeholder="090-1234-5678">
-        </fieldset>
-        <fieldset class="contact-form__fieldset contact-form__fieldset--checkboxes">
-          <legend class="contact-form__legend">
-            <span class="contact-form__text-space">目的</span><br class="br-pc">(複数選択可)
-          </legend>
-          <div class="contact-form__checkbox-wrapper">
-            <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">プランについてのお問い合わせ
-            </label>
-            <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="ヒアリングのご予約">ヒアリングのご予約
-            </label>
-            <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="資料請求">資料請求
-            </label>
-            <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="その他">その他
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="contact-form__fieldset  contact-form__fieldset--textarea">
-          <label class="contact-form__label" for="message"><span class="contact-form__text-space">内容</span></label>
-          <textarea class="contact-form__textarea" name="message" id="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
-        </fieldset>
-        <button type="submit" class="contact__button button button--bottom">送信</button>
-      </form>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="../result/">卒業実績</a>
+            </li>
+          </ul>
+          <a class="header-nav__contact button" href="../contact/"><span class="button__span">お問い合わせ</span></a>
+        </div>
+      </nav>
     </div>
-  </div>
-</main>
+    <section class="contact__hero contact-hero hero">
+      <picture class="index-hero__image hero__image">
+        <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/contact/hero-sp.jpg" alt="お問い合わせ" width="1125" height="1650">
+      </picture>
+      <h2 class="hero__h2">お問い合わせ</h2>
+    </section>
+    <nav class="contact__breadcrumb breadcrumb">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+        <li class="breadcrumb__item">お問い合わせ</li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contact">
+    <div class="contact__inner inner">
+      <div class="contact__container">
+        <p class="contact__text">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>
+          通常３営業日以内にメールにてご連絡させていただきます。</p>
+        <form class="contact__form contact-form" action="send.html" method="post">
+          <fieldset class="contact-form__fieldset">
+            <label class="contact-form__label" for="company_name">会社名</label>
+            <input type="text" class="contact-form__input" name="company_name" id="company_name" placeholder="きたむらミュージックスクール">
+          </fieldset>
+          <fieldset class="contact-form__fieldset">
+            <label class="contact-form__label" for="name">お名前</label>
+            <input type="text" class="contact-form__input" name="name" id="name" placeholder="北村　翔平">
+          </fieldset>
+          <fieldset class="contact-form__fieldset">
+            <label class="contact-form__label" for="email">メールアドレス</label>
+            <input type="email" class="contact-form__input" name="email" id="email" placeholder="info@kitamura.musicschool.jp">
+          </fieldset>
+          <fieldset class="contact-form__fieldset">
+            <label class="contact-form__label" for="tel">電話番号</label>
+            <input type="tel" class="contact-form__input" name="tel" id="tel" placeholder="090-1234-5678">
+          </fieldset>
+          <fieldset class="contact-form__fieldset contact-form__fieldset--checkboxes">
+            <legend class="contact-form__legend">
+              <span class="contact-form__text-space">目的</span><br class="br-pc">(複数選択可)
+            </legend>
+            <div class="contact-form__checkbox-wrapper">
+              <label class="contact-form__label contact-form__label--checkbox">
+                <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">プランについてのお問い合わせ
+              </label>
+              <label class="contact-form__label contact-form__label--checkbox">
+                <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="ヒアリングのご予約">ヒアリングのご予約
+              </label>
+              <label class="contact-form__label contact-form__label--checkbox">
+                <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="資料請求">資料請求
+              </label>
+              <label class="contact-form__label contact-form__label--checkbox">
+                <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="その他">その他
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="contact-form__fieldset  contact-form__fieldset--textarea">
+            <label class="contact-form__label" for="message"><span class="contact-form__text-space">内容</span></label>
+            <textarea class="contact-form__textarea" name="message" id="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+          </fieldset>
+          <button type="submit" class="contact__button button button--bottom">送信</button>
+        </form>
+      </div>
+    </div>
+  </main>
   <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
     <symbol id="logo" viewBox="0 0 21 33">
       <path d="M20.1334 23.182C19.7653 22.3566 18.8131 21.9118 17.6807 22.0354C16.6012 22.1535 15.6762 22.6108 14.8962 23.351C13.9229 24.2751 13.7784 25.0889 14.3363 26.2915C13.4208 26.6889 12.6604 26.4007 12.0503 25.4766C11.4898 24.6281 10.9649 23.7401 10.2967 22.9818C9.92421 22.5589 9.52946 22.187 7.96208 21.4008C7.88261 21.2762 7.79954 21.1522 7.70939 21.03C7.35615 20.5502 6.98842 20.0691 6.72059 19.5415C6.1331 18.3837 6.46556 17.3659 7.65214 16.8662C8.32805 16.5818 9.0959 16.5221 9.80766 16.3119C10.1339 16.2155 10.5734 16.0779 10.7057 15.8252C11.2146 14.8536 11.62 13.8275 12.1369 12.6563C8.84968 12.5837 6.66783 13.8305 5.63814 16.9596C4.91212 14.9162 5.41899 13.0217 6.98369 11.6652C8.63472 10.2336 10.6505 9.72975 12.744 9.40886C13.112 9.35221 13.6545 9.21994 13.777 8.96193C15.0042 6.3767 16.1599 3.75797 17.3619 1.09149C17.0944 1.00904 16.9598 0.936974 16.8216 0.928967C13.223 0.723141 9.82158 1.38569 6.75355 3.3484C1.32982 6.81801 0.190413 12.6101 3.94234 17.841C4.78432 19.0145 5.85283 20.0306 6.85496 21.0828C7.94667 22.2291 8.10444 23.3804 7.25743 24.5284C5.76121 23.3659 4.58146 23.3062 2.98234 24.3659C1.70085 25.215 0.767836 26.3565 0.257429 27.8224C-0.278215 29.3599 0.0361767 30.8291 1.06795 31.6058C2.16914 32.4353 3.54552 32.3808 4.91481 31.3947C6.91694 29.9524 8.06468 27.9381 8.65666 25.586C8.77586 25.1124 8.83043 24.6506 8.82689 24.2001L8.84202 24.2422C9.35805 24.1028 9.88386 23.873 11.0203 25.1429C11.2965 25.4516 11.6084 25.7346 11.8801 26.0507C12.6598 26.9585 13.6396 27.436 14.8378 27.4114C16.5345 27.377 18.088 26.9105 19.3855 25.7716C20.2728 24.9928 20.5258 24.0628 20.1334 23.182Z" />
@@ -131,32 +134,32 @@
   </a>
   <footer class="footer">
     <div class="footer__contact footer-contact">
-      <a class="footer-contact__link button" href="/contact/"><span class="footer-contact__span">お問い合わせ</span></a>
+      <a class="footer-contact__link button" href="../contact/"><span class="footer-contact__span">お問い合わせ</span></a>
     </div>
     <div class="footer__container">
       <ul class="footer__list">
-                  <li class="footer__item">
-            <a class="footer__link" href="/index/">
-              <span>ホーム</span>
-            </a>
-          </li>
-                  <li class="footer__item">
-            <a class="footer__link" href="/plan/">
-              <span>料金</span>
-            </a>
-          </li>
-                  <li class="footer__item">
-            <a class="footer__link" href="/blog/">
-              <span>ブログ</span>
-            </a>
-          </li>
-                  <li class="footer__item">
-            <a class="footer__link" href="/result/">
-              <span>卒業実績</span>
-            </a>
-          </li>
-              </ul>
-      <a class="footer__logo" href="/">
+        <li class="footer__item">
+          <a class="footer__link" href="../top/">
+            <span>ホーム</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="../plan/">
+            <span>料金</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="../blog/">
+            <span>ブログ</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="../result/">
+            <span>卒業実績</span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer__logo" href="../top/">
         <svg class="img-100">
           <use href="#logo"></use>
         </svg>
@@ -178,4 +181,4 @@
       </div>
     </div>
   </footer>
-  </body>
+</body>

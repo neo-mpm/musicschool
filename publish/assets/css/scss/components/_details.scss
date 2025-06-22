@@ -22,7 +22,6 @@ details-content
   }
 
   .card__tag {
-    min-width: get_rem(100px);
     padding-top: get_rem(4px);
   }
 
@@ -31,7 +30,7 @@ details-content
     text-align: unset;
 
     @include mq_up {
-      margin-top: 48px;
+      margin-top: get_rem(48px);
       font-size: get_rem(25px);
       font-weight: 700;
       line-height: get_lh(40px, 25px);
@@ -301,7 +300,7 @@ details-related
   }
 
   .card__tag {
-    min-width: get_rem(80px, 15px);
+    min-width: get_rem(80px);
   }
 
   .card__title {

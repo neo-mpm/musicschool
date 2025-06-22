@@ -328,5 +328,6 @@ breadcrumb
 
   @include mq_up {
     display: inline;
+    margin-left: get_rem(6px);
   }
 }

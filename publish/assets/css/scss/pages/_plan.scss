@@ -90,28 +90,25 @@ plan-content
 }
 
 .plan-content__container {
-  padding: get_rem(16px) 0 get_rem(18px);
+  padding: get_rem(16px) 0 get_rem(42px);
   overflow-x: auto;
 
+  @media (width > 713px) {
+    padding-bottom: get_rem(18px);
+  }
+
   @include mq_up {
-    padding-top: get_rem(46px);
+    padding: get_rem(46px) 0 get_rem(42px);
   }
 
-  &::-webkit-scrollbar {
-    height: get_rem(25px);
-  }
-
-  &::-webkit-scrollbar-track {
-    background: rgba(80, 80, 80, 15%);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgba(80, 80, 80, 25%);
+  @media (width > 911px) {
+    padding-bottom: get_rem(18px);
   }
 }
 
 .plan-content__table {
   width: 100%;
+  max-width: get_rem(874px);
   font-size: get_rem(16px);
   line-height: get_lh(30px, 16px);
   table-layout: fixed;

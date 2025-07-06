@@ -271,11 +271,12 @@ hero
   }
 }
 
-.hero__h2 {
+.hero__head {
   z-index: 2;
   grid-area: 1 / 1;
   margin-top: get_rem(12px);
   font-size: get_rem(25px);
+  font-weight: 700;
   line-height: get_lh(60px, 25px);
   color: white;
   text-align: center;

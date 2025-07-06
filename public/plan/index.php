@@ -25,7 +25,7 @@ require_once $head_path;
       <source srcset="../assets/img/plan/hero-pc.jpg" media="(min-width: 768px)">
       <img class="img-w-100" src="../assets/img/plan/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
     </picture>
-    <h2 class="hero__h2"><?= $title; ?></h2>
+    <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="blog__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
@@ -37,7 +37,7 @@ require_once $head_path;
 <main class="<?= $class_name; ?>">
   <section class="plan__topic plan-topic">
     <div class="plan-topic__inner inner">
-      <h3 class="plan-topic__head page-title">料金体系</h3>
+      <h2 class="plan-topic__head page-title">料金体系</h2>
       <div class="plan-topic__container">
         <p class="plan-topic__box">入会金 39,000円</p>
         <p class="plan-topic__image"><img class="img-w-100" src="../assets/img/plan/plus.svg" alt="" width="57" height="57" loading="lazy"></p>
@@ -48,7 +48,7 @@ require_once $head_path;
   </section>
   <section class="plan__content plan-content">
     <div class="plan-content__inner inner">
-      <h3 class="plan-content__head page-title">プラン内容・月額料金</h3>
+      <h2 class="plan-content__head page-title">プラン内容・月額料金</h2>
       <div class="plan-content__container" data-simplebar data-simplebar-auto-hide="false" data-simplebar-scrollbar-min-size="100" data-simplebar-scrollbar-max-size="100">
         <table class="plan-content__table">
           <thead>

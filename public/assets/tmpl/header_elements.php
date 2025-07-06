@@ -4,7 +4,14 @@
       <svg class="header__logo">
         <use xlink:href="#logo"></use>
       </svg>
-      <h1 class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</h1>
+      <?php
+      if (isset($title) && $title === '') {
+        $logo = '<h1 class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</h1>';
+      } else {
+        $logo = '<div class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</div>';
+      }
+      echo $logo;
+      ?>
     </a>
     <nav class="header__nav header-nav">
       <p class="header-nav__box">

@@ -28,7 +28,7 @@ require_once $head_path;
   <section class="search__content search-content blog-content">
     <div class="blog__inner inner">
       <div class="blog__container">
-        <h3 class="search-content__head search-content-head blog-content__head"><span class="search-content-head__text">「<span class="search-content-head__text--bold">キーワード</span>」の検索結果</span><span class="search-content-head__text">28件</span></h3>
+        <h1 class="search-content__head search-content-head blog-content__head"><span class="search-content-head__text">「<span class="search-content-head__text--bold">キーワード</span>」の検索結果</span><span class="search-content-head__text">28件</span></h1>
         <div class="search-content__container blog-content__container">
           <?php
           require_once $blog_data_path;
@@ -45,7 +45,7 @@ require_once $head_path;
                   </picture>
                   <p class="card__tag"><?= $value['tag'] ?></p>
                 </a>
-                <h4 class="card__title"><a class="card__title-link" href="../blog/details.php"><?= $value['title'] ?></a></h4>
+                <h2 class="card__title"><a class="card__title-link" href="../blog/details.php"><?= $value['title'] ?></a></h2>
                 <p class="card__date"><?= $value['date'] ?></p>
                 <p class="card__text"><?= $value['text'] ?></p>
               </div>

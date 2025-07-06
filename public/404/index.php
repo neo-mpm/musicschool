@@ -19,7 +19,7 @@ require_once $head_path;
       <source srcset="../assets/img/404/hero-pc.jpg" media="(min-width: 768px)">
       <img class="img-w-100" src="../assets/img/404/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
     </picture>
-    <h2 class="hero__h2"><?= $title; ?></h2>
+    <h1 class="hero__head"><?= $title; ?></h1>
   </section>
 </header>
 <main class="<?= $class_name; ?>">

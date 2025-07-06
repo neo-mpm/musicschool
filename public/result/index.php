@@ -26,7 +26,7 @@ require_once $head_path;
       <source srcset="../assets/img/result/hero-pc.jpg" media="(min-width: 768px)">
       <img class="img-w-100" src="../assets/img/result/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
     </picture>
-    <h2 class="hero__h2"><?= $title; ?></h2>
+    <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="result__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
@@ -38,7 +38,7 @@ require_once $head_path;
 <main class="<?= $class_name; ?>">
   <section class="result__content result-content">
     <div class="result__inner inner">
-      <h3 class="result-content__head page-title">卒業実績一覧</h3>
+      <h2 class="result-content__head page-title">卒業実績一覧</h2>
       <div class="result-content__container">
         <?php
         $result_genre = array_merge($result_genre, $result_genre);
@@ -51,7 +51,7 @@ require_once $head_path;
                 <p class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></p>
                 <p class="card__tag"><?= $value ?></p>
               </a>
-              <h4 class="card__title"><a class="card__title-link" href="../result/details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h4>
+              <h3 class="card__title"><a class="card__title-link" href="../result/details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h3>
               <p class="card__date">0000.00.00</p>
             </div>
           </article>

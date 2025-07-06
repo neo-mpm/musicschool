@@ -978,11 +978,12 @@ hero
   }
 }
 
-.hero__h2 {
+.hero__head {
   z-index: 2;
   grid-area: 1/1;
   margin-top: 0.75rem;
   font-size: 1.5625rem;
+  font-weight: 700;
   line-height: 2.4;
   color: white;
   text-align: center;
@@ -1214,14 +1215,14 @@ breadcrumb
 /* --------------------------------------------------
 top-hero
 -------------------------------------------------- */
-.top-hero__h2 {
+.top-hero__head {
   margin-top: 1.125rem;
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.6667;
 }
 @media (width >= 768px) {
-  .top-hero__h2 {
+  .top-hero__head {
     margin-top: 1.375rem;
     font-size: 2.5rem;
     line-height: 1.5;

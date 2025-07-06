@@ -20,7 +20,7 @@ require_once $head_path;
       <source srcset="../assets/img/blog/hero-pc.jpg" media="(min-width: 768px)">
       <img class="img-w-100" src="../assets/img/blog/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
     </picture>
-    <h2 class="hero__h2"><?= $title; ?></h2>
+    <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="blog__breadcrumb breadcrumb">
     <ul class="breadcrumb__list">
@@ -32,7 +32,7 @@ require_once $head_path;
 <main class="<?= $class_name; ?>">
   <section class="blog__content blog-content">
     <div class="blog__inner inner">
-      <h3 class="blog-content__head page-title">ブログ一覧</h3>
+      <h2 class="blog-content__head page-title">ブログ一覧</h2>
       <div class="blog-content__container">
         <?php
         require_once $blog_data_path;
@@ -49,7 +49,7 @@ require_once $head_path;
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </a>
-              <h4 class="card__title"><a class="card__title-link" href="details.php"><?= $value['title'] ?></a></h4>
+              <h3 class="card__title"><a class="card__title-link" href="details.php"><?= $value['title'] ?></a></h3>
               <p class="card__date"><?= $value['date'] ?></p>
               <p class="card__text"><?= $value['text'] ?></p>
             </div>

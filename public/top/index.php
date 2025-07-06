@@ -25,7 +25,7 @@ require_once $head_path;
       <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
       <img class="img-w-100" src="../assets/img/top/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
     </picture>
-    <h2 class="top-hero__h2 hero__h2">「音楽で生きる」<br class="br-sp">を叶える<br>
+    <h2 class="top-hero__head hero__head">「音楽で生きる」<br class="br-sp">を叶える<br>
       ミュージックスクール</h2>
   </section>
 </header>

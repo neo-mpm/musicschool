@@ -131,7 +131,7 @@
   cursor: pointer;
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 
   @include mq_up {
     right: get_rem(116px);

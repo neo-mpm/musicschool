@@ -64,8 +64,8 @@ body * {
 }
 
 a {
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 a:link, a:visited {
   color: black;
@@ -172,8 +172,8 @@ main {
   background: white;
   border: 1px solid;
   opacity: 0.7;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .button--bottom {
@@ -787,8 +787,8 @@ details-related
   display: block;
   width: 2.0625rem;
   padding-bottom: 0.125rem;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .header-nav__button.open span {
   -webkit-transform: rotate(45deg);
@@ -823,8 +823,8 @@ details-related
   background: white;
   border-radius: 1px;
   content: "";
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .header-nav__line::before {
   bottom: 0.75rem;
@@ -842,8 +842,8 @@ details-related
   row-gap: 2.5rem;
   width: 18.75rem;
   margin-right: -100vw;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 @media (width >= 768px) {
   .header-nav__container {
@@ -1185,8 +1185,8 @@ breadcrumb
   cursor: pointer;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 @media (width >= 768px) {
   .to-top {

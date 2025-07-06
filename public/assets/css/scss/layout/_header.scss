@@ -92,7 +92,7 @@
   display: block;
   width: get_rem(33px);
   padding-bottom: get_rem(2px);
-  transition-duration: 0.25s;
+  transition-duration: 0.3s;
 
   &.open {
     span {
@@ -131,7 +131,7 @@
     @include burgerSpan;
 
     content: '';
-    transition-duration: 0.25s;
+    transition-duration: 0.3s;
   }
 
   &::before {
@@ -152,7 +152,7 @@
   row-gap: get_rem(40px);
   width: get_rem(300px);
   margin-right: -100vw;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 
   @include mq_up {
     position: unset;

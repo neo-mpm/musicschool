@@ -12,6 +12,7 @@ $css_paths = [$swiper_css_path];
 $swiper_js_path = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
 $js_paths = [$swiper_js_path];
 
+$class_name = 'top';
 $title = '';
 
 require_once $head_path;
@@ -29,7 +30,7 @@ require_once $head_path;
       ミュージックスクール</h2>
   </section>
 </header>
-<main class="index" id="main">
+<main class="<?= $class_name; ?>">
   <section class="top__topic top-topic">
     <div class="top-topic__inner inner">
       <h2 class="top-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h2>

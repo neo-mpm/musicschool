@@ -19,7 +19,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Yu Gothic", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+  font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", "メイリオ", "Meiryo", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.875;
@@ -2935,7 +2935,7 @@ contact__form
 .contact-form__input,
 .contact-form__textarea {
   width: 100%;
-  font-family: "Yu Gothic", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+  font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", "メイリオ", "Meiryo", sans-serif;
   font-size: 0.9375rem;
   line-height: 2.2;
   border: 1px solid;

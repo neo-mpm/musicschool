@@ -16,7 +16,12 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
   <meta content="<?= KEYWORDS ?>" name="keywords">
   <meta content="<?= $meta_tags['description'] ?>" name="description">
   <meta content="telephone=metaTags" name="format-detection">
+  <title><?= $meta_tags['page_title'] ?></title>
   <link rel="icon" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
   <?php
   if (isset($css_paths) && $css_paths) {
     foreach ($css_paths as $path) {
@@ -25,7 +30,6 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
   }
   ?>
   <link rel="stylesheet" href="<?= $default_css_path ?>">
-  <title><?= $meta_tags['page_title'] ?></title>
   <?php
   if (isset($js_paths) && $js_paths) {
     foreach ($js_paths as $path) {

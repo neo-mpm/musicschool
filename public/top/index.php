@@ -32,7 +32,7 @@ require_once $head_path;
 <main class="index" id="main">
   <section class="top__topic top-topic">
     <div class="top-topic__inner inner">
-      <h3 class="top-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h3>
+      <h2 class="top-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h2>
       <p class="top-topic__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
       <p class="top-topic__semicircle">
         <picture>
@@ -54,14 +54,14 @@ require_once $head_path;
     </div>
   </section>
   <section class="top__about top-about">
-    <h3 class="top-about__head title">音楽業界初！<br>
-      収益化までサポートする<br class="br-sp">ミュージックスクール</h3>
+    <h2 class="top-about__head title">音楽業界初！<br>
+      収益化までサポートする<br class="br-sp">ミュージックスクール</h2>
     <p class="top-about__text">楽器や作詞作曲などの<br class="br-sp">技術・知識はもちろんのこと<br>
       自分で稼ぎつづけるための<br class="br-sp">ビジネス面もサポートします！</p>
   </section>
   <section class="top__reason top-reason">
     <div class="top-reason__inner inner">
-      <h3 class="top-reason__head title">きたむらミュージック<br class="br-sp">スクールが選ばれる理由</h3>
+      <h2 class="top-reason__head title">きたむらミュージック<br class="br-sp">スクールが選ばれる理由</h2>
       <ul class="top-reason__list">
         <?php
         $reason = [
@@ -92,7 +92,7 @@ require_once $head_path;
             </p>
             <div class="top-reason__box">
               <header class="top-reason__header">
-                <h4 class="top-reason__title"><?= $value['title'] ?></h4>
+                <h3 class="top-reason__title"><?= $value['title'] ?></h3>
               </header>
               <div class="top-reason__content">
                 <p class="top-reason__text"><?= $value['text'] ?></p>
@@ -107,7 +107,7 @@ require_once $head_path;
   </section>
   <section class="top__voice top-voice">
     <div class="top-voice__inner inner">
-      <h3 class="top-voice__head title">生徒さんたちの声</h3>
+      <h2 class="top-voice__head title">生徒さんたちの声</h2>
       <div class="top-voice__container">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -137,7 +137,7 @@ require_once $head_path;
             ?>
               <div class="swiper-slide">
                 <a class="top-voice__image" href="../result/details.php"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></a>
-                <h4 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h4>
+                <h3 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h3>
                 <p class="top-voice__text"><?= $value['text'] ?></p>
               </div>
             <?php
@@ -152,7 +152,7 @@ require_once $head_path;
   </section>
   <section class="top__guide top-guide">
     <div class="top-guide__inner inner">
-      <h3 class="top-guide__head title">ご利用の流れ</h3>
+      <h2 class="top-guide__head title">ご利用の流れ</h2>
       <div class="top-guide__container">
         <ul class="top-guide__list">
           <?php
@@ -178,7 +178,7 @@ require_once $head_path;
           ?>
             <li class="top-guide__item">
               <p class="top-guide__circle"></p>
-              <h4 class="top-guide__title"><?= $value['title'] ?></h4>
+              <h3 class="top-guide__title"><?= $value['title'] ?></h3>
               <p class="top-guide__text"><?= $value['text'] ?></p>
             </li>
           <?php
@@ -191,7 +191,7 @@ require_once $head_path;
   </section>
   <section class="top__faq top-faq">
     <div class="top-faq__inner inner">
-      <h3 class="top-faq__head title">よくあるご質問</h3>
+      <h2 class="top-faq__head title">よくあるご質問</h2>
       <div class="top-faq__container">
         <?php
         $faq = [
@@ -235,7 +235,7 @@ require_once $head_path;
   </section>
   <section class="top__blog top-blog">
     <div class="top-blog__inner inner">
-      <h3 class="top-blog__head title">ブログ</h3>
+      <h2 class="top-blog__head title">ブログ</h2>
       <ul class="top-blog__list">
         <?php
         require_once $blog_data_path;
@@ -253,7 +253,7 @@ require_once $head_path;
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </a>
-              <h4 class="card__title"><a href="../blog/details.php"><?= $value['title'] ?></a></h4>
+              <h3 class="card__title"><a href="../blog/details.php"><?= $value['title'] ?></a></h3>
               <p class="card__date"><?= $value['date'] ?></p>
             </div>
           </li>

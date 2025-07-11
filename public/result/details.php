@@ -36,7 +36,7 @@ require_once $head_path;
           <div class="details-content__container">
             <div class="details-content__card card">
               <div class="card__image-box">
-                <p class="card__image"><img class="img-100" src="../assets/img/result/01.jpg" alt="" width="1161" height="819" loading="lazy"></p>
+                <div class="card__image"><img class="img-100" src="../assets/img/result/01.jpg" alt="" width="1161" height="819" loading="lazy"></div>
                 <p class="card__tag">ポップス</p>
               </div>
               <h1 class="card__title page-title"><span class="card__title-text"><?= $title ?></span></h1>
@@ -103,7 +103,7 @@ require_once $head_path;
             <li class="details-related__item">
               <div class="details-related__card card">
                 <a class="card__image-box" href="details.php">
-                  <p class="card__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="" width="1161" height="819" loading="lazy"></p>
+                  <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="" width="1161" height="819" loading="lazy"></div>
                   <p class="card__tag"><?= $value['genre'] ?></p>
                 </a>
                 <h5 class="card__title"><a href="details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h5>

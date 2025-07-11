@@ -88,7 +88,7 @@ require_once $head_path;
                     ?>
                       <li class="blog-details-sns__item<?= $class_name ?>">
                         <a class="blog-details-sns__link" href="<?= $value['url'] ?>" target="_blank" rel="noreferrer">
-                          <p class="blog-details-sns__image"><img class="img-w-100" alt="<?= $value['text'] ?>" src="<?= $image_path ?>" width="<?= $width ?>" height="<?= $height ?>" loading="lazy"></p>
+                          <div class="blog-details-sns__image"><img class="img-w-100" alt="<?= $value['text'] ?>" src="<?= $image_path ?>" width="<?= $width ?>" height="<?= $height ?>" loading="lazy"></div>
                           <p class="blog-details-sns__text"><?= $value['text'] ?></p>
                         </a>
                       </li>
@@ -118,7 +118,7 @@ require_once $head_path;
             <hr class="details-content__hr">
             <h3 class="details-content__head3">H3見出しが入ります。H3見出しが入ります。</h3>
             <div class="details-content__quotation blog-details-quotation">
-              <p class="blog-details-quotation__image"><img class="img-w-100" alt="" src="../assets/img/blog/icon/quote.svg" width="28" height="25"></p>
+              <div class="blog-details-quotation__image"><img class="img-w-100" alt="" src="../assets/img/blog/icon/quote.svg" width="28" height="25"></div>
               <p class="details-content__text">本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
             </div>
             <a href="details.php" class="details-content__link">テキストリンク</a>

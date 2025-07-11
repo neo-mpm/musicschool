@@ -50,7 +50,7 @@ require_once $head_path;
           <article class="result-content__item">
             <div class="result-content__card card">
               <a class="card__image-box" href="../result/details.php">
-                <p class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></p>
+                <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></div>
                 <p class="card__tag"><?= $value ?></p>
               </a>
               <h3 class="card__title"><a class="card__title-link" href="../result/details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h3>

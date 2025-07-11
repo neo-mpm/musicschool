@@ -35,12 +35,12 @@ require_once $head_path;
     <div class="top-topic__inner inner">
       <h2 class="top-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h2>
       <p class="top-topic__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
-      <p class="top-topic__semicircle">
+      <div class="top-topic__semicircle">
         <picture>
           <source srcset="../assets/img/top/semicircle-pc.svg" media="(min-width: 768px)">
           <img class="img-w-100" src="../assets/img/top/semicircle-sp.svg" alt="" width="335" height="37" loading="lazy">
         </picture>
-      </p>
+      </div>
       <div class="top-topic__table">
         <p class="top-topic__data top-topic__data--left">Enthusiasm</p>
         <p class="top-topic__data top-topic__data--circle"></p>
@@ -85,12 +85,12 @@ require_once $head_path;
         foreach ($reason as $value) :
         ?>
           <li class="top-reason__item">
-            <p class="top-reason__image">
+            <div class="top-reason__image">
               <picture>
                 <source srcset="../assets/img/top/reason/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
                 <img class="img-w-100" src="../assets/img/top/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
-            </p>
+            </div>
             <div class="top-reason__box">
               <h3 class="top-reason__title"><?= $value['title'] ?></h3>
               <div class="top-reason__content">
@@ -215,7 +215,7 @@ require_once $head_path;
             <dt class="top-faq__question">
               <div class="top-faq__box">
                 <p class="top-faq__text"><?= $value['question'] ?></p>
-                <p class="top-faq__arrow"><img class="img-w-100" src="../assets/img/top/faq-arrow-sp.svg" alt="" width="15" height="11" loading="lazy"></p>
+                <div class="top-faq__arrow"><img class="img-w-100" src="../assets/img/top/faq-arrow-sp.svg" alt="" width="15" height="11" loading="lazy"></div>
               </div>
             </dt>
             <dd class="top-faq__answer">

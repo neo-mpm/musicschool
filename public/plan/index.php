@@ -42,7 +42,7 @@ require_once $head_path;
       <h2 class="plan-topic__head page-title">料金体系</h2>
       <div class="plan-topic__container">
         <p class="plan-topic__box">入会金 39,000円</p>
-        <p class="plan-topic__image"><img class="img-w-100" src="../assets/img/plan/plus.svg" alt="" width="57" height="57" loading="lazy"></p>
+        <div class="plan-topic__image"><img class="img-w-100" src="../assets/img/plan/plus.svg" alt="" width="57" height="57" loading="lazy"></div>
         <p class="plan-topic__box">月額料金</p>
       </div>
       <p class="plan-topic__text">きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>

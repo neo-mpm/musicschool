@@ -1,5 +1,4 @@
-  <div class="overlay"></div>
-  <div class="header__container">
+  <div class="header__inner inner">
     <a class="header__link" href="../top/">
       <svg class="header__logo">
         <use xlink:href="#logo"></use>

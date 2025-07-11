@@ -41,3 +41,4 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
 </head>
 
 <body>
+  <div class="overlay"></div>

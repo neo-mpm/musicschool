@@ -109,46 +109,44 @@ require_once $head_path;
   <section class="top__voice top-voice">
     <div class="top-voice__inner inner">
       <h2 class="top-voice__head title">生徒さんたちの声</h2>
-      <div class="top-voice__container">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <?php
-            $voice = [
-              [
-                'src'  => '01.jpg',
-                'occupation' => '証券会社勤務',
-                'name' => '丸山',
-                'text' => '昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。',
-              ],
-              [
-                'src'  => '02.jpg',
-                'occupation' => 'IT会社勤務',
-                'name' => 'S.E',
-                'text' => 'プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。',
-              ],
-              [
-                'src'  => '03.jpg',
-                'occupation' => '都内大学生',
-                'name' => '田森',
-                'text' => '就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。',
-              ],
-            ];
-            $voice = array_merge($voice, $voice);
-            foreach ($voice as $value) :
-            ?>
-              <div class="swiper-slide">
-                <a class="top-voice__image" href="../result/details.php"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></a>
-                <h3 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h3>
-                <p class="top-voice__text"><?= $value['text'] ?></p>
-              </div>
-            <?php
-            endforeach;
-            ?>
-          </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <?php
+          $voice = [
+            [
+              'src'  => '01.jpg',
+              'occupation' => '証券会社勤務',
+              'name' => '丸山',
+              'text' => '昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。',
+            ],
+            [
+              'src'  => '02.jpg',
+              'occupation' => 'IT会社勤務',
+              'name' => 'S.E',
+              'text' => 'プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。',
+            ],
+            [
+              'src'  => '03.jpg',
+              'occupation' => '都内大学生',
+              'name' => '田森',
+              'text' => '就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。',
+            ],
+          ];
+          $voice = array_merge($voice, $voice);
+          foreach ($voice as $value) :
+          ?>
+            <div class="swiper-slide">
+              <a class="top-voice__image" href="../result/details.php"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></a>
+              <h3 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h3>
+              <p class="top-voice__text"><?= $value['text'] ?></p>
+            </div>
+          <?php
+          endforeach;
+          ?>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
   <section class="top__guide top-guide">

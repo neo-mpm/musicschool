@@ -23,10 +23,12 @@ require_once $head_path;
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="blog__breadcrumb breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-      <li class="breadcrumb__item"><?= $title; ?></li>
-    </ul>
+    <div class="breadcrumb__inner inner">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+        <li class="breadcrumb__item"><?= $title; ?></li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="<?= $class_name; ?>">

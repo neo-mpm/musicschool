@@ -37,13 +37,6 @@
   }
 }
 
-.contact__container {
-  @include mq_up {
-    max-width: 880px;
-    margin-inline: auto;
-  }
-}
-
 .contact__button--send {
   margin-top: get_rem(38px);
 

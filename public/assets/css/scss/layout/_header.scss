@@ -3,17 +3,16 @@
 // ==========================================================================
 // header
 // ==========================================================================
-.header__container {
+.header__inner {
   position: relative;
   z-index: 60;
   display: grid;
   height: get_rem(50px);
+  padding-inline: unset;
 
   @include mq_up {
-    max-width: 920px;
     height: get_rem(80px);
-    padding-inline: get_rem(20px);
-    margin-inline: auto;
+    padding-inline: 20px;
   }
 }
 
@@ -286,7 +285,12 @@ hero
 breadcrumb
 -------------------------------------------------- */
 .breadcrumb {
+  padding-block: get_rem(10px) get_rem(4px);
   background: #e8e8e8;
+
+  @include mq_up {
+    padding-block: get_rem(16px) get_rem(11px);
+  }
 }
 
 .breadcrumb__list {
@@ -294,15 +298,8 @@ breadcrumb
   flex-wrap: wrap;
   column-gap: get_rem(20px);
   align-items: center;
-  padding: get_rem(10px) get_rem(20px) get_rem(4px);
   font-size: get_rem(16px);
   line-height: get_lh(22px, 16px);
-
-  @include mq_up {
-    max-width: 920px;
-    padding: get_rem(16px) get_rem(20px) get_rem(11px);
-    margin-inline: auto;
-  }
 }
 
 .breadcrumb__item {

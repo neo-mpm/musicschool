@@ -18,42 +18,42 @@ require_once $head_path;
   require_once $header_elements_path;
   ?>
   <nav class="detail__breadcrumb breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-      <li class="breadcrumb__item"><span class="breadcrumb__text"><?= $title; ?></span></li>
-    </ul>
+    <div class="breadcrumb__inner inner">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__text"><?= $title; ?></span></li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="<?= $class_name; ?>">
   <section class="search__content search-content blog-content">
-    <div class="blog__inner inner">
-      <div class="blog__container">
-        <h1 class="search-content__head search-content-head blog-content__head"><span class="search-content-head__text">「<span class="search-content-head__text--bold">キーワード</span>」の検索結果</span><span class="search-content-head__text">28件</span></h1>
-        <div class="search-content__container blog-content__container">
-          <?php
-          require_once $blog_data_path;
-          $blog = array_merge($blog, $blog, $blog);
-          $blog[] = $blog[0];
-          foreach ($blog as $index => $value) :
-          ?>
-            <article class="blog-content__item">
-              <div class="blog-content__card card">
-                <a class="card__image-box" href="../blog/details.php">
-                  <picture class="card__image">
-                    <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                    <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                  </picture>
-                  <p class="card__tag"><?= $value['tag'] ?></p>
-                </a>
-                <h2 class="card__title"><a class="card__title-link" href="../blog/details.php"><?= $value['title'] ?></a></h2>
-                <p class="card__date"><?= $value['date'] ?></p>
-                <p class="card__text"><?= $value['text'] ?></p>
-              </div>
-            </article>
-          <?php
-          endforeach;
-          ?>
-        </div>
+    <div class="search__inner inner">
+      <h1 class="search-content__head search-content-head blog-content__head"><span class="search-content-head__text">「<span class="search-content-head__text--bold">キーワード</span>」の検索結果</span><span class="search-content-head__text">28件</span></h1>
+      <div class="search-content__container blog-content__container">
+        <?php
+        require_once $blog_data_path;
+        $blog = array_merge($blog, $blog, $blog);
+        $blog[] = $blog[0];
+        foreach ($blog as $index => $value) :
+        ?>
+          <article class="blog-content__item">
+            <div class="blog-content__card card">
+              <a class="card__image-box" href="../blog/details.php">
+                <picture class="card__image">
+                  <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                  <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
+                </picture>
+                <p class="card__tag"><?= $value['tag'] ?></p>
+              </a>
+              <h2 class="card__title"><a class="card__title-link" href="../blog/details.php"><?= $value['title'] ?></a></h2>
+              <p class="card__date"><?= $value['date'] ?></p>
+              <p class="card__text"><?= $value['text'] ?></p>
+            </div>
+          </article>
+        <?php
+        endforeach;
+        ?>
       </div>
     </div>
   </section>

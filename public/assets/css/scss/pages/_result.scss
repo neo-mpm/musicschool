@@ -22,8 +22,6 @@ result-content
   @include mq_up {
     grid-template-columns: repeat(2, 1fr);
     gap: get_rem(71px) get_rem(106px);
-    max-width: 880px;
-    margin-inline: auto;
   }
 }
 

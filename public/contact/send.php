@@ -22,10 +22,12 @@ require_once $head_path;
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="contact__breadcrumb breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-      <li class="breadcrumb__item">送信完了</li>
-    </ul>
+    <div class="breadcrumb__inner inner">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+        <li class="breadcrumb__item">送信完了</li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="<?= $class_name; ?> contact--send">

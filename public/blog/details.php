@@ -19,15 +19,17 @@ require_once $head_path;
   require_once $header_elements_path;
   ?>
   <nav class="blog-details__breadcrumb breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="../blog/">ブログ</a>></li>
-      <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">ギター</a>></li>
-      <li class="breadcrumb__item">
-        <span class="breadcrumb__text breadcrumb__text--sp"><?= $title_another; ?></span>
-        <span class="breadcrumb__text breadcrumb__text--pc"><?= $title_another; ?></span>
-      </li>
-    </ul>
+    <div class="breadcrumb__inner inner">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../blog/">ブログ</a>></li>
+        <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">ギター</a>></li>
+        <li class="breadcrumb__item">
+          <span class="breadcrumb__text breadcrumb__text--sp"><?= $title_another; ?></span>
+          <span class="breadcrumb__text breadcrumb__text--pc"><?= $title_another; ?></span>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="<?= $class_name; ?>">

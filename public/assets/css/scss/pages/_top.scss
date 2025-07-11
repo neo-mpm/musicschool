@@ -187,8 +187,7 @@ top-reason
 
   @include mq_up {
     row-gap: get_rem(50px);
-    max-width: 880px;
-    margin: get_rem(27px) auto 0;
+    margin-top: get_rem(27px);
   }
 }
 
@@ -333,12 +332,6 @@ top-voice
   @include mq_up {
     font-size: get_em(30px, 16px);
   }
-}
-
-.top-voice__container {
-  position: relative;
-  max-width: 966px;
-  margin-inline: auto;
 }
 
 .top-voice__image {
@@ -639,13 +632,6 @@ top-blog
       width: get_rem(260px);
       aspect-ratio: 260 / 200;
     }
-  }
-}
-
-.top-blog__inner {
-  @include mq_up {
-    max-width: 926px;
-    margin-inline: auto;
   }
 }
 

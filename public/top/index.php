@@ -92,9 +92,7 @@ require_once $head_path;
               </picture>
             </p>
             <div class="top-reason__box">
-              <header class="top-reason__header">
-                <h3 class="top-reason__title"><?= $value['title'] ?></h3>
-              </header>
+              <h3 class="top-reason__title"><?= $value['title'] ?></h3>
               <div class="top-reason__content">
                 <p class="top-reason__text"><?= $value['text'] ?></p>
               </div>

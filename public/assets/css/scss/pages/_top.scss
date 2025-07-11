@@ -213,22 +213,16 @@ top-reason
   }
 }
 
-.top-reason__header {
+.top-reason__title {
   padding-bottom: get_rem(7px);
+  font-size: get_rem(20px);
+  font-weight: 700;
+  line-height: get_lh(30px, 20px);
   border-bottom: get_rem(2px) solid var(--main-color);
 
   @include mq_up {
     padding: 0 0 get_rem(8px) get_rem(50px);
     margin-top: get_rem(-2px);
-  }
-}
-
-.top-reason__title {
-  font-size: get_rem(20px);
-  font-weight: 700;
-  line-height: get_lh(30px, 20px);
-
-  @include mq_up {
     font-size: get_rem(22px);
     line-height: get_lh(33px, 22px);
   }

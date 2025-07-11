@@ -1460,24 +1460,17 @@ top-reason
   }
 }
 
-.top-reason__header {
-  padding-bottom: 0.4375rem;
-  border-bottom: 0.125rem solid var(--main-color);
-}
-@media (width >= 768px) {
-  .top-reason__header {
-    padding: 0 0 0.5rem 3.125rem;
-    margin-top: -0.125rem;
-  }
-}
-
 .top-reason__title {
+  padding-bottom: 0.4375rem;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.5;
+  border-bottom: 0.125rem solid var(--main-color);
 }
 @media (width >= 768px) {
   .top-reason__title {
+    padding: 0 0 0.5rem 3.125rem;
+    margin-top: -0.125rem;
     font-size: 1.375rem;
     line-height: 1.5;
   }

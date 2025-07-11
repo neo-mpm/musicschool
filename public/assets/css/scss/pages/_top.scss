@@ -276,22 +276,9 @@ top-voice
   }
 
   .swiper-slide {
-    display: grid;
-
     @include mq_up {
       width: get_em(270px);
       margin-right: get_em(35px);
-    }
-
-    &::before {
-      grid-area: 1 / 1;
-      content: '';
-      background: white;
-
-      @include mq_up {
-        width: get_em(270px);
-        aspect-ratio: 270 / 190;
-      }
     }
 
     &:last-child {
@@ -328,8 +315,14 @@ top-voice
   }
 }
 
+.top-voice__link {
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
 .top-voice__image {
-  grid-area: 1 / 1;
   aspect-ratio: 335 / 200;
 
   @include mq_up {

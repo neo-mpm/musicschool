@@ -134,9 +134,11 @@ require_once $head_path;
           foreach ($voice as $value) :
           ?>
             <div class="swiper-slide">
-              <a class="top-voice__image" href="../result/details.php"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></a>
-              <h3 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h3>
-              <p class="top-voice__text"><?= $value['text'] ?></p>
+              <a class="top-voice__link" href="../result/details.php">
+                <div class="top-voice__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></div>
+                <h3 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h3>
+                <p class="top-voice__text"><?= $value['text'] ?></p>
+              </a>
             </div>
           <?php
           endforeach;
@@ -242,17 +244,17 @@ require_once $head_path;
         foreach ($blog as $value) :
         ?>
           <li class="top-blog__item">
-            <div class="top-blog__card card">
-              <a class="card__image-box" href="../blog/details.php">
+            <a class="top-blog__card card" href="../blog/details.php">
+              <div class="card__image-box">
                 <picture class="card__image">
                   <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
                   <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
-              </a>
-              <h3 class="card__title"><a href="../blog/details.php"><?= $value['title'] ?></a></h3>
+              </div>
+              <h3 class="card__title"><?= $value['title'] ?></h3>
               <p class="card__date"><?= $value['date'] ?></p>
-            </div>
+            </a>
           </li>
         <?php
         endforeach;

@@ -43,18 +43,18 @@ require_once $head_path;
         foreach ($blog as $index => $value) :
         ?>
           <article class="blog-content__item">
-            <div class="blog-content__card card">
-              <a class="card__image-box" href="details.php">
+            <a class="blog-content__card card" href="details.php">
+              <div class="card__image-box">
                 <picture class="card__image">
                   <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
                   <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
-              </a>
-              <h3 class="card__title"><a class="card__title-link" href="details.php"><?= $value['title'] ?></a></h3>
+              </div>
+              <h3 class="card__title"><?= $value['title'] ?></h3>
               <p class="card__date"><?= $value['date'] ?></p>
               <p class="card__text"><?= $value['text'] ?></p>
-            </div>
+            </a>
           </article>
         <?php
         endforeach;

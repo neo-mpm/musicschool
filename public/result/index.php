@@ -48,14 +48,14 @@ require_once $head_path;
           $index = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
         ?>
           <article class="result-content__item">
-            <div class="result-content__card card">
-              <a class="card__image-box" href="../result/details.php">
+            <a class="result-content__card card" href="../result/details.php">
+              <div class="card__image-box">
                 <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></div>
                 <p class="card__tag"><?= $value ?></p>
-              </a>
-              <h3 class="card__title"><a class="card__title-link" href="../result/details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h3>
+              </div>
+              <h3 class="card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
               <p class="card__date">0000.00.00</p>
-            </div>
+            </a>
           </article>
         <?php
         endforeach;

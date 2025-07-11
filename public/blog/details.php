@@ -124,16 +124,16 @@ require_once $head_path;
             <a href="details.php" class="details-content__link">テキストリンク</a>
           </div>
           <div class="details-content__bottom details-bottom">
-            <div class="details-bottom__box details-bottom__prev">
+            <a class="details-bottom__box details-bottom__prev" href="details.php">
               <p class="details-bottom__link">◀︎ 前の記事</p>
-              <a href="details.php" class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></a>
-              <p class="details-bottom__title"><a href="details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></p>
-            </div>
-            <div class="details-bottom__box details-bottom__next">
+              <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></div>
+              <p class="details-bottom__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+            </a>
+            <a class="details-bottom__box details-bottom__next" href="details.php">
               <p class="details-bottom__link">次の記事 ▶︎</p>
-              <a href="details.php" class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></a>
-              <p class="details-bottom__title"><a href="details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></p>
-            </div>
+              <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></div>
+              <p class="details-bottom__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+            </a>
           </div>
         </article>
         <aside class="blog-details__related details-related details-aside">
@@ -143,17 +143,17 @@ require_once $head_path;
             for ($i = 0; $i < 3; $i++) :
             ?>
               <li class="details-related__item">
-                <div class="details-related__card card">
-                  <a href="details.php" class="card__image-box">
+                <a class="details-related__card card" href="details.php">
+                  <div class="card__image-box">
                     <picture class="card__image">
                       <source srcset="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" media="(min-width: 768px)">
                       <img class="img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
                     </picture>
                     <p class="card__tag">ギター</p>
-                  </a>
-                  <h5 class="card__title"><a href="details.php">タイトルが入ります。タイトルが入ります。タイトルが入ります。</a></h5>
+                  </div>
+                  <h5 class="card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
                   <p class="card__date">0000.00.00</p>
-                </div>
+                </a>
               </li>
             <?php
             endfor;
@@ -186,12 +186,12 @@ require_once $head_path;
             for ($i = 0; $i < 3; $i++) :
             ?>
               <li class="blog-details-recommend__item">
-                <div class="blog-details-recommend__card card">
-                  <a class="card__image-box" href="details.php">
-                    <p class="card__image"></p>
-                  </a>
-                  <h5 class="card__title"><a href="details.php">タイトルが入ります。タイトル</a></h5>
-                </div>
+                <a class="blog-details-recommend__card card" href="details.php">
+                  <div class="card__image-box">
+                    <div class="card__image"></div>
+                  </div>
+                  <h5 class="card__title">タイトルが入ります。タイトル</h5>
+                </a>
               </li>
             <?php
             endfor;

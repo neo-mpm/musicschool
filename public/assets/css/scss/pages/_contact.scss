@@ -10,8 +10,12 @@
     padding: get_rem(69px) 0 get_rem(100px);
   }
 
-  & ~ .footer > .footer__contact {
-    display: none;
+  & ~ .links {
+    width: fit-content;
+
+    .links__to-contact {
+      display: none;
+    }
   }
 }
 

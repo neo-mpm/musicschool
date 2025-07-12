@@ -75,14 +75,10 @@ document.addEventListener('DOMContentLoaded', accordions);
 
 // back-to-top
 function handleScrollTopBtn() {
-  const spFooterMargin = 20;
-  const pcFooterMargin = 30;
   const SCROLL_THRESHOLD = 100;
 
-  const scrollTopBtn = document.querySelector('.to-top');
+  const scrollTopBtn = document.querySelector('.links');
   const footer = document.querySelector('footer');
-
-  let FOOTER_MARGIN = window.innerWidth <= breakpoint ? spFooterMargin : pcFooterMargin;
 
   if (!scrollTopBtn || !footer) return;
 
@@ -98,7 +94,7 @@ function handleScrollTopBtn() {
 
   const overlap = scrollY + windowHeight - footerTop;
   if (overlap > 0) {
-    scrollTopBtn.style.bottom = `${overlap + FOOTER_MARGIN}px`;
+    scrollTopBtn.style.bottom = overlap + 'px';
   } else {
     scrollTopBtn.style.removeProperty('bottom');
   }
@@ -113,7 +109,7 @@ if (window.visualViewport) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const scrollTopBtn = document.querySelector('.to-top');
+  const scrollTopBtn = document.querySelector('.links__to-top');
   if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', function (e) {
       e.preventDefault();

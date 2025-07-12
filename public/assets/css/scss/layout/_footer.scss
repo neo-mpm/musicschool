@@ -1,11 +1,68 @@
 @use '../base/config' as *;
 
 // ==========================================================================
-// footer
+// links
 // ==========================================================================
+.links {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
 
-.footer-contact__link {
-  width: get_rem(335px);
+  @include mq_up {
+    width: fit-content;
+    min-width: get_rem(300px);
+  }
+
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.links__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
+  @include mq_up {
+    align-items: center;
+    padding-inline: unset;
+  }
+}
+
+.links__to-top {
+  z-index: 100;
+  display: block;
+  width: get_rem(68px);
+  height: get_rem(68px);
+  margin-bottom: get_rem(20px);
+  cursor: pointer;
+  border-radius: 50%;
+
+  @include mq_up {
+    margin-bottom: get_rem(30px);
+  }
+
+  svg {
+    width: 99%;
+    height: 99%;
+    margin: 0;
+    border-radius: 50%;
+    opacity: 0.502;
+  }
+}
+
+/* --------------------------------------------------
+links-to-contact
+-------------------------------------------------- */
+.links-to-contact {
+  width: 100%;
+  max-width: get_rem(335px);
   height: get_rem(60px);
   padding-top: get_rem(8px);
   margin-inline: auto;
@@ -19,17 +76,15 @@
     padding-top: get_rem(10px);
     margin-inline: auto 0;
   }
-
-  &:hover,
-  &:active {
-    border-bottom: unset;
-  }
 }
 
-.footer-contact__span {
+.links-to-contact__span {
   margin-right: get_rem(-4px);
 }
 
+// ==========================================================================
+// footer
+// ==========================================================================
 .footer__container {
   padding: get_rem(45px) get_rem(20px) get_rem(51px);
   color: white;
@@ -115,48 +170,4 @@
   display: block;
   width: 24%;
   height: 100%;
-}
-
-// ==========================================================================
-// back-to-top
-// ==========================================================================
-.to-top {
-  position: fixed;
-  right: get_rem(20px);
-  bottom: get_rem(20px);
-  z-index: 100;
-  width: get_rem(68px);
-  height: get_rem(68px);
-  pointer-events: none;
-  cursor: pointer;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s;
-
-  @include mq_up {
-    right: get_rem(116px);
-    bottom: get_rem(30px);
-  }
-
-  &:hover,
-  &:active {
-    opacity: 0;
-  }
-
-  &.active {
-    pointer-events: auto;
-    opacity: 1;
-
-    &:hover,
-    &:active {
-      opacity: 0.7;
-    }
-  }
-
-  svg {
-    width: 99%;
-    height: 99%;
-    margin: 0;
-    opacity: 0.502;
-  }
 }

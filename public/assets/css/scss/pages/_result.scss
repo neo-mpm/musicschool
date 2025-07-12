@@ -4,10 +4,10 @@
 // result
 // ==========================================================================
 .result {
-  padding: get_rem(50px) 0 get_rem(137px);
+  padding: get_rem(50px) 0 get_rem(207px);
 
   @include mq_up {
-    padding: get_rem(67px) 0 get_rem(151px);
+    padding: get_rem(67px) 0 get_rem(211px);
   }
 }
 

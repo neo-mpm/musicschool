@@ -4,10 +4,10 @@
 // blog
 // ==========================================================================
 .blog {
-  padding-bottom: get_rem(143px);
+  padding-bottom: get_rem(203px);
 
   @include mq_up {
-    padding-bottom: get_rem(151px);
+    padding-bottom: get_rem(211px);
   }
 }
 
@@ -34,6 +34,7 @@ blog-content
 }
 
 .blog-content__card.card {
+  display: block;
   padding-bottom: get_rem(37px);
 
   @include mq_up {

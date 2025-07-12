@@ -78,10 +78,10 @@ a {
 }
 
 main {
-  padding-bottom: get_rem(130px);
+  padding-bottom: get_rem(188px);
 
   @include mq_up {
-    padding-bottom: 144px;
+    padding-bottom: get_rem(202px);
   }
 }
 

@@ -1557,9 +1557,19 @@ top-voice
 }
 
 @media (width >= 768px) {
+  .top-voice__inner {
+    max-width: 1006px;
+  }
+}
+
+@media (width >= 768px) {
   .top-voice__head.title {
     font-size: 1.875em;
   }
+}
+
+.top-voice__container {
+  position: relative;
 }
 
 .top-voice__link:link, .top-voice__link:visited {

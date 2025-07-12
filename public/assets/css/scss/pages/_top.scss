@@ -309,10 +309,20 @@ top-voice
   }
 }
 
+.top-voice__inner {
+  @include mq_up {
+    max-width: 1006px;
+  }
+}
+
 .top-voice__head.title {
   @include mq_up {
     font-size: get_em(30px, 16px);
   }
+}
+
+.top-voice__container {
+  position: relative;
 }
 
 .top-voice__link {

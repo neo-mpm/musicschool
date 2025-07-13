@@ -21,7 +21,7 @@
       <div class="header-nav__container">
         <ul class="header-nav__list">
           <?php foreach ($navMenu as $key => $value) :
-            if ($key === 'index') continue; ?>
+            if ($key === 'top') continue; ?>
             <li class="header-nav__item">
               <a class="header-nav__link" href="../<?= $key ?>/"><?= $value ?></a>
             </li>

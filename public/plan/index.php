@@ -1,8 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footer_path = ASSETS . '/tmpl/footer.php';
 
 $simplebar_css_path = 'https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css';
@@ -14,12 +13,9 @@ $js_paths = [$simplebar_js_path];
 $class_name = 'plan';
 $title = 'プラン・料金';
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <section class="plan__hero plan-hero hero">
     <picture class="index-hero__image hero__image">
       <source srcset="../assets/img/plan/hero-pc.jpg" media="(min-width: 768px)">
@@ -35,8 +31,6 @@ require_once $head_path;
       </ul>
     </div>
   </nav>
-</header>
-<main class="<?= $class_name; ?>">
   <section class="plan__topic plan-topic">
     <div class="plan-topic__inner inner">
       <h2 class="plan-topic__head page-title">料金体系</h2>

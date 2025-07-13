@@ -1,8 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footer_path = ASSETS . '/tmpl/footer.php';
 $blog_data_path = $_SERVER['DOCUMENT_ROOT'] . '/blog/data.php';
 
@@ -15,12 +14,9 @@ $js_paths = [$swiper_js_path];
 $class_name = 'top';
 $title = '';
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <section class="top__hero top-hero hero">
     <picture class="top-hero__image hero__image">
       <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
@@ -29,8 +25,6 @@ require_once $head_path;
     <h2 class="top-hero__head hero__head">「音楽で生きる」<br class="br-sp">を叶える<br>
       ミュージックスクール</h2>
   </section>
-</header>
-<main class="<?= $class_name; ?>">
   <section class="top__topic top-topic">
     <div class="top-topic__inner inner">
       <h2 class="top-topic__head title">全人類、<br class="br-sp">ミュージシャン計画。</h2>

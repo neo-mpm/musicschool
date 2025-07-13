@@ -1,19 +1,15 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footer_path = ASSETS . '/tmpl/footer.php';
 
 $class_name = 'page404';
 $title = '404 not fonud';
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <section class="page404__hero page404-hero hero">
     <picture class="index-hero__image hero__image">
       <source srcset="../assets/img/404/hero-pc.jpg" media="(min-width: 768px)">
@@ -21,8 +17,6 @@ require_once $head_path;
     </picture>
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
-</header>
-<main class="<?= $class_name; ?>">
   <div class="page404__inner inner">
     <div class="page404__container">
       <p class="page404__text">申し訳ございませんが、お探しのページが見つかりませんでした。<br>

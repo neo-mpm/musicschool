@@ -1,19 +1,15 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footer_path = ASSETS . '/tmpl/footer.php';
 
 $class_name = 'contact';
 $title = 'お問い合わせ';
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <section class="contact__hero contact-hero hero">
     <picture class="index-hero__image hero__image">
       <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
@@ -29,8 +25,6 @@ require_once $head_path;
       </ul>
     </div>
   </nav>
-</header>
-<main class="<?= $class_name; ?>">
   <div class="contact__inner inner">
     <p class="contact__text">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>
       通常３営業日以内にメールにてご連絡させていただきます。</p>

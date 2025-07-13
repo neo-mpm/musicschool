@@ -1,8 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footerPath = ASSETS . '/tmpl/footer.php';
 $blog_data_path = $_SERVER['DOCUMENT_ROOT'] . '/blog/data.php';
 
@@ -11,12 +10,9 @@ require_once $blog_data_path;
 $class_name = 'blog-details';
 $title = $blog[0]['title'];
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <nav class="blog-details__breadcrumb breadcrumb">
     <div class="breadcrumb__inner inner">
       <ul class="breadcrumb__list">
@@ -27,10 +23,8 @@ require_once $head_path;
       </ul>
     </div>
   </nav>
-</header>
-<main class="<?= $class_name; ?>">
-  <div class="blog-details__inner inner">
-    <div class="blog-details__container">
+  <div class="blog-details__container">
+    <div class="blog-details__inner inner">
       <div class="blog-details__main">
         <article class="blog-details__content details-content">
           <div class="details-content__inner">

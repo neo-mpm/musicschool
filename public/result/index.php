@@ -1,8 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footerPath = ASSETS . '/tmpl/footer.php';
 $result_genre = [
   'ポップス',
@@ -15,12 +14,9 @@ $result_genre = [
 $class_name = 'result';
 $title = $navMenu[$class_name];
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <section class="result__hero result-hero hero">
     <picture class="index-hero__image hero__image">
       <source srcset="../assets/img/result/hero-pc.jpg" media="(min-width: 768px)">
@@ -36,8 +32,6 @@ require_once $head_path;
       </ul>
     </div>
   </nav>
-</header>
-<main class="<?= $class_name; ?>">
   <section class="result__content result-content">
     <div class="result__inner inner">
       <h2 class="result-content__head page-title">卒業実績一覧</h2>

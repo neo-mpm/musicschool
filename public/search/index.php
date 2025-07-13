@@ -1,8 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footerPath = ASSETS . '/tmpl/footer.php';
 $blog_data_path = $_SERVER['DOCUMENT_ROOT'] . '/blog/data.php';
 
@@ -11,12 +10,9 @@ require_once $blog_data_path;
 $class_name = 'search';
 $title = '検索';
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?>">
   <nav class="detail__breadcrumb breadcrumb">
     <div class="breadcrumb__inner inner">
       <ul class="breadcrumb__list">
@@ -25,8 +21,6 @@ require_once $head_path;
       </ul>
     </div>
   </nav>
-</header>
-<main class="<?= $class_name; ?>">
   <section class="search__content search-content blog-content">
     <div class="search__inner inner">
       <h1 class="search-content__head search-content-head blog-content__head"><span class="search-content-head__text">「<span class="search-content-head__text--bold">キーワード</span>」の検索結果</span><span class="search-content-head__text">28件</span></h1>

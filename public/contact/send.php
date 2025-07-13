@@ -1,19 +1,15 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
-$head_path = ASSETS . '/tmpl/head.php';
-$header_elements_path = ASSETS . '/tmpl/header_elements.php';
+$header_path = ASSETS . '/tmpl/header.php';
 $footer_path = ASSETS . '/tmpl/footer.php';
 
 $class_name = 'contact';
 $title = 'お問い合わせ';
 
-require_once $head_path;
+require_once $header_path;
 ?>
-<header class="header">
-  <?php
-  require_once $header_elements_path;
-  ?>
+<main class="<?= $class_name; ?> contact--send">
   <section class="contact__hero contact-hero hero">
     <picture class="index-hero__image hero__image">
       <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
@@ -29,8 +25,6 @@ require_once $head_path;
       </ul>
     </div>
   </nav>
-</header>
-<main class="<?= $class_name; ?> contact--send">
   <div class="contact__inner inner">
     <div class="contact__container">
       <p class="contact__text">お問い合わせいただきありがとうございました。<br>

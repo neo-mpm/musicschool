@@ -21,7 +21,7 @@ require_once $head_path;
     <div class="breadcrumb__inner inner">
       <ul class="breadcrumb__list">
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-        <li class="breadcrumb__item"><span class="breadcrumb__text"><?= $title; ?></span></li>
+        <li class="breadcrumb__item"><?= $title; ?></li>
       </ul>
     </div>
   </nav>

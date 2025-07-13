@@ -23,7 +23,7 @@ require_once $head_path;
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../result/">卒業実績</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../result/">ポップス</a>></li>
-        <li class="breadcrumb__item"><span class="breadcrumb__text"><?= $title; ?></span></li>
+        <li class="breadcrumb__item"><?= $title; ?></li>
       </ul>
     </div>
   </nav>

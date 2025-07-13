@@ -37,20 +37,6 @@ details-content
     }
   }
 
-  .card__title-text--sp {
-    @include mq_up {
-      display: none;
-    }
-  }
-
-  .card__title-text--pc {
-    display: none;
-
-    @include mq_up {
-      display: inline;
-    }
-  }
-
   .card__date {
     text-align: unset;
 

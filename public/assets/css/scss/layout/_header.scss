@@ -285,47 +285,48 @@ hero
 breadcrumb
 -------------------------------------------------- */
 .breadcrumb {
-  padding-block: get_rem(10px) get_rem(4px);
+  height: get_rem(36px);
+  white-space: nowrap;
   background: #e8e8e8;
 
   @include mq_up {
-    padding-block: get_rem(16px) get_rem(11px);
+    height: get_rem(50px);
   }
+}
+
+.breadcrumb__inner {
+  height: 100%;
 }
 
 .breadcrumb__list {
   display: flex;
-  flex-wrap: wrap;
   column-gap: get_rem(20px);
   align-items: center;
+  height: 100%;
+  overflow-x: auto;
   font-size: get_rem(16px);
   line-height: get_lh(22px, 16px);
+  scrollbar-width: none;
+
+  @include mq_up {
+    overflow: hidden;
+  }
 }
 
 .breadcrumb__item {
-  display: inline-flex;
+  display: flex;
   column-gap: get_rem(20px);
+  align-items: center;
+  height: 100%;
 }
 
 .breadcrumb__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
   &:hover,
   &:active {
-    text-decoration: underline;
     opacity: 0.5;
-  }
-}
-
-.breadcrumb__text--sp {
-  @include mq_up {
-    display: none;
-  }
-}
-
-.breadcrumb__text--pc {
-  display: none;
-
-  @include mq_up {
-    display: inline;
-    margin-left: get_rem(6px);
   }
 }

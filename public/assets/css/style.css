@@ -295,19 +295,6 @@ details-content
     line-height: 1.6;
   }
 }
-@media (width >= 768px) {
-  .details-content__card.card .card__title-text--sp {
-    display: none;
-  }
-}
-.details-content__card.card .card__title-text--pc {
-  display: none;
-}
-@media (width >= 768px) {
-  .details-content__card.card .card__title-text--pc {
-    display: inline;
-  }
-}
 .details-content__card.card .card__date {
   text-align: unset;
 }
@@ -994,59 +981,66 @@ hero
 breadcrumb
 -------------------------------------------------- */
 .breadcrumb {
-  padding-block: 0.625rem 0.25rem;
+  height: 2.25rem;
+  white-space: nowrap;
   background: #e8e8e8;
 }
 @media (width >= 768px) {
   .breadcrumb {
-    padding-block: 1rem 0.6875rem;
+    height: 3.125rem;
   }
+}
+
+.breadcrumb__inner {
+  height: 100%;
 }
 
 .breadcrumb__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  overflow-x: auto;
   font-size: 1rem;
   line-height: 1.375;
+  scrollbar-width: none;
+}
+@media (width >= 768px) {
+  .breadcrumb__list {
+    overflow: hidden;
+  }
 }
 
 .breadcrumb__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
+.breadcrumb__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
 .breadcrumb__link:hover, .breadcrumb__link:active {
-  text-decoration: underline;
   opacity: 0.5;
-}
-
-@media (width >= 768px) {
-  .breadcrumb__text--sp {
-    display: none;
-  }
-}
-
-.breadcrumb__text--pc {
-  display: none;
-}
-@media (width >= 768px) {
-  .breadcrumb__text--pc {
-    display: inline;
-    margin-left: 0.375rem;
-  }
 }
 
 .links {

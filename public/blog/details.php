@@ -10,7 +10,6 @@ require_once $blog_data_path;
 
 $class_name = 'blog-details';
 $title = $blog[0]['title'];
-$title_another = 'アルペジオが劇的に向上する３つの習慣';
 
 require_once $head_path;
 ?>
@@ -24,10 +23,7 @@ require_once $head_path;
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../blog/">ブログ</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">ギター</a>></li>
-        <li class="breadcrumb__item">
-          <span class="breadcrumb__text breadcrumb__text--sp"><?= $title_another; ?></span>
-          <span class="breadcrumb__text breadcrumb__text--pc"><?= $title_another; ?></span>
-        </li>
+        <li class="breadcrumb__item"><?= $title; ?></li>
       </ul>
     </div>
   </nav>
@@ -48,8 +44,7 @@ require_once $head_path;
                   <p class="card__tag"><?= $blog[0]['tag'] ?></p>
                 </div>
                 <h1 class="card__title page-title">
-                  <span class="card__title-text card__title-text--sp"><?= $title ?></span>
-                  <span class="card__title-text card__title-text--pc"><?= $title_another; ?></span>
+                  <span class="card__title-text"><?= $title ?></span>
                 </h1>
                 <p class="card__date"><?= $blog[0]['date'] ?></p>
                 <nav class="details-content__sns blog-details-sns">

@@ -77,7 +77,7 @@ EOM;
               </li>
             <?php endforeach; ?>
           </ul>
-          <a class="header-nav__contact button" href="../contact/"><span class="button__span">お問い合わせ</span></a>
+          <a class="header-nav__contact button" href="../contact/">お問い合わせ</a>
         </div>
       </nav>
     </div>

@@ -290,9 +290,15 @@ top-voice
   .swiper-button-next {
     width: get_rem(30px);
     aspect-ratio: 30 / 38;
+    transition: 0.3s all;
 
     @include mq_up {
       width: get_em(28px);
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
     }
 
     &::after {

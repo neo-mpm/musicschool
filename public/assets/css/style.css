@@ -1594,12 +1594,19 @@ top-voice
 .top-voice .swiper-button-next {
   width: 1.875rem;
   aspect-ratio: 30/38;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 @media (width >= 768px) {
   .top-voice .swiper-button-prev,
   .top-voice .swiper-button-next {
     width: 1.75em;
   }
+}
+.top-voice .swiper-button-prev:hover, .top-voice .swiper-button-prev:active,
+.top-voice .swiper-button-next:hover,
+.top-voice .swiper-button-next:active {
+  opacity: 0.7;
 }
 .top-voice .swiper-button-prev::after,
 .top-voice .swiper-button-next::after {

@@ -44,19 +44,24 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
   <header class="header">
     <div class="header__inner inner">
       <div class="overlay"></div>
+      <?php
+      $logo_element = <<<EOM
       <a class="header__link" href="../top/">
         <svg class="header__logo">
           <use xlink:href="#logo"></use>
         </svg>
-        <?php
-        if (isset($title) && $title === '') {
-          $logo = '<h1 class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</h1>';
-        } else {
-          $logo = '<div class="header__head"><span class="header__head--large">きたむら</span><br class="br-pc">ミュージックスクール</div>';
-        }
-        echo $logo;
-        ?>
+        <p class="header__text"><span class="header__text--large">きたむら</span><br class="br-pc">ミュージックスクール</p>
       </a>
+
+EOM;
+
+      if (isset($title) && $title === '') {
+        $logo = '<h1 class="header__box">' . $logo_element . '</h1>' . PHP_EOL;
+      } else {
+        $logo = '<div class="header__box">' . $logo_element . '</div>' . PHP_EOL;
+      }
+      echo $logo;
+      ?>
       <nav class="header__nav header-nav">
         <p class="header-nav__box">
           <span class="header-nav__button">

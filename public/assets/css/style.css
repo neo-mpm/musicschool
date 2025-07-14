@@ -78,16 +78,18 @@ a:hover, a:active {
 
 main {
   padding-bottom: 11.75rem;
+  margin-top: 3.125rem;
 }
 @media (width >= 768px) {
   main {
     padding-bottom: 12.625rem;
+    margin-top: 5rem;
   }
 }
 
 .overlay {
   position: fixed;
-  z-index: 52;
+  top: 0;
   display: none;
   width: 100%;
   height: 100%;
@@ -106,6 +108,26 @@ main {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.header {
+  z-index: 30;
+}
+
+.overlay[class] {
+  z-index: 40;
+}
+
+.header__nav {
+  z-index: 50;
+}
+
+.hero__head {
+  z-index: 10;
+}
+
+.links {
+  z-index: 20;
 }
 
 .inner {
@@ -676,9 +698,16 @@ details-related
   background: black;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  background: white;
+}
+
 .header__inner {
-  position: relative;
-  z-index: 60;
   display: grid;
   height: 3.125rem;
   padding-inline: unset;
@@ -756,7 +785,6 @@ details-related
 }
 
 .header-nav__box {
-  z-index: 2;
   display: grid;
   place-items: center;
   width: 4.4375rem;
@@ -825,7 +853,6 @@ details-related
   position: fixed;
   top: 3.125rem;
   right: 0;
-  z-index: 3;
   visibility: hidden;
   row-gap: 2.5rem;
   width: 18.75rem;
@@ -967,7 +994,6 @@ hero
 }
 
 .hero__head {
-  z-index: 2;
   grid-area: 1/1;
   margin-top: 0.75rem;
   font-size: 1.5625rem;
@@ -1047,8 +1073,8 @@ breadcrumb
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 100;
   width: 100%;
+  pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -1062,7 +1088,6 @@ breadcrumb
   }
 }
 .links.active {
-  pointer-events: auto;
   opacity: 1;
 }
 
@@ -1078,6 +1103,7 @@ breadcrumb
       -ms-flex-align: end;
           align-items: flex-end;
   width: 100%;
+  pointer-events: none;
 }
 @media (width >= 768px) {
   .links__inner {
@@ -1089,11 +1115,11 @@ breadcrumb
 }
 
 .links__to-top {
-  z-index: 100;
   display: block;
   width: 4.25rem;
   height: 4.25rem;
   margin-bottom: 1.25rem;
+  pointer-events: auto;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -1123,6 +1149,7 @@ links-to-contact
   font-weight: 700;
   line-height: 1.65;
   letter-spacing: 0.25rem;
+  pointer-events: auto;
 }
 @media (width >= 768px) {
   .links-to-contact {
@@ -2413,11 +2440,11 @@ blog-content
 }
 
 .blog-details {
-  padding: 3.125rem 0 12.3125rem;
+  padding-bottom: 12.3125rem;
 }
 @media (width >= 768px) {
   .blog-details {
-    padding: 4.375rem 0 11.75rem;
+    padding-bottom: 11.75rem;
   }
 }
 
@@ -2427,6 +2454,9 @@ blog-content
   }
 }
 
+.blog-details__container {
+  padding-top: 3.125rem;
+}
 @media (width >= 768px) {
   .blog-details__container {
     display: -webkit-box;
@@ -2438,6 +2468,7 @@ blog-content
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-top: 4.375rem;
   }
 }
 
@@ -2761,11 +2792,11 @@ blog-details-category
 }
 
 .contact {
-  padding: 3rem 0 6.75rem;
+  padding-bottom: 6.75rem;
 }
 @media (width >= 768px) {
   .contact {
-    padding: 4.3125rem 0 6.25rem;
+    padding-bottom: 6.25rem;
   }
 }
 .contact ~ .links {
@@ -2775,6 +2806,15 @@ blog-details-category
 }
 .contact ~ .links .links__to-contact {
   display: none;
+}
+
+.contact__container {
+  padding-top: 3rem;
+}
+@media (width >= 768px) {
+  .contact__container {
+    padding-top: 4.3125rem;
+  }
 }
 
 .contact--send {
@@ -3085,17 +3125,26 @@ contact__form
 }
 
 .result {
-  padding: 3.125rem 0 12.9375rem;
+  padding-bottom: 12.9375rem;
 }
 @media (width >= 768px) {
   .result {
-    padding: 4.1875rem 0 13.1875rem;
+    padding-bottom: 13.1875rem;
   }
 }
 
 /* --------------------------------------------------
 result-content
 -------------------------------------------------- */
+.result-content {
+  padding-top: 3.125rem;
+}
+@media (width >= 768px) {
+  .result-content {
+    padding-top: 4.1875rem;
+  }
+}
+
 .result-content__container {
   display: grid;
   row-gap: 2.3125rem;
@@ -3119,17 +3168,21 @@ result-content
 }
 
 .result-details {
-  padding: 3.125rem 0 12.25rem;
+  padding-bottom: 12.25rem;
 }
 @media (width >= 768px) {
   .result-details {
-    padding: 4.375rem 0 9.8125rem;
+    padding-bottom: 9.8125rem;
   }
 }
 
+.result-details__container {
+  padding-top: 3.125rem;
+}
 @media (width >= 768px) {
   .result-details__container {
     max-width: 55rem;
+    padding-top: 4.375rem;
     margin-inline: auto;
   }
   .result-details__container .details-content__card .card__image {

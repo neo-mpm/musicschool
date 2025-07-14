@@ -4,16 +4,19 @@
 // result-details
 // ==========================================================================
 .result-details {
-  padding: get_rem(50px) 0 get_rem(196px);
+  padding-bottom: get_rem(196px);
 
   @include mq_up {
-    padding: get_rem(70px) 0 get_rem(157px);
+    padding-bottom: get_rem(157px);
   }
 }
 
 .result-details__container {
+  padding-top: get_rem(50px);
+
   @include mq_up {
     max-width: get_rem(880px);
+    padding-top: get_rem(70px);
     margin-inline: auto;
 
     .details-content__card {

@@ -4,16 +4,24 @@
 // result
 // ==========================================================================
 .result {
-  padding: get_rem(50px) 0 get_rem(207px);
+  padding-bottom: get_rem(207px);
 
   @include mq_up {
-    padding: get_rem(67px) 0 get_rem(211px);
+    padding-bottom: get_rem(211px);
   }
 }
 
 /* --------------------------------------------------
 result-content
 -------------------------------------------------- */
+.result-content {
+  padding-top: get_rem(50px);
+
+  @include mq_up {
+    padding-top: get_rem(67px);
+  }
+}
+
 .result-content__container {
   display: grid;
   row-gap: get_rem(37px);

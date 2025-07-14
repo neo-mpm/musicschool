@@ -4,10 +4,10 @@
 // blog-details
 // ==========================================================================
 .blog-details {
-  padding: get_rem(50px) 0 get_rem(197px);
+  padding-bottom: get_rem(197px);
 
   @include mq_up {
-    padding: get_rem(70px) 0 get_rem(188px);
+    padding-bottom: get_rem(188px);
   }
 }
 
@@ -18,10 +18,13 @@
 }
 
 .blog-details__container {
+  padding-top: get_rem(50px);
+
   @include mq_up {
     display: flex;
     column-gap: get_rem(31px);
     justify-content: center;
+    padding-top: get_rem(70px);
   }
 }
 

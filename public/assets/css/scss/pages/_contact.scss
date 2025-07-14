@@ -4,10 +4,10 @@
 // contact
 // ==========================================================================
 .contact {
-  padding: get_rem(48px) 0 get_rem(108px);
+  padding-bottom: get_rem(108px);
 
   @include mq_up {
-    padding: get_rem(69px) 0 get_rem(100px);
+    padding-bottom: get_rem(100px);
   }
 
   & ~ .links {
@@ -16,6 +16,14 @@
     .links__to-contact {
       display: none;
     }
+  }
+}
+
+.contact__container {
+  padding-top: get_rem(48px);
+
+  @include mq_up {
+    padding-top: get_rem(69px);
   }
 }
 

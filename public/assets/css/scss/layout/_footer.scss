@@ -7,8 +7,8 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 100;
   width: 100%;
+  pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
 
@@ -18,7 +18,6 @@
   }
 
   &.active {
-    pointer-events: auto;
     opacity: 1;
   }
 }
@@ -28,6 +27,7 @@
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
+  pointer-events: none;
 
   @include mq_up {
     align-items: center;
@@ -36,11 +36,11 @@
 }
 
 .links__to-top {
-  z-index: 100;
   display: block;
   width: get_rem(68px);
   height: get_rem(68px);
   margin-bottom: get_rem(20px);
+  pointer-events: auto;
   cursor: pointer;
   border-radius: 50%;
 
@@ -70,6 +70,7 @@ links-to-contact
   font-weight: 700;
   line-height: get_lh(33px, 20px);
   letter-spacing: get_rem(4px);
+  pointer-events: auto;
 
   @include mq_up {
     width: get_rem(300px);

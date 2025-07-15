@@ -45,7 +45,6 @@ plan-topic
   place-items: center;
   width: get_rem(210px);
   height: get_rem(60px);
-  padding-top: get_rem(5px);
   font-size: get_rem(20px);
   line-height: get_lh(33px, 20px);
   color: white;
@@ -160,12 +159,7 @@ plan-content
 }
 
 .plan-content__td {
-  padding-top: get_rem(7px);
   border-right: 1px solid black;
-
-  @include mq_up {
-    padding-top: 4px;
-  }
 
   &:first-child {
     padding-left: get_rem(9px);
@@ -182,7 +176,6 @@ plan-content
 }
 
 .plan-content__text {
-  margin-top: get_rem(-1px);
   font-size: get_rem(17px);
   line-height: get_lh(27px, 17px);
 
@@ -191,19 +184,16 @@ plan-content
     line-height: get_lh(25px, 16px);
 
     @include mq_up {
-      margin-top: get_rem(3px);
       font-size: get_rem(17px);
       line-height: get_lh(25px, 17px);
     }
   }
 
   .plan-content__th & {
-    margin-top: get_rem(2px);
     font-size: get_rem(20px);
     line-height: get_lh(25px, 20px);
 
     @include mq_up {
-      margin-top: get_rem(6px);
       font-size: get_rem(20px);
       line-height: get_lh(33px, 20px);
     }

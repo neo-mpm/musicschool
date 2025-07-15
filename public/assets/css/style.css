@@ -1878,7 +1878,6 @@ top-faq
   place-items: center;
   width: 2.1875rem;
   height: 2.1875rem;
-  padding-top: 0.125rem;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.5;
@@ -1886,11 +1885,6 @@ top-faq
   content: "Q";
   background: black;
   border-radius: 50%;
-}
-@media (width >= 768px) {
-  .top-faq__box::before {
-    padding-top: 0;
-  }
 }
 .top-faq__answer .top-faq__box::before {
   content: "A";
@@ -2115,7 +2109,6 @@ plan-topic
   place-items: center;
   width: 13.125rem;
   height: 3.75rem;
-  padding-top: 0.3125rem;
   font-size: 1.25rem;
   line-height: 1.65;
   color: white;
@@ -2239,7 +2232,6 @@ tbody .plan-content__tr:nth-child(even) {
 }
 
 .plan-content__td {
-  padding-top: 0.4375rem;
   border-right: 1px solid black;
 }
 @media (width >= 768px) {
@@ -2261,7 +2253,6 @@ tbody .plan-content__tr:nth-child(even) {
 }
 
 .plan-content__text {
-  margin-top: -0.0625rem;
   font-size: 1.0625rem;
   line-height: 1.5882;
 }

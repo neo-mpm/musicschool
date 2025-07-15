@@ -248,7 +248,7 @@ require_once $header_path;
                 </picture>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </div>
-              <h3 class="card__title"><?= $value['title'] ?></h3>
+              <h3 class="card__title ellipsis"><?= $value['title'] ?></h3>
               <p class="card__date"><?= $value['date'] ?></p>
             </a>
           </li>

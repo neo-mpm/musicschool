@@ -39,7 +39,7 @@ blog-content
 
   @include mq_up {
     display: grid;
-    grid-template: get_rem(27px) get_rem(42px) 1fr / repeat(2, auto);
+    grid-template: auto get_rem(42px) 1fr / repeat(2, auto);
     grid-auto-flow: column;
     column-gap: get_rem(50px);
     align-items: start;

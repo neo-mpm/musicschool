@@ -19,12 +19,12 @@ require_once $header_path;
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../blog/">ブログ</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">ギター</a>></li>
-        <li class="breadcrumb__item"><?= $title; ?></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__text ellipsis"><?= $title; ?></span></li>
       </ul>
     </div>
   </nav>
-  <div class="blog-details__container">
-    <div class="blog-details__inner inner">
+  <div class="blog-details__inner inner">
+    <div class="blog-details__container">
       <div class="blog-details__main">
         <article class="blog-details__content details-content">
           <div class="details-content__inner">
@@ -116,12 +116,12 @@ require_once $header_path;
             <a class="details-bottom__box details-bottom__prev" href="details.php">
               <p class="details-bottom__link">◀︎ 前の記事</p>
               <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></div>
-              <p class="details-bottom__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+              <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
             </a>
             <a class="details-bottom__box details-bottom__next" href="details.php">
               <p class="details-bottom__link">次の記事 ▶︎</p>
               <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></div>
-              <p class="details-bottom__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+              <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
             </a>
           </div>
         </article>
@@ -140,7 +140,7 @@ require_once $header_path;
                     </picture>
                     <p class="card__tag">ギター</p>
                   </div>
-                  <h5 class="card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
+                  <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
                   <p class="card__date">0000.00.00</p>
                 </a>
               </li>
@@ -179,7 +179,7 @@ require_once $header_path;
                   <div class="card__image-box">
                     <div class="card__image"></div>
                   </div>
-                  <h5 class="card__title">タイトルが入ります。タイトル</h5>
+                  <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
                 </a>
               </li>
             <?php

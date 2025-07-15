@@ -162,6 +162,7 @@ details-bottom
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: get_rem(16px);
+    max-width: 320px;
   }
 }
 
@@ -198,15 +199,11 @@ details-bottom
 }
 
 .details-bottom__title {
-  height: get_rem(76px);
   overflow: hidden;
+  -webkit-line-clamp: 3;
   font-size: get_rem(16px);
   font-weight: 700;
   line-height: get_lh(25px, 16px);
-
-  @include mq_up {
-    height: get_rem(70px);
-  }
 }
 
 /* --------------------------------------------------

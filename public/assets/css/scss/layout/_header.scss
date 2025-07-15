@@ -340,3 +340,10 @@ breadcrumb
     opacity: 0.5;
   }
 }
+
+.breadcrumb__text {
+  @include mq_up {
+    max-width: 450px;
+    -webkit-line-clamp: 1;
+  }
+}

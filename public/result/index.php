@@ -47,7 +47,7 @@ require_once $header_path;
                 <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></div>
                 <p class="card__tag"><?= $value ?></p>
               </div>
-              <h3 class="card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
+              <h3 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
               <p class="card__date">0000.00.00</p>
             </a>
           </article>

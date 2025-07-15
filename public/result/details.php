@@ -19,12 +19,12 @@ require_once $header_path;
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../result/">卒業実績</a>></li>
         <li class="breadcrumb__item"><a class="breadcrumb__link" href="../result/">ポップス</a>></li>
-        <li class="breadcrumb__item"><?= $title; ?></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__text ellipsis"><?= $title; ?></span></li>
       </ul>
     </div>
   </nav>
-  <div class="result-details__container">
-    <div class="result-details__inner inner">
+  <div class="result-details__inner inner">
+    <div class="result-details__container">
       <article class="result-details__content details-content">
         <div class="details-content__inner">
           <div class="details-content__container">
@@ -64,12 +64,12 @@ require_once $header_path;
           <a class="details-bottom__box details-bottom__prev" href="./">
             <p class="details-bottom__link">◀︎ 前の記事</p>
             <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600"></div>
-            <p class="details-bottom__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+            <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
           </a>
           <a class="details-bottom__box details-bottom__next" href="./">
             <p class="details-bottom__link">次の記事 ▶︎</p>
             <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600"></div>
-            <p class="details-bottom__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+            <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
           </a>
         </div>
       </article>
@@ -100,7 +100,7 @@ require_once $header_path;
                   <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="" width="1161" height="819" loading="lazy"></div>
                   <p class="card__tag"><?= $value['genre'] ?></p>
                 </div>
-                <h5 class="card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
+                <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
                 <p class="card__date">0000.00.00</p>
               </a>
             </li>

@@ -2790,10 +2790,14 @@ blog-details-recommend
 blog-details-category
 -------------------------------------------------- */
 .blog-details-category__item {
-  padding: 0.75rem 0 0.375rem;
+  border-bottom: 1px solid;
+}
+
+.blog-details-category__link {
+  display: block;
+  padding: 0.5625rem 0;
   font-size: 1.0625rem;
   line-height: 1.6471;
-  border-bottom: 1px solid;
 }
 
 .contact {

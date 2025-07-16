@@ -193,7 +193,7 @@ require_once $header_path;
             <?php
             for ($i = 0; $i < 5; $i++) :
             ?>
-              <li class="blog-details-category__item"><a href="./">カテゴリー</a></li>
+              <li class="blog-details-category__item"><a class="blog-details-category__link" href="./">カテゴリー</a></li>
             <?php
             endfor;
             ?>

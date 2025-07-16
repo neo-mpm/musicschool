@@ -298,8 +298,12 @@ blog-details-recommend
 blog-details-category
 -------------------------------------------------- */
 .blog-details-category__item {
-  padding: get_rem(12px) 0 get_rem(6px);
+  border-bottom: 1px solid;
+}
+
+.blog-details-category__link {
+  display: block;
+  padding: get_rem(9px) 0;
   font-size: get_rem(17px);
   line-height: get_lh(28px, 17px);
-  border-bottom: 1px solid;
 }

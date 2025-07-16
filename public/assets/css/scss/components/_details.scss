@@ -114,14 +114,10 @@ details-content
   &::before {
     display: block;
     width: get_rem(4px);
-    height: get_rem(50px);
+    margin-block: 0.25em;
     margin-right: get_rem(6px);
     content: '';
     background: black;
-
-    @include mq_up {
-      height: get_rem(20px);
-    }
   }
 }
 

@@ -701,6 +701,7 @@ details-related
   color: white;
   text-decoration: none;
   background: black;
+  opacity: unset;
 }
 
 .header {

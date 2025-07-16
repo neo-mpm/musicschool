@@ -25,8 +25,8 @@ require_once $header_path;
       </ul>
     </div>
   </nav>
-  <div class="contact__inner inner">
-    <div class="contact__container">
+  <div class="contact__container">
+    <div class="contact__inner inner">
       <p class="contact__text">お問い合わせいただきありがとうございました。<br>
         内容確認後、担当者よりメールにてご連絡いたします。</p>
       <a class="button button--bottom contact__button--send " href="../top/">ホームへ戻る</a>

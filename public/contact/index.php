@@ -52,16 +52,20 @@ require_once $header_path;
           </legend>
           <div class="contact-form__checkbox-wrapper">
             <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">プランについてのお問い合わせ
+              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">
+              <span class="contact-form__text--checkbox">プランについてのお問い合わせ</span>
             </label>
             <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="ヒアリングのご予約">ヒアリングのご予約
+              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="ヒアリングのご予約">
+              <span class="contact-form__text--checkbox">ヒアリングのご予約</span>
             </label>
             <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="資料請求">資料請求
+              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="資料請求">
+              <span class="contact-form__text--checkbox">資料請求</span>
             </label>
             <label class="contact-form__label contact-form__label--checkbox">
-              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="その他">その他
+              <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="その他">
+              <span class="contact-form__text--checkbox">その他</span>
             </label>
           </div>
         </fieldset>

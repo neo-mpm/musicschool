@@ -3057,14 +3057,15 @@ contact__form
 }
 
 .contact-form__textarea {
-  height: 11.875rem;
+  min-height: 11.875rem;
   padding: 0.75rem 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.6667;
+  resize: vertical;
 }
 @media (width >= 768px) {
   .contact-form__textarea {
-    height: 18.75rem;
+    min-height: 18.75rem;
     padding: 1rem;
   }
 }

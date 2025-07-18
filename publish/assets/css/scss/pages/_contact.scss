@@ -4,14 +4,26 @@
 // contact
 // ==========================================================================
 .contact {
-  padding: get_rem(48px) 0 get_rem(108px);
+  padding-bottom: get_rem(108px);
 
   @include mq_up {
-    padding: get_rem(69px) 0 get_rem(100px);
+    padding-bottom: get_rem(100px);
   }
 
-  & ~ .footer > .footer__contact {
-    display: none;
+  & ~ .links {
+    width: fit-content;
+
+    .links__to-contact {
+      display: none;
+    }
+  }
+}
+
+.contact__container {
+  padding-top: get_rem(48px);
+
+  @include mq_up {
+    padding-top: get_rem(69px);
   }
 }
 
@@ -34,13 +46,6 @@
 
   @media (width > 813px) {
     text-align: center;
-  }
-}
-
-.contact__container {
-  @include mq_up {
-    max-width: 880px;
-    margin-inline: auto;
   }
 }
 
@@ -115,20 +120,16 @@ contact__form
 .contact-form__legend {
   @include mq_up {
     min-width: get_rem(140px);
-    margin-top: get_rem(7px);
     font-size: get_rem(20px);
     line-height: get_lh(33px, 20px);
   }
 }
 
-.contact-form__legend {
-  @include mq_up {
-    float: left;
-  }
-}
-
 .contact-form__label--checkbox {
+  display: flex;
+
   @include mq_up {
+    min-width: unset;
     margin-top: unset;
     font-size: get_rem(18px);
     line-height: get_lh(30px, 18px);
@@ -137,7 +138,7 @@ contact__form
 
 .contact-form__legend {
   @include mq_up {
-    margin-top: get_rem(5px);
+    float: left;
     font-size: get_rem(20px);
     line-height: get_lh(30px, 20px);
   }
@@ -153,30 +154,31 @@ contact__form
 }
 
 .contact-form__input {
-  padding: get_rem(5px) get_rem(20px) 0;
+  height: get_rem(40px);
+  padding-inline: get_rem(20px);
 }
 
 .contact-form__checkbox-wrapper {
   display: flex;
   flex-direction: column;
   row-gap: get_rem(10px);
-  margin-top: get_rem(-1px);
-
-  @include mq_up {
-    margin-top: get_rem(1px);
-  }
+  align-items: flex-start;
 }
 
-.contact-form__checkbox {
-  width: get_rem(20px);
-  aspect-ratio: 1 / 1;
-  margin-right: get_rem(10px);
-  font-size: get_rem(16px);
-  line-height: get_lh(33px, 16px);
+// .contact-form__checkbox {
+//   width: get_rem(20px);
+//   aspect-ratio: 1 / 1;
+//   margin-right: get_rem(10px);
+//   font-size: get_rem(16px);
+//   line-height: get_lh(33px, 16px);
 
-  @include mq_up {
-    margin-right: get_rem(20px);
-  }
+//   @include mq_up {
+//     margin-right: get_rem(20px);
+//   }
+// }
+
+.contact-form__checkbox {
+  appearance: none;
 }
 
 .contact-form__text-space {
@@ -187,14 +189,53 @@ contact__form
   }
 }
 
+.contact-form__text--checkbox {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: get_rem(10px);
+  align-items: center;
+  font-size: get_rem(16px);
+  line-height: get_lh(33px, 16px);
+
+  &::before,
+  &::after {
+    display: block;
+    grid-area: 1 / 1;
+    content: '';
+  }
+
+  &::before {
+    width: get_rem(20px);
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+  }
+
+  &::after {
+    width: get_rem(8px);
+    height: get_rem(15px);
+    margin-left: get_rem(5px);
+    border-right: get_rem(3px) solid var(--main-color);
+    border-bottom: get_rem(3px) solid var(--main-color);
+    opacity: 0;
+    transform: rotate(35deg) skewY(16deg) translateY(10%);
+    transform-origin: center right;
+    transition: opacity 0.3s ease;
+
+    .contact-form__checkbox:checked + & {
+      opacity: 1;
+    }
+  }
+}
+
 .contact-form__textarea {
-  height: get_rem(190px);
+  min-height: get_rem(190px);
   padding: get_rem(12px) get_rem(20px);
   font-size: get_rem(15px);
   line-height: get_lh(25px, 15px);
+  resize: vertical;
 
   @include mq_up {
-    height: get_rem(300px);
+    min-height: get_rem(300px);
     padding: get_rem(16px);
   }
 }

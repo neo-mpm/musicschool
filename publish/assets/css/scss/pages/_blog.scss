@@ -4,17 +4,10 @@
 // blog
 // ==========================================================================
 .blog {
-  padding-bottom: get_rem(143px);
+  padding-bottom: get_rem(203px);
 
   @include mq_up {
-    padding-bottom: get_rem(151px);
-  }
-}
-
-.blog__container {
-  @include mq_up {
-    max-width: 880px;
-    margin-inline: auto;
+    padding-bottom: get_rem(211px);
   }
 }
 
@@ -41,11 +34,12 @@ blog-content
 }
 
 .blog-content__card.card {
+  display: block;
   padding-bottom: get_rem(37px);
 
   @include mq_up {
     display: grid;
-    grid-template: get_rem(27px) get_rem(42px) 1fr / repeat(2, auto);
+    grid-template: auto get_rem(42px) 1fr / repeat(2, auto);
     grid-auto-flow: column;
     column-gap: get_rem(50px);
     align-items: start;

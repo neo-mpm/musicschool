@@ -72,3 +72,7 @@
   font-size: get_rem(16px);
   line-height: get_lh(30px, 16px);
 }
+
+.card__text--list {
+  -webkit-line-clamp: 5;
+}

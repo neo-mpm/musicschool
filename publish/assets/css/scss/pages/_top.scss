@@ -7,7 +7,7 @@
 /* --------------------------------------------------
 top-hero
 -------------------------------------------------- */
-.top-hero__h2 {
+.top-hero__head {
   margin-top: get_rem(18px);
   font-size: get_rem(30px);
   font-weight: 700;
@@ -187,8 +187,7 @@ top-reason
 
   @include mq_up {
     row-gap: get_rem(50px);
-    max-width: 880px;
-    margin: get_rem(27px) auto 0;
+    margin-top: get_rem(27px);
   }
 }
 
@@ -214,22 +213,16 @@ top-reason
   }
 }
 
-.top-reason__header {
+.top-reason__title {
   padding-bottom: get_rem(7px);
+  font-size: get_rem(20px);
+  font-weight: 700;
+  line-height: get_lh(30px, 20px);
   border-bottom: get_rem(2px) solid var(--main-color);
 
   @include mq_up {
     padding: 0 0 get_rem(8px) get_rem(50px);
     margin-top: get_rem(-2px);
-  }
-}
-
-.top-reason__title {
-  font-size: get_rem(20px);
-  font-weight: 700;
-  line-height: get_lh(30px, 20px);
-
-  @include mq_up {
     font-size: get_rem(22px);
     line-height: get_lh(33px, 22px);
   }
@@ -283,22 +276,9 @@ top-voice
   }
 
   .swiper-slide {
-    display: grid;
-
     @include mq_up {
       width: get_em(270px);
       margin-right: get_em(35px);
-    }
-
-    &::before {
-      grid-area: 1 / 1;
-      content: '';
-      background: white;
-
-      @include mq_up {
-        width: get_em(270px);
-        aspect-ratio: 270 / 190;
-      }
     }
 
     &:last-child {
@@ -310,9 +290,15 @@ top-voice
   .swiper-button-next {
     width: get_rem(30px);
     aspect-ratio: 30 / 38;
+    transition: 0.3s all;
 
     @include mq_up {
       width: get_em(28px);
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
     }
 
     &::after {
@@ -329,6 +315,12 @@ top-voice
   }
 }
 
+.top-voice__inner {
+  @include mq_up {
+    max-width: 1006px;
+  }
+}
+
 .top-voice__head.title {
   @include mq_up {
     font-size: get_em(30px, 16px);
@@ -337,12 +329,16 @@ top-voice
 
 .top-voice__container {
   position: relative;
-  max-width: 966px;
-  margin-inline: auto;
+}
+
+.top-voice__link {
+  &:link,
+  &:visited {
+    color: white;
+  }
 }
 
 .top-voice__image {
-  grid-area: 1 / 1;
   aspect-ratio: 335 / 200;
 
   @include mq_up {
@@ -540,7 +536,6 @@ top-faq
     place-items: center;
     width: get_rem(35px);
     height: get_rem(35px);
-    padding-top: get_rem(2px);
     font-size: get_rem(20px);
     font-weight: 700;
     line-height: get_lh(30px, 20px);
@@ -548,10 +543,6 @@ top-faq
     content: 'Q';
     background: black;
     border-radius: 50%;
-
-    @include mq_up {
-      padding-top: 0;
-    }
 
     .top-faq__answer & {
       content: 'A';
@@ -564,24 +555,19 @@ top-faq
   display: flex;
   align-items: center;
   min-width: get_rem(233px);
-  padding: get_rem(17px) get_rem(47px) get_rem(7px) get_rem(20px);
+  padding: get_rem(12px) get_rem(47px) get_rem(12px) get_rem(20px);
   font-size: get_rem(16px);
   line-height: get_lh(30px, 16px);
 
   @include mq_up {
-    padding: get_rem(18px) 0 get_rem(14px) get_rem(9px);
+    padding: get_rem(16px) get_rem(62px) get_rem(16px) get_rem(9px);
     font-size: get_rem(17px);
     line-height: get_lh(30px, 17px);
   }
 
   .top-faq__answer & {
-    padding-top: get_rem(19px);
     font-weight: 700;
     color: var(--main-color);
-
-    @include mq_up {
-      padding-bottom: get_rem(13px);
-    }
   }
 }
 
@@ -639,13 +625,6 @@ top-blog
       width: get_rem(260px);
       aspect-ratio: 260 / 200;
     }
-  }
-}
-
-.top-blog__inner {
-  @include mq_up {
-    max-width: 926px;
-    margin-inline: auto;
   }
 }
 

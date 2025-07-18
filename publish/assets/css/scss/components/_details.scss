@@ -37,20 +37,6 @@ details-content
     }
   }
 
-  .card__title-text--sp {
-    @include mq_up {
-      display: none;
-    }
-  }
-
-  .card__title-text--pc {
-    display: none;
-
-    @include mq_up {
-      display: inline;
-    }
-  }
-
   .card__date {
     text-align: unset;
 
@@ -128,14 +114,10 @@ details-content
   &::before {
     display: block;
     width: get_rem(4px);
-    height: get_rem(50px);
+    margin-block: 0.25em;
     margin-right: get_rem(6px);
     content: '';
     background: black;
-
-    @include mq_up {
-      height: get_rem(20px);
-    }
   }
 }
 
@@ -176,6 +158,7 @@ details-bottom
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: get_rem(16px);
+    max-width: 320px;
   }
 }
 
@@ -212,15 +195,11 @@ details-bottom
 }
 
 .details-bottom__title {
-  height: get_rem(76px);
   overflow: hidden;
+  -webkit-line-clamp: 3;
   font-size: get_rem(16px);
   font-weight: 700;
   line-height: get_lh(25px, 16px);
-
-  @include mq_up {
-    height: get_rem(70px);
-  }
 }
 
 /* --------------------------------------------------
@@ -235,7 +214,9 @@ details-aside
 }
 
 .details-aside__title {
-  padding: get_rem(11px) 0 get_rem(6px);
+  display: grid;
+  place-items: center;
+  height: get_rem(50px);
   font-size: get_rem(18px);
   font-weight: 700;
   line-height: get_lh(33px, 18px);

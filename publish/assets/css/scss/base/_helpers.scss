@@ -4,7 +4,9 @@
 // helpers
 // ==========================================================================
 .inner {
+  max-width: 920px;
   padding-inline: 20px;
+  margin-inline: auto;
 }
 
 .br-sp {
@@ -43,4 +45,12 @@
   font-weight: 700;
   line-height: get_lh(40px, 25px);
   text-align: center;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

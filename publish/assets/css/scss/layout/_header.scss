@@ -3,37 +3,44 @@
 // ==========================================================================
 // header
 // ==========================================================================
-.header__container {
-  position: relative;
-  z-index: 60;
+.header {
+  position: fixed;
+  top: 0;
+  width: stretch;
+  background: white;
+}
+
+.header__inner {
   display: grid;
   height: get_rem(50px);
+  padding-inline: unset;
 
   @include mq_up {
-    max-width: 920px;
     height: get_rem(80px);
-    padding-inline: get_rem(20px);
-    margin-inline: auto;
+    padding-inline: 20px;
   }
 }
 
-.header__link {
-  display: flex;
+.header__box {
+  display: block;
   grid-area: 1 / 1;
-  column-gap: get_rem(7px);
-  align-items: center;
   width: fit-content;
-  height: 100%;
   padding-left: get_rem(20px);
 
   @include mq_up {
     padding-left: unset;
   }
+}
+
+.header__link {
+  display: flex;
+  column-gap: get_rem(7px);
+  align-items: center;
+  height: 100%;
 
   &:hover,
   &:active {
     text-decoration: none;
-    opacity: unset;
   }
 }
 
@@ -48,7 +55,7 @@
   }
 }
 
-.header__head {
+.header__text {
   font-size: get_rem(13px);
   font-weight: 700;
   line-height: get_lh(14px, 13px);
@@ -60,7 +67,7 @@
   }
 }
 
-.header__head--large {
+.header__text--large {
   @include mq_up {
     font-size: get_rem(20px);
     line-height: get_lh(23px, 20px);
@@ -74,7 +81,6 @@
 }
 
 .header-nav__box {
-  z-index: 2;
   display: grid;
   place-items: center;
   width: get_rem(71px);
@@ -92,7 +98,7 @@
   display: block;
   width: get_rem(33px);
   padding-bottom: get_rem(2px);
-  transition-duration: 0.25s;
+  transition-duration: 0.3s;
 
   &.open {
     span {
@@ -131,7 +137,7 @@
     @include burgerSpan;
 
     content: '';
-    transition-duration: 0.25s;
+    transition-duration: 0.3s;
   }
 
   &::before {
@@ -147,12 +153,11 @@
   position: fixed;
   top: get_rem(50px);
   right: 0;
-  z-index: 3;
   visibility: hidden;
   row-gap: get_rem(40px);
   width: get_rem(300px);
   margin-right: -100vw;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 
   @include mq_up {
     position: unset;
@@ -178,7 +183,13 @@
     column-gap: get_rem(30px);
     align-items: center;
     height: 100%;
-    padding: get_rem(6px) get_rem(2px) 0 0;
+    padding-right: get_rem(2px);
+  }
+}
+
+.header-nav__item {
+  @include mq_up {
+    height: 100%;
   }
 }
 
@@ -229,7 +240,6 @@
     display: grid;
     width: get_rem(150px);
     height: get_rem(45px);
-    padding-top: get_rem(4px);
     font-size: get_rem(15px);
     font-weight: 700;
     line-height: get_lh(23px, 15px);
@@ -271,11 +281,11 @@ hero
   }
 }
 
-.hero__h2 {
-  z-index: 2;
+.hero__head {
   grid-area: 1 / 1;
   margin-top: get_rem(12px);
   font-size: get_rem(25px);
+  font-weight: 700;
   line-height: get_lh(60px, 25px);
   color: white;
   text-align: center;
@@ -285,49 +295,55 @@ hero
 breadcrumb
 -------------------------------------------------- */
 .breadcrumb {
+  height: get_rem(36px);
+  white-space: nowrap;
   background: #e8e8e8;
+
+  @include mq_up {
+    height: get_rem(50px);
+  }
+}
+
+.breadcrumb__inner {
+  height: 100%;
 }
 
 .breadcrumb__list {
   display: flex;
-  flex-wrap: wrap;
   column-gap: get_rem(20px);
   align-items: center;
-  padding: get_rem(10px) get_rem(20px) get_rem(4px);
+  height: 100%;
+  overflow-x: auto;
   font-size: get_rem(16px);
   line-height: get_lh(22px, 16px);
+  scrollbar-width: none;
 
   @include mq_up {
-    max-width: 920px;
-    padding: get_rem(16px) get_rem(20px) get_rem(11px);
-    margin-inline: auto;
+    overflow: hidden;
   }
 }
 
 .breadcrumb__item {
-  display: inline-flex;
+  display: flex;
   column-gap: get_rem(20px);
+  align-items: center;
+  height: 100%;
 }
 
 .breadcrumb__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
   &:hover,
   &:active {
-    text-decoration: underline;
     opacity: 0.5;
   }
 }
 
-.breadcrumb__text--sp {
+.breadcrumb__text {
   @include mq_up {
-    display: none;
-  }
-}
-
-.breadcrumb__text--pc {
-  display: none;
-
-  @include mq_up {
-    display: inline;
-    margin-left: get_rem(6px);
+    max-width: 450px;
+    -webkit-line-clamp: 1;
   }
 }

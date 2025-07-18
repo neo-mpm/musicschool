@@ -2150,7 +2150,7 @@ plan-topic
 @media (width >= 768px) {
   .plan-topic__text {
     max-width: 890px;
-    margin: 3.125rem 0 0 0.125rem;
+    margin-top: 3.125rem;
     font-size: 1.125rem;
     line-height: 1.6667;
   }

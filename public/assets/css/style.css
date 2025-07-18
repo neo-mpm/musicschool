@@ -470,7 +470,7 @@ details-bottom
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 1rem;
-    max-width: 320px;
+    max-width: 340px;
   }
 }
 

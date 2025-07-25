@@ -1147,7 +1147,6 @@ links-to-contact
   width: 100%;
   max-width: 20.9375rem;
   height: 3.75rem;
-  padding-top: 0.5rem;
   margin-inline: auto;
   font-size: 1.25rem;
   font-weight: 700;
@@ -1158,7 +1157,6 @@ links-to-contact
 @media (width >= 768px) {
   .links-to-contact {
     width: 18.75rem;
-    padding-top: 0.625rem;
     margin-inline: auto 0;
   }
 }

@@ -64,7 +64,6 @@ links-to-contact
   width: 100%;
   max-width: get_rem(335px);
   height: get_rem(60px);
-  padding-top: get_rem(8px);
   margin-inline: auto;
   font-size: get_rem(20px);
   font-weight: 700;
@@ -74,7 +73,6 @@ links-to-contact
 
   @include mq_up {
     width: get_rem(300px);
-    padding-top: get_rem(10px);
     margin-inline: auto 0;
   }
 }

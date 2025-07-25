@@ -153,34 +153,34 @@
   position: fixed;
   top: get_rem(50px);
   right: 0;
-  visibility: hidden;
   row-gap: get_rem(40px);
   width: get_rem(300px);
   margin-right: -100vw;
+  visibility: hidden;
   transition-duration: 0.3s;
 
   @include mq_up {
     position: unset;
     top: unset;
     display: flex;
-    visibility: visible;
     column-gap: get_rem(30px);
     align-items: center;
     width: unset;
     height: 100%;
     margin-right: unset;
+    visibility: visible;
   }
 
   &.open {
-    visibility: visible;
     margin-right: 0;
+    visibility: visible;
   }
 }
 
 .header-nav__list {
   @include mq_up {
     display: flex;
-    column-gap: get_rem(30px);
+    column-gap: get_rem(34px);
     align-items: center;
     height: 100%;
     padding-right: get_rem(2px);
@@ -207,6 +207,8 @@
   @include mq_up {
     height: 100%;
     padding-left: unset;
+    font-size: get_rem(17px);
+    line-height: get_lh(33px, 17px);
     background: unset;
   }
 

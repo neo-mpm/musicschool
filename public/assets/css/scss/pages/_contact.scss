@@ -127,6 +127,7 @@ contact__form
 
 .contact-form__label--checkbox {
   display: flex;
+  cursor: pointer;
 
   @include mq_up {
     min-width: unset;
@@ -217,9 +218,9 @@ contact__form
     border-right: get_rem(3px) solid var(--main-color);
     border-bottom: get_rem(3px) solid var(--main-color);
     opacity: 0;
+    transition: opacity 0.3s ease;
     transform: rotate(35deg) skewY(16deg) translateY(10%);
     transform-origin: center right;
-    transition: opacity 0.3s ease;
 
     .contact-form__checkbox:checked + & {
       opacity: 1;

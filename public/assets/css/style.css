@@ -2959,6 +2959,7 @@ contact__form
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 @media (width >= 768px) {
   .contact-form__label--checkbox {
@@ -3049,12 +3050,12 @@ contact__form
   border-right: 0.1875rem solid var(--main-color);
   border-bottom: 0.1875rem solid var(--main-color);
   opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   -webkit-transform: rotate(35deg) skewY(16deg) translateY(10%);
           transform: rotate(35deg) skewY(16deg) translateY(10%);
   -webkit-transform-origin: center right;
           transform-origin: center right;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
 }
 .contact-form__checkbox:checked + .contact-form__text--checkbox::after {
   opacity: 1;

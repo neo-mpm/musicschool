@@ -43,7 +43,6 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
 <body>
   <header class="header">
     <div class="header__inner inner">
-      <div class="overlay"></div>
       <?php
       $logo_element = <<<EOM
       <a class="header__link" href="../top/">

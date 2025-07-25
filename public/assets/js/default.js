@@ -1,27 +1,22 @@
 const breakpoint = 768;
 
 // Nav Toggle Button
-const body = document.querySelector('body');
-const overlay = document.querySelector('.overlay');
 const navToggle = document.querySelector('.header-nav__button');
 const navContainer = document.querySelector('.header-nav__container');
 
-if (overlay && navToggle && navContainer) {
+function toggleNav() {
+  if (window.innerWidth >= breakpoint) return;
+
+  if (navToggle && navContainer) {
+    navToggle.classList.toggle('open');
+    navContainer.classList.toggle('open');
+  }
+}
+
+if (navToggle && navContainer) {
   const navContainerLinks = navContainer.querySelectorAll('a');
 
-  function toggleNav() {
-    if (window.innerWidth >= breakpoint) return;
-
-    if (overlay && navToggle && navContainer) {
-      body.classList.toggle('open');
-      overlay.classList.toggle('over');
-      navToggle.classList.toggle('open');
-      navContainer.classList.toggle('open');
-    }
-  }
-
   navToggle.addEventListener('click', toggleNav);
-  overlay.addEventListener('click', toggleNav);
   navContainerLinks.forEach((link) => {
     link.addEventListener('click', toggleNav);
   });

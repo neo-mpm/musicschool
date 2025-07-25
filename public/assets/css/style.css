@@ -2145,11 +2145,6 @@ plan-topic
 .plan-topic__image {
   width: 1.1875rem;
 }
-@media (width >= 768px) {
-  .plan-topic__image {
-    margin-top: 0.5625rem;
-  }
-}
 
 .plan-topic__text {
   margin-top: 2.9375rem;
@@ -2235,8 +2230,8 @@ tbody .plan-content__tr:nth-child(even) {
 
 .plan-content__th {
   width: 10.5625rem;
-  vertical-align: bottom;
   color: white;
+  vertical-align: bottom;
   border-bottom: 1px solid black;
 }
 @media (width >= 768px) {

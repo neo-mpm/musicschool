@@ -41,7 +41,7 @@ require_once $header_path;
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </div>
               <h2 class="card__title ellipsis"><?= $value['title'] ?></h2>
-              <p class="card__date"><?= $value['date'] ?></p>
+              <time class="card__date" datetime="<?= $blog[0]['date'] ?>"><?= date('Y.m.d', strtotime($blog[0]['date'])) ?></time>
               <p class="card__text card__text--list ellipsis"><?= $value['text'] ?></p>
             </a>
           </article>

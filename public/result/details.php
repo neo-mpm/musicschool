@@ -34,7 +34,7 @@ require_once $header_path;
                 <p class="card__tag">ポップス</p>
               </div>
               <h1 class="card__title page-title"><span class="card__title-text"><?= $title ?></span></h1>
-              <p class="card__date"><?= $blog[0]['date'] ?></p>
+              <time class="card__date" datetime="<?= $blog[0]['date'] ?>"><?= date('Y.m.d', strtotime($blog[0]['date'])) ?></time>
               <div class="result-details__box">
                 <table class="result-details__table result-details-table">
                   <?php
@@ -101,7 +101,7 @@ require_once $header_path;
                   <p class="card__tag"><?= $value['genre'] ?></p>
                 </div>
                 <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
-                <p class="card__date">0000.00.00</p>
+                <time class="card__date" datetime="<?= $blog[0]['date'] ?>"><?= date('Y.m.d', strtotime($blog[0]['date'])) ?></time>
               </a>
             </li>
           <?php

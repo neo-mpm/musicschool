@@ -3,6 +3,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/assets/src/config.php';
 
 $header_path = ASSETS . '/tmpl/header.php';
 $footerPath = ASSETS . '/tmpl/footer.php';
+$blog_data_path = $_SERVER['DOCUMENT_ROOT'] . '/blog/data.php';
+
 $result_genre = [
   'ポップス',
   'ロック',
@@ -10,6 +12,8 @@ $result_genre = [
   'ラテン',
   'クラシック',
 ];
+
+require_once $blog_data_path;
 
 $class_name = 'result';
 $title = $navMenu[$class_name];
@@ -48,7 +52,7 @@ require_once $header_path;
                 <p class="card__tag"><?= $value ?></p>
               </div>
               <h3 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-              <p class="card__date">0000.00.00</p>
+              <time class="card__date" datetime="<?= $blog[0]['date'] ?>"><?= date('Y.m.d', strtotime($blog[0]['date'])) ?></time>
             </a>
           </article>
         <?php

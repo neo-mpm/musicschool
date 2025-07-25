@@ -80,7 +80,7 @@
   height: 100%;
 }
 
-.header-nav__box {
+.header-nav__button {
   display: grid;
   place-items: center;
   width: get_rem(71px);
@@ -93,9 +93,8 @@
   }
 }
 
-.header-nav__button {
+.header-nav__box {
   position: relative;
-  display: block;
   width: get_rem(33px);
   padding-bottom: get_rem(2px);
   transition-duration: 0.3s;
@@ -122,7 +121,6 @@
 
 @mixin burgerSpan {
   position: absolute;
-  display: inline-block;
   width: 100%;
   height: get_rem(3px);
   background: white;

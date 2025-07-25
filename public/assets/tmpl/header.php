@@ -63,11 +63,11 @@ EOM;
       echo $logo;
       ?>
       <nav class="header__nav header-nav">
-        <p class="header-nav__box">
-          <span class="header-nav__button">
-            <span class="header-nav__line"></span>
-          </span>
-        </p>
+        <div class="header-nav__button">
+          <div class="header-nav__box">
+            <div class="header-nav__line"></div>
+          </div>
+        </div>
         <div class="header-nav__container">
           <ul class="header-nav__list">
             <?php foreach ($navMenu as $key => $value) :

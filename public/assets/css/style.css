@@ -931,6 +931,7 @@ details-related
 .header-nav__link:hover, .header-nav__link:active {
   text-decoration: unset;
   background: black;
+  opacity: unset;
 }
 @media (width >= 768px) {
   .header-nav__link:hover, .header-nav__link:active {

@@ -224,6 +224,7 @@
   &:active {
     text-decoration: unset;
     background: black;
+    opacity: unset;
 
     @include mq_up {
       text-decoration: underline;

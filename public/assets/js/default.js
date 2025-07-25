@@ -76,27 +76,12 @@ document.addEventListener('DOMContentLoaded', accordions);
 // back-to-top
 function handleScrollTopBtn() {
   const SCROLL_THRESHOLD = 100;
-
   const scrollTopBtn = document.querySelector('.links');
-  const footer = document.querySelector('footer');
-
-  if (!scrollTopBtn || !footer) return;
-
-  const scrollY = window.pageYOffset !== undefined ? window.pageYOffset : window.scrollY;
-  const windowHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  const footerTop = footer.getBoundingClientRect().top + scrollY;
 
   if (scrollY > SCROLL_THRESHOLD) {
     scrollTopBtn.classList.add('active');
   } else {
     scrollTopBtn.classList.remove('active');
-  }
-
-  const overlap = scrollY + windowHeight - footerTop;
-  if (overlap > 0) {
-    scrollTopBtn.style.bottom = overlap + 'px';
-  } else {
-    scrollTopBtn.style.removeProperty('bottom');
   }
 }
 

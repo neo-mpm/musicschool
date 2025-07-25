@@ -1093,10 +1093,10 @@ breadcrumb
 }
 
 .links {
-  position: fixed;
-  right: 0;
+  position: sticky;
   bottom: 0;
   width: 100%;
+  margin: 0 0 -0.0625rem auto;
   pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.3s;

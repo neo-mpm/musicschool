@@ -3202,12 +3202,13 @@ result-content
 .result-content__container {
   display: grid;
   row-gap: 2.3125rem;
-  padding-top: 2.375rem;
+  padding: 2.375rem 0 2.3125rem;
 }
 @media (width >= 768px) {
   .result-content__container {
     grid-template-columns: repeat(2, 1fr);
     gap: 4.4375rem 6.625rem;
+    padding-bottom: unset;
   }
 }
 

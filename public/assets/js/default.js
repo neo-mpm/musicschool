@@ -13,13 +13,8 @@ function toggleNav() {
   }
 }
 
-if (navToggle && navContainer) {
-  const navContainerLinks = navContainer.querySelectorAll('a');
-
+if (navToggle) {
   navToggle.addEventListener('click', toggleNav);
-  navContainerLinks.forEach((link) => {
-    link.addEventListener('click', toggleNav);
-  });
 }
 
 // top-voice

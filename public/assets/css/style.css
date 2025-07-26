@@ -1202,7 +1202,6 @@ links-to-contact
 }
 .footer__logo:hover, .footer__logo:active {
   text-decoration: none;
-  opacity: unset;
 }
 
 .footer__copy {

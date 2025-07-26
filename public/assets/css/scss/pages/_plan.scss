@@ -4,10 +4,10 @@
 // plan
 // ==========================================================================
 .plan {
-  padding-bottom: get_rem(186px);
+  padding-bottom: get_rem(40px);
 
   @include mq_up {
-    padding-bottom: get_rem(223px);
+    padding-bottom: get_rem(65px);
   }
 }
 

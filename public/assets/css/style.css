@@ -2340,11 +2340,11 @@ tbody .plan-content__td:nth-child(3) .plan-content__circle {
 }
 
 .blog {
-  padding-bottom: 12.6875rem;
+  padding-bottom: 3.5625rem;
 }
 @media (width >= 768px) {
   .blog {
-    padding-bottom: 13.1875rem;
+    padding-bottom: 3.3125rem;
   }
 }
 

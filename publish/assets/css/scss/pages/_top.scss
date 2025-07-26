@@ -332,17 +332,35 @@ top-voice
 }
 
 .top-voice__link {
+  display: block;
+
   &:link,
   &:visited {
     color: white;
+  }
+
+  &:hover,
+  &:active {
+    opacity: unset;
   }
 }
 
 .top-voice__image {
   aspect-ratio: 335 / 200;
+  overflow: hidden;
 
   @include mq_up {
     aspect-ratio: 270 / 190;
+  }
+
+  .img-100 {
+    transition: 0.3s all;
+
+    .top-voice__link:hover &,
+    .top-voice__link:active & {
+      transform: scale(1.1);
+      transform-origin: center;
+    }
   }
 }
 
@@ -372,6 +390,16 @@ top-voice
   @include mq_up {
     margin-top: get_em(10px, 16px);
     font-size: get_em(18px, 16px);
+  }
+}
+
+.top-voice__name,
+.top-voice__text {
+  transition: 0.3s opacity;
+
+  .top-voice__link:hover &,
+  .top-voice__link:active & {
+    opacity: 0.7;
   }
 }
 
@@ -640,7 +668,7 @@ top-blog
     column-gap: get_rem(50px);
     align-items: unset;
     justify-content: center;
-    margin-top: get_rem(34px);
+    margin-top: get_rem(32px);
   }
 }
 

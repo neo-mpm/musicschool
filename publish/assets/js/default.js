@@ -1,30 +1,20 @@
 const breakpoint = 768;
 
 // Nav Toggle Button
-const body = document.querySelector('body');
-const overlay = document.querySelector('.overlay');
 const navToggle = document.querySelector('.header-nav__button');
 const navContainer = document.querySelector('.header-nav__container');
 
-if (overlay && navToggle && navContainer) {
-  const navContainerLinks = navContainer.querySelectorAll('a');
+function toggleNav() {
+  if (window.innerWidth >= breakpoint) return;
 
-  function toggleNav() {
-    if (window.innerWidth >= breakpoint) return;
-
-    if (overlay && navToggle && navContainer) {
-      body.classList.toggle('open');
-      overlay.classList.toggle('over');
-      navToggle.classList.toggle('open');
-      navContainer.classList.toggle('open');
-    }
+  if (navToggle && navContainer) {
+    navToggle.classList.toggle('open');
+    navContainer.classList.toggle('open');
   }
+}
 
+if (navToggle) {
   navToggle.addEventListener('click', toggleNav);
-  overlay.addEventListener('click', toggleNav);
-  navContainerLinks.forEach((link) => {
-    link.addEventListener('click', toggleNav);
-  });
 }
 
 // top-voice
@@ -76,27 +66,12 @@ document.addEventListener('DOMContentLoaded', accordions);
 // back-to-top
 function handleScrollTopBtn() {
   const SCROLL_THRESHOLD = 100;
-
   const scrollTopBtn = document.querySelector('.links');
-  const footer = document.querySelector('footer');
-
-  if (!scrollTopBtn || !footer) return;
-
-  const scrollY = window.pageYOffset !== undefined ? window.pageYOffset : window.scrollY;
-  const windowHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  const footerTop = footer.getBoundingClientRect().top + scrollY;
 
   if (scrollY > SCROLL_THRESHOLD) {
     scrollTopBtn.classList.add('active');
   } else {
     scrollTopBtn.classList.remove('active');
-  }
-
-  const overlap = scrollY + windowHeight - footerTop;
-  if (overlap > 0) {
-    scrollTopBtn.style.bottom = overlap + 'px';
-  } else {
-    scrollTopBtn.style.removeProperty('bottom');
   }
 }
 

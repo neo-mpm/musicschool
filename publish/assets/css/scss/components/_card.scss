@@ -57,6 +57,7 @@
 }
 
 .card__date {
+  display: block;
   margin-top: get_rem(6px);
   font-size: get_rem(17px);
   line-height: get_lh(30px, 17px);

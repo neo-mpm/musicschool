@@ -3220,11 +3220,11 @@ contact__form
 }
 
 .result {
-  padding-bottom: 12.9375rem;
+  padding-bottom: 3.5625rem;
 }
 @media (width >= 768px) {
   .result {
-    padding-bottom: 13.1875rem;
+    padding-bottom: 3.3125rem;
   }
 }
 

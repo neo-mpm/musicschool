@@ -3177,11 +3177,11 @@ contact__form
 }
 
 .search {
-  padding-bottom: 12.75rem;
+  padding-bottom: 3.625rem;
 }
 @media (width >= 768px) {
   .search {
-    padding-bottom: 13.1875rem;
+    padding-bottom: 3.3125rem;
   }
 }
 

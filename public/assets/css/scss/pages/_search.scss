@@ -4,10 +4,10 @@
 // search
 // ==========================================================================
 .search {
-  padding-bottom: get_rem(204px);
+  padding-bottom: get_rem(58px);
 
   @include mq_up {
-    padding-bottom: get_rem(211px);
+    padding-bottom: get_rem(53px);
   }
 }
 

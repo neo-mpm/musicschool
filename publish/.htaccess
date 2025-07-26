@@ -4,4 +4,4 @@ AuthName "Member Site"
 AuthType BASIC
 require valid-user
 
-ErrorDocument 404 /404/index.html
+ErrorDocument 404 /musicschool/404/index.html

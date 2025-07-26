@@ -84,6 +84,14 @@ links-to-contact
 // ==========================================================================
 // footer
 // ==========================================================================
+.footer {
+  @include mq_up {
+    position: sticky;
+    top: 100vh;
+    width: 100%;
+  }
+}
+
 .footer__container {
   padding: get_rem(45px) get_rem(20px) get_rem(51px);
   color: white;

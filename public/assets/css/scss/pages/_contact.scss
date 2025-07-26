@@ -4,10 +4,10 @@
 // contact
 // ==========================================================================
 .contact {
-  padding-bottom: get_rem(108px);
+  padding-bottom: get_rem(22px);
 
   @include mq_up {
-    padding-bottom: get_rem(100px);
+    padding-bottom: get_rem(4px);
   }
 
   & ~ .links {
@@ -19,19 +19,23 @@
   }
 }
 
+.contact--send {
+  padding-bottom: get_rem(51px);
+
+  @include mq_up {
+    padding-bottom: get_rem(91px);
+  }
+
+  & ~ .links {
+    display: none;
+  }
+}
+
 .contact__container {
   padding-top: get_rem(48px);
 
   @include mq_up {
     padding-top: get_rem(69px);
-  }
-}
-
-.contact--send {
-  padding-bottom: get_rem(50px);
-
-  @include mq_up {
-    padding-bottom: get_rem(89px);
   }
 }
 
@@ -80,10 +84,6 @@ contact-button
 
 .contact-button--send {
   margin-top: get_rem(38px);
-
-  @include mq_up {
-    margin-top: 40px;
-  }
 }
 
 /* --------------------------------------------------
@@ -97,7 +97,7 @@ contact__form
 
   @include mq_up {
     row-gap: get_rem(30px);
-    margin-top: get_rem(65px);
+    margin-top: get_rem(64px);
   }
 }
 
@@ -190,21 +190,15 @@ contact__form
 .contact-form__checkbox-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: get_rem(10px);
+  row-gap: get_rem(7px);
   align-items: flex-start;
+  margin-top: get_rem(-3px);
+
+  @include mq_up {
+    row-gap: get_rem(10px);
+    margin-top: unset;
+  }
 }
-
-// .contact-form__checkbox {
-//   width: get_rem(20px);
-//   aspect-ratio: 1 / 1;
-//   margin-right: get_rem(10px);
-//   font-size: get_rem(16px);
-//   line-height: get_lh(33px, 16px);
-
-//   @include mq_up {
-//     margin-right: get_rem(20px);
-//   }
-// }
 
 .contact-form__checkbox {
   appearance: none;
@@ -225,6 +219,12 @@ contact__form
   align-items: center;
   font-size: get_rem(16px);
   line-height: get_lh(33px, 16px);
+
+  @include mq_up {
+    column-gap: get_rem(20px);
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
+  }
 
   &::before,
   &::after {

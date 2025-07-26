@@ -25,6 +25,10 @@ body {
   font-size: 1rem;
   font-weight: 500;
   line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    min-height: calc(100vh - get_rem(80px));
+  }
 }
 
 *,

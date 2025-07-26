@@ -75,11 +75,11 @@ button {
 }
 
 main {
-  padding-bottom: get_rem(188px);
+  padding-bottom: get_rem(43px);
   margin-top: get_rem(50px);
 
   @include mq_up {
-    padding-bottom: get_rem(202px);
+    padding-bottom: get_rem(47px);
     margin-top: get_rem(80px);
   }
 }

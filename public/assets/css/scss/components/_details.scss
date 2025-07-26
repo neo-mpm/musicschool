@@ -232,12 +232,13 @@ details-related
   margin-top: get_rem(62px);
 
   @include mq_up {
-    margin-top: get_rem(98px);
+    margin-top: get_rem(94px);
   }
 }
 
 .details-related__head {
   @include mq_up {
+    display: block;
     padding: get_rem(10px) 0 get_rem(7px) get_rem(31px);
     text-align: unset;
   }

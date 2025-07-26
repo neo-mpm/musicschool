@@ -3131,7 +3131,7 @@ contact__form
 }
 
 .page404 {
-  padding-bottom: 3.125rem;
+  padding-bottom: 3.1875rem;
 }
 @media (width >= 768px) {
   .page404 {
@@ -3139,11 +3139,6 @@ contact__form
   }
 }
 .page404 ~ .links {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.page404 ~ .links .links__to-contact {
   display: none;
 }
 
@@ -3178,7 +3173,6 @@ contact__form
 @media (width >= 768px) {
   .page404__button {
     margin-top: 40px;
-    letter-spacing: unset;
   }
 }
 

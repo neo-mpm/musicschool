@@ -73,7 +73,7 @@ require_once $header_path;
           <label class="contact-form__label" for="message"><span class="contact-form__text-space">内容</span></label>
           <textarea class="contact-form__textarea" name="message" id="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
         </fieldset>
-        <button type="submit" class="contact__button button button--bottom">送信</button>
+        <button type="submit" class="contact__button contact-button contact-button--submit button"><span class="contact-button__span contact-button__span--submit">送信</span></button>
       </form>
     </div>
   </div>

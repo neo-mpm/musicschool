@@ -191,24 +191,6 @@ main {
   opacity: unset;
 }
 
-.button--bottom {
-  height: 3.125rem;
-  margin-top: 2.125rem;
-  font-size: 1.25rem;
-  line-height: 1.3;
-}
-@media (width >= 768px) {
-  .button--bottom {
-    width: 15.625rem;
-    height: 3.125rem;
-    margin: 1.25rem auto 0;
-    font-size: 1.5625rem;
-    font-weight: 700;
-    line-height: 1.32;
-    letter-spacing: 0.3125rem;
-  }
-}
-
 .card__image-box {
   display: grid;
 }
@@ -2854,13 +2836,42 @@ blog-details-category
   }
 }
 
-.contact__button--send {
+/* --------------------------------------------------
+contact-button
+-------------------------------------------------- */
+.contact__button {
+  width: 100%;
+  max-width: 20.9375rem;
+  height: 3.125rem;
+  margin: 2.125rem auto 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media (width >= 768px) {
+  .contact__button {
+    width: 15.625rem;
+    height: 3.125rem;
+    margin-top: 1.25rem;
+    font-size: 1.5625rem;
+    line-height: 1.32;
+  }
+}
+
+.contact-button--submit {
+  letter-spacing: 0.3125rem;
+}
+
+.contact-button__span--submit {
+  margin-right: -0.3125rem;
+}
+
+.contact-button--send {
   margin-top: 2.375rem;
 }
 @media (width >= 768px) {
-  .contact__button--send {
+  .contact-button--send {
     margin-top: 40px;
-    letter-spacing: unset;
   }
 }
 

@@ -49,12 +49,40 @@
   }
 }
 
-.contact__button--send {
+/* --------------------------------------------------
+contact-button
+-------------------------------------------------- */
+.contact__button {
+  width: 100%;
+  max-width: get_rem(335px);
+  height: get_rem(50px);
+  margin: get_rem(34px) auto 0;
+  font-size: get_rem(20px);
+  font-weight: 700;
+  line-height: get_lh(26px, 20px);
+
+  @include mq_up {
+    width: get_rem(250px);
+    height: get_rem(50px);
+    margin-top: get_rem(20px);
+    font-size: get_rem(25px);
+    line-height: get_lh(33px, 25px);
+  }
+}
+
+.contact-button--submit {
+  letter-spacing: get_rem(5px);
+}
+
+.contact-button__span--submit {
+  margin-right: get_rem(-5px);
+}
+
+.contact-button--send {
   margin-top: get_rem(38px);
 
   @include mq_up {
     margin-top: 40px;
-    letter-spacing: unset;
   }
 }
 

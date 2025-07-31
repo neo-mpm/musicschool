@@ -2869,6 +2869,7 @@ contact-button
   width: 100%;
   max-width: 20.9375rem;
   height: 3.125rem;
+  padding-top: 0.125rem;
   margin: 2.125rem auto 0;
   font-size: 1.25rem;
   font-weight: 700;
@@ -2877,7 +2878,7 @@ contact-button
 @media (width >= 768px) {
   .contact__button {
     width: 15.625rem;
-    height: 3.125rem;
+    padding-top: 0.1875rem;
     margin-top: 1.25rem;
     font-size: 1.5625rem;
     line-height: 1.32;
@@ -3096,12 +3097,12 @@ contact__form
   border-right: 0.1875rem solid var(--main-color);
   border-bottom: 0.1875rem solid var(--main-color);
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
   -webkit-transform: rotate(35deg) skewY(16deg) translateY(10%);
           transform: rotate(35deg) skewY(16deg) translateY(10%);
   -webkit-transform-origin: center right;
           transform-origin: center right;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .contact-form__checkbox:checked + .contact-form__text--checkbox::after {
   opacity: 1;

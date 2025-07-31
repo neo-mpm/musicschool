@@ -364,16 +364,14 @@ top-voice
   }
 }
 
-.top-voice__name {
-  display: inline-flex;
-  flex-wrap: wrap;
-  column-gap: get_rem(22px);
-  justify-content: center;
+.top-voice__head {
   width: 100%;
   margin-top: get_rem(27px);
+  -webkit-line-clamp: 1;
   font-size: get_rem(22px);
   font-weight: 700;
   line-height: get_lh(33px, 22px);
+  text-align: center;
 
   @include mq_up {
     column-gap: get_em(22px, 22px);
@@ -382,8 +380,13 @@ top-voice
   }
 }
 
+.top-voice__job {
+  margin-right: 1em;
+}
+
 .top-voice__text {
   margin-top: get_rem(10px);
+  -webkit-line-clamp: 3;
   font-size: get_rem(18px);
   line-height: get_lh(30px, 18px);
 
@@ -624,7 +627,7 @@ top-faq
   height: 0;
   overflow: hidden;
   cursor: pointer;
-  background: rgba(203, 0, 0, 10%);
+  background: rgb(203, 0, 0, 10%);
   opacity: 0;
   transition:
     height 0.3s ease,

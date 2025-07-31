@@ -118,7 +118,7 @@ plan-content
 
 .plan-content__tr {
   tbody &:nth-child(even) {
-    background-color: rgba(80, 80, 80, 15%);
+    background-color: rgb(80, 80, 80, 15%);
   }
 }
 
@@ -131,8 +131,8 @@ plan-content
 
 .plan-content__th {
   width: get_rem(169px);
-  color: white;
   vertical-align: bottom;
+  color: white;
   border-bottom: 1px solid black;
 
   @include mq_up {
@@ -155,6 +155,7 @@ plan-content
 }
 
 .plan-content__td {
+  padding-top: get_rem(3px);
   border-right: 1px solid black;
 
   &:first-child {
@@ -162,7 +163,7 @@ plan-content
     text-align: left;
 
     @include mq_up {
-      padding-left: get_rem(20px);
+      padding-left: get_rem(17px);
     }
   }
 
@@ -197,7 +198,7 @@ plan-content
 
   .plan-content__th:nth-child(3) & {
     position: relative;
-    top: get_rem(-3px);
+    top: get_rem(-6px);
   }
 
   tbody .plan-content__tr:first-child & {
@@ -225,6 +226,7 @@ plan-content
   display: grid;
   place-items: center;
   height: get_rem(66px);
+  padding-top: get_rem(4px);
   background: black;
   border: 1px solid black;
 
@@ -248,7 +250,7 @@ plan-content
 .plan-content__line {
   display: inline-block;
   width: get_rem(30px);
-  height: get_rem(10px);
+  height: get_rem(8px);
   border-top: 1px solid black;
 }
 

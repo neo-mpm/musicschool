@@ -131,8 +131,8 @@ require_once $header_path;
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.php">
                   <div class="top-voice__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></div>
-                  <h3 class="top-voice__name"><span><?= $value['occupation'] ?></span><span><?= $value['name'] ?>さん</span></h3>
-                  <p class="top-voice__text"><?= $value['text'] ?></p>
+                  <h3 class="top-voice__head ellipsis"><span class="top-voice__job"><?= $value['occupation'] ?></span><?= $value['name'] ?>さん</h3>
+                  <p class="top-voice__text ellipsis"><?= $value['text'] ?></p>
                 </a>
               </div>
             <?php

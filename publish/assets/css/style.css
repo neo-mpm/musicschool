@@ -1661,7 +1661,7 @@ top-voice
           transform-origin: center;
 }
 
-.top-voice__head {
+.top-voice__title {
   width: 100%;
   margin-top: 1.6875rem;
   -webkit-line-clamp: 1;
@@ -1671,7 +1671,7 @@ top-voice
   text-align: center;
 }
 @media (width >= 768px) {
-  .top-voice__head {
+  .top-voice__title {
     -webkit-column-gap: 1em;
        -moz-column-gap: 1em;
             column-gap: 1em;

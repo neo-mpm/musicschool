@@ -23,19 +23,19 @@ blog-content
 }
 
 .blog-content__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(37px);
+  align-items: center;
   margin-top: get_rem(38px);
 
   @include mq_up {
-    display: flex;
-    flex-direction: column;
     row-gap: get_rem(70px);
-    align-items: center;
   }
 }
 
 .blog-content__card.card {
   display: block;
-  padding-bottom: get_rem(37px);
 
   @include mq_up {
     display: grid;
@@ -44,7 +44,6 @@ blog-content
     column-gap: get_rem(50px);
     align-items: start;
     justify-content: center;
-    padding-bottom: unset;
 
     .card__image-box {
       grid-row: span 3;

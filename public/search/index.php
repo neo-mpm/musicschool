@@ -49,15 +49,15 @@ require_once $header_path;
         endforeach;
         ?>
       </div>
+      <nav class="blog__pager pager">
+        <ul class="pager__list">
+          <li class="pager__item pager__item--active"><span class="pager__inner">1</span></li>
+          <li class="pager__item"><a class="pager__inner pager__link" href="">2</a></li>
+          <li class="pager__item"><a class="pager__inner pager__link" href="">3</a></li>
+        </ul>
+      </nav>
     </div>
   </section>
-  <nav class="blog__pager pager">
-    <ul class="pager__list">
-      <li class="pager__item pager__item--active"><span class="pager__inner">1</span></li>
-      <li class="pager__item"><a class="pager__inner pager__link" href="">2</a></li>
-      <li class="pager__item"><a class="pager__inner pager__link" href="">3</a></li>
-    </ul>
-  </nav>
 </main>
 
 <?php

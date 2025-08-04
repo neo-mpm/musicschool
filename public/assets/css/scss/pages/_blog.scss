@@ -23,7 +23,7 @@ blog-content
 }
 
 .blog-content__container {
-  padding-top: get_rem(38px);
+  margin-top: get_rem(38px);
 
   @include mq_up {
     display: flex;

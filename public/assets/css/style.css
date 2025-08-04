@@ -2367,7 +2367,7 @@ blog-content
 }
 
 .blog-content__container {
-  padding-top: 2.375rem;
+  margin-top: 2.375rem;
 }
 @media (width >= 768px) {
   .blog-content__container {
@@ -3205,7 +3205,7 @@ contact__form
 }
 
 .search-content__container.blog-content__container {
-  padding-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .search-content-head__text--bold {
@@ -3236,7 +3236,8 @@ result-content
 .result-content__container {
   display: grid;
   row-gap: 2.3125rem;
-  padding: 2.375rem 0 2.3125rem;
+  padding-bottom: 2.3125rem;
+  margin-top: 2.375rem;
 }
 @media (width >= 768px) {
   .result-content__container {

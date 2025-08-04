@@ -56,6 +56,7 @@
 }
 
 .header__text {
+  display: block;
   font-size: get_rem(13px);
   font-weight: 700;
   line-height: get_lh(14px, 13px);

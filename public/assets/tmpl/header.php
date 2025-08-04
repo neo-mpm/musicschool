@@ -49,7 +49,7 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
         <svg class="header__logo">
           <use xlink:href="#logo"></use>
         </svg>
-        <p class="header__text"><span class="header__text--large">きたむら</span><br class="br-pc">ミュージックスクール</p>
+        <span class="header__text"><span class="header__text--large">きたむら</span><br class="br-pc">ミュージックスクール</span>
       </a>
 
 EOM;

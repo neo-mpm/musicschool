@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/css/style.css?date=250801010935">
+  <link rel="stylesheet" href="../assets/css/style.css?date=250805173852">
   <script src="../assets/js/default.js?date=250801010935" defer></script>
 </head>
 
@@ -27,7 +27,7 @@
           <svg class="header__logo">
             <use xlink:href="#logo"></use>
           </svg>
-          <p class="header__text"><span class="header__text--large">きたむら</span><br class="br-pc">ミュージックスクール</p>
+          <span class="header__text"><span class="header__text--large">きたむら</span><br class="br-pc">ミュージックスクール</span>
         </a>
       </div>
       <nav class="header__nav header-nav">
@@ -91,9 +91,9 @@
             <input type="tel" class="contact-form__input" name="tel" id="tel" placeholder="090-1234-5678">
           </fieldset>
           <fieldset class="contact-form__fieldset contact-form__fieldset--checkboxes">
-            <legend class="contact-form__legend">
+            <p class="contact-form__legend">
               <span class="contact-form__text-space">目的</span><br class="br-pc">(複数選択可)
-            </legend>
+            </p>
             <div class="contact-form__checkbox-wrapper">
               <label class="contact-form__label contact-form__label--checkbox">
                 <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">
@@ -114,7 +114,7 @@
             </div>
           </fieldset>
           <fieldset class="contact-form__fieldset  contact-form__fieldset--textarea">
-            <label class="contact-form__label" for="message"><span class="contact-form__text-space">内容</span></label>
+            <label class="contact-form__label contact-form__label--textarea" for="message"><span class="contact-form__text-space">内容</span></label>
             <textarea class="contact-form__textarea" name="message" id="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
           </fieldset>
           <button type="submit" class="contact__button contact-button contact-button--submit button"><span class="contact-button__span contact-button__span--submit">送信</span></button>

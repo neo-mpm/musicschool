@@ -46,9 +46,6 @@
   @include mq_up {
     font-size: get_rem(18px);
     line-height: get_lh(30px, 18px);
-  }
-
-  @media (width > 813px) {
     text-align: center;
   }
 }
@@ -113,34 +110,11 @@ contact__form
     column-gap: get_rem(30px);
     align-items: center;
   }
-
-  &:nth-child(3) {
-    margin-top: get_rem(1px);
-
-    @include mq_up {
-      margin-top: unset;
-    }
-  }
-
-  &:nth-child(5) {
-    @include mq_up {
-      margin-top: get_rem(-5px);
-    }
-  }
-
-  &:nth-child(6) {
-    margin-top: get_rem(-9px);
-
-    @include mq_up {
-      margin-top: get_rem(-5px);
-    }
-  }
 }
 
 .contact-form__fieldset--checkboxes,
 .contact-form__fieldset--textarea {
   @include mq_up {
-    display: flex;
     align-items: flex-start;
   }
 }
@@ -155,7 +129,8 @@ contact__form
 }
 
 .contact-form__label--checkbox {
-  display: flex;
+  display: grid;
+  width: fit-content;
   cursor: pointer;
 
   @include mq_up {
@@ -166,10 +141,16 @@ contact__form
   }
 }
 
-.contact-form__legend {
+.contact-form__label--textarea {
   @include mq_up {
-    float: left;
-    font-size: get_rem(20px);
+    padding-top: get_rem(8px);
+  }
+}
+
+.contact-form__legend {
+  cursor: default;
+
+  @include mq_up {
     line-height: get_lh(30px, 20px);
   }
 }
@@ -191,18 +172,16 @@ contact__form
 .contact-form__checkbox-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: get_rem(7px);
-  align-items: flex-start;
-  margin-top: get_rem(-3px);
+  row-gap: get_rem(20px);
+}
 
-  @include mq_up {
-    row-gap: get_rem(10px);
-    margin-top: unset;
-  }
+.contact-form__checkbox,
+.contact-form__text--checkbox {
+  grid-area: 1 / 1;
 }
 
 .contact-form__checkbox {
-  appearance: none;
+  width: get_rem(20px);
 }
 
 .contact-form__text-space {
@@ -217,7 +196,10 @@ contact__form
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: get_rem(10px);
+  align-content: center;
   align-items: center;
+  height: get_rem(20px);
+  overflow: hidden;
   font-size: get_rem(16px);
   line-height: get_lh(33px, 16px);
 
@@ -237,6 +219,7 @@ contact__form
   &::before {
     width: get_rem(20px);
     aspect-ratio: 1 / 1;
+    background: white;
     border: 1px solid black;
   }
 

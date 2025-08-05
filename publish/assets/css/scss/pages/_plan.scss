@@ -93,11 +93,7 @@ plan-content
   }
 
   @include mq_up {
-    padding: get_rem(46px) 0 get_rem(42px);
-  }
-
-  @media (width > 911px) {
-    padding-bottom: get_rem(18px);
+    padding: get_rem(46px) 0 get_rem(18px);
   }
 }
 
@@ -111,7 +107,6 @@ plan-content
   border-bottom: 1px solid;
 
   @include mq_up {
-    width: fit-content;
     margin-inline: auto;
   }
 }
@@ -136,7 +131,8 @@ plan-content
   border-bottom: 1px solid black;
 
   @include mq_up {
-    width: get_rem(218px);
+    width: unset;
+    min-width: get_rem(218px);
     height: get_rem(80px);
   }
 
@@ -144,7 +140,8 @@ plan-content
     width: get_rem(167px);
 
     @include mq_up {
-      width: get_rem(220px);
+      width: unset;
+      min-width: get_rem(220px);
     }
   }
 

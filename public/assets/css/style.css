@@ -2486,9 +2486,6 @@ blog-details-sns
   -webkit-column-gap: 0.1875rem;
      -moz-column-gap: 0.1875rem;
           column-gap: 0.1875rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 1.3125rem 0 1.6875rem;
 }
 @media (width >= 768px) {
@@ -2496,9 +2493,6 @@ blog-details-sns
     -webkit-column-gap: 0.25rem;
        -moz-column-gap: 0.25rem;
             column-gap: 0.25rem;
-    -webkit-box-pack: unset;
-        -ms-flex-pack: unset;
-            justify-content: unset;
     margin: 1.25rem 0 3.125rem;
   }
 }

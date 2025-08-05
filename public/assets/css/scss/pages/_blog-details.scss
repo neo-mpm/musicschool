@@ -41,12 +41,10 @@ blog-details-sns
 .blog-details-sns__list {
   display: flex;
   column-gap: get_rem(3px);
-  justify-content: center;
   margin: get_rem(21px) 0 get_rem(27px);
 
   @include mq_up {
     column-gap: get_rem(4px);
-    justify-content: unset;
     margin: get_rem(20px) 0 get_rem(50px);
   }
 }
@@ -273,7 +271,7 @@ blog-details-recommend
   .card__image {
     width: get_rem(160px);
     aspect-ratio: 160 / 110;
-    background: rgba(80, 80, 80, 10%);
+    background: rgb(80, 80, 80, 10%);
 
     @include mq_up {
       width: get_rem(95px);

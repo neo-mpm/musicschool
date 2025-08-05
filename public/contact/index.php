@@ -47,9 +47,9 @@ require_once $header_path;
           <input type="tel" class="contact-form__input" name="tel" id="tel" placeholder="090-1234-5678">
         </fieldset>
         <fieldset class="contact-form__fieldset contact-form__fieldset--checkboxes">
-          <legend class="contact-form__legend">
+          <p class="contact-form__legend">
             <span class="contact-form__text-space">目的</span><br class="br-pc">(複数選択可)
-          </legend>
+          </p>
           <div class="contact-form__checkbox-wrapper">
             <label class="contact-form__label contact-form__label--checkbox">
               <input type="checkbox" class="contact-form__checkbox" name="purpose[]" value="プランについてのお問い合わせ">
@@ -70,7 +70,7 @@ require_once $header_path;
           </div>
         </fieldset>
         <fieldset class="contact-form__fieldset  contact-form__fieldset--textarea">
-          <label class="contact-form__label" for="message"><span class="contact-form__text-space">内容</span></label>
+          <label class="contact-form__label contact-form__label--textarea" for="message"><span class="contact-form__text-space">内容</span></label>
           <textarea class="contact-form__textarea" name="message" id="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
         </fieldset>
         <button type="submit" class="contact__button contact-button contact-button--submit button"><span class="contact-button__span contact-button__span--submit">送信</span></button>

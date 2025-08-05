@@ -97,7 +97,7 @@ main {
   font-weight: inherit;
 }
 
-:is(body, h1, h2, h3, h4, h5, p, ul, li, dl, dt, dd, form, legend, label, fieldset, input, button) {
+:is(body, h1, h2, h3, h4, h5, p, ul, li, dl, dt, dd, form, label, fieldset, input, button) {
   padding: 0;
   margin: 0;
   list-style: none;

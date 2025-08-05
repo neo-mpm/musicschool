@@ -130,7 +130,7 @@ contact__form
 
 .contact-form__label--checkbox {
   display: grid;
-  justify-items: start;
+  width: fit-content;
   cursor: pointer;
 
   @include mq_up {

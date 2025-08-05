@@ -2945,7 +2945,9 @@ contact__form
 
 .contact-form__label--checkbox {
   display: grid;
-  justify-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
 }
 @media (width >= 768px) {

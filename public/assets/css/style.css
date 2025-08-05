@@ -2719,7 +2719,7 @@ blog-details-recommend
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 0.9375rem;
+  row-gap: 1.4375rem;
   margin-top: 1.25rem;
 }
 @media (width >= 768px) {

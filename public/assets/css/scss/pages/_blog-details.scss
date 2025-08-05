@@ -245,7 +245,7 @@ blog-details-recommend
 .blog-details-recommend__list {
   display: flex;
   flex-direction: column;
-  row-gap: get_rem(15px);
+  row-gap: get_rem(23px);
   margin-top: get_rem(20px);
 
   @include mq_up {

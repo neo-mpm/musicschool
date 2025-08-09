@@ -132,13 +132,6 @@ contact__form
   display: grid;
   width: fit-content;
   cursor: pointer;
-
-  @include mq_up {
-    min-width: unset;
-    margin-top: unset;
-    font-size: get_rem(18px);
-    line-height: get_lh(30px, 18px);
-  }
 }
 
 .contact-form__label--textarea {
@@ -198,15 +191,13 @@ contact__form
   column-gap: get_rem(10px);
   align-content: center;
   align-items: center;
-  height: get_rem(20px);
   overflow: hidden;
   font-size: get_rem(16px);
-  line-height: get_lh(33px, 16px);
+  line-height: 1;
 
   @include mq_up {
     column-gap: get_rem(20px);
     font-size: get_rem(18px);
-    line-height: get_lh(30px, 18px);
   }
 
   &::before,

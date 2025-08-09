@@ -2950,14 +2950,6 @@ contact__form
   width: fit-content;
   cursor: pointer;
 }
-@media (width >= 768px) {
-  .contact-form__label--checkbox {
-    min-width: unset;
-    margin-top: unset;
-    font-size: 1.125rem;
-    line-height: 1.6667;
-  }
-}
 
 @media (width >= 768px) {
   .contact-form__label--textarea {
@@ -3028,10 +3020,9 @@ contact__form
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 1.25rem;
   overflow: hidden;
   font-size: 1rem;
-  line-height: 2.0625;
+  line-height: 1;
 }
 @media (width >= 768px) {
   .contact-form__text--checkbox {
@@ -3039,7 +3030,6 @@ contact__form
        -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
     font-size: 1.125rem;
-    line-height: 1.6667;
   }
 }
 .contact-form__text--checkbox::before, .contact-form__text--checkbox::after {

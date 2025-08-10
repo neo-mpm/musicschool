@@ -33,15 +33,6 @@ result-content
   }
 }
 
-.result-content__item {
-  @include mq_up {
-    &:nth-child(3),
-    &:nth-child(4) {
-      margin-top: get_rem(-10px);
-    }
-  }
-}
-
 .result-content__card.card {
   .card__img {
     aspect-ratio: 335 / 236;

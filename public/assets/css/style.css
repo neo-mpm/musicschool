@@ -3247,12 +3247,6 @@ result-content
   }
 }
 
-@media (width >= 768px) {
-  .result-content__item:nth-child(3), .result-content__item:nth-child(4) {
-    margin-top: -0.625rem;
-  }
-}
-
 .result-content__card.card .card__img {
   aspect-ratio: 335/236;
 }

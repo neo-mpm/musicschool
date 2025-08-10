@@ -1211,21 +1211,24 @@ links-to-contact
   opacity: 0.5;
 }
 
-.footer__logo {
+.footer__logo-link {
   display: block;
   width: 2rem;
-  aspect-ratio: 32/49;
   margin: 0 auto 1.75rem;
   fill: white;
 }
 @media (width >= 768px) {
-  .footer__logo {
+  .footer__logo-link {
     width: 2.1875rem;
     margin-bottom: 1.75rem;
   }
 }
-.footer__logo:hover, .footer__logo:active {
+.footer__logo-link:hover, .footer__logo-link:active {
   text-decoration: none;
+}
+
+.footer__logo {
+  aspect-ratio: 32/49;
 }
 
 .footer__copy {

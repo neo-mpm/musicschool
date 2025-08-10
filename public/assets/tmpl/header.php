@@ -45,6 +45,7 @@ $default_js_path = get_file_url_with_timestamp(ASSETS . '/js/default.js', '../as
     <div class="header__inner inner">
       <?php
       $logo_element = <<<EOM
+
       <a class="header__link" href="../top/">
         <svg class="header__logo">
           <use xlink:href="#logo"></use>

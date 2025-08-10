@@ -37,8 +37,8 @@
           </li>
         <?php endforeach; ?>
       </ul>
-      <a class="footer__logo" href="../top/">
-        <svg class="img-100">
+      <a class="footer__logo-link" href="../top/">
+        <svg class="footer__logo img-100">
           <use href="#logo"></use>
         </svg>
       </a>

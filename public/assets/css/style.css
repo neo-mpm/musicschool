@@ -281,9 +281,6 @@ details-content
     aspect-ratio: 600/350;
   }
 }
-.details-content__card.card .card__tag {
-  padding-top: 0.25rem;
-}
 .details-content__card.card .card__title {
   margin-top: 2rem;
   text-align: unset;

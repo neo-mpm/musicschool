@@ -3276,6 +3276,9 @@ result-content
     margin-inline: auto;
   }
 }
+.result-details__container .details-content__card.card .card__img {
+  aspect-ratio: 335/236;
+}
 @media (width >= 768px) {
   .result-details__container .details-content__card.card .card__img {
     aspect-ratio: 880/400;

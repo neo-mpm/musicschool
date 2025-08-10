@@ -22,6 +22,8 @@
 
   .details-content__card.card {
     .card__img {
+      aspect-ratio: 335 / 236;
+
       @include mq_up {
         aspect-ratio: 880 / 400;
       }

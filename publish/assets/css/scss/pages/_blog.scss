@@ -47,11 +47,6 @@ blog-content
 
     .card__image-box {
       grid-row: span 3;
-      min-width: get_rem(260px);
-    }
-
-    .card__image {
-      height: get_rem(184px);
     }
 
     .card__title {
@@ -68,6 +63,20 @@ blog-content
       margin-top: unset;
       font-size: get_rem(18px);
       line-height: get_lh(30px, 18px);
+    }
+  }
+
+  .card__image {
+    @include mq_up {
+      width: get_rem(260px);
+    }
+  }
+
+  .card__img {
+    aspect-ratio: 335 / 200;
+
+    @include mq_up {
+      aspect-ratio: 260 / 184;
     }
   }
 }

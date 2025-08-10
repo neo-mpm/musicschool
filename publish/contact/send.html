@@ -16,14 +16,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/style.css?date=250805173852">
+    <link rel="stylesheet" href="../assets/css/style.css?date=250811010544">
     <script src="../assets/js/default.js?date=250801010935" defer></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__inner inner">
-      <div class="header__box">      <a class="header__link" href="../top/">
+      <div class="header__box">
+      <a class="header__link" href="../top/">
         <svg class="header__logo">
           <use xlink:href="#logo"></use>
         </svg>
@@ -55,10 +56,12 @@
   </header>
 <main class="contact contact--send">
   <section class="contact__hero contact-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/contact/hero-sp.jpg" alt="お問い合わせ" width="1125" height="1650">
-    </picture>
+    <div class="index-hero__image hero__image">
+      <picture>
+        <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/contact/hero-sp.jpg" alt="お問い合わせ" width="1125" height="1650">
+      </picture>
+    </div>
     <h1 class="hero__head">お問い合わせ</h1>
   </section>
   <nav class="contact__breadcrumb breadcrumb">
@@ -129,8 +132,8 @@
             </a>
           </li>
               </ul>
-      <a class="footer__logo" href="../top/">
-        <svg class="img-100">
+      <a class="footer__logo-link" href="../top/">
+        <svg class="footer__logo img-100">
           <use href="#logo"></use>
         </svg>
       </a>

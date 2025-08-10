@@ -270,12 +270,17 @@ blog-details-recommend
 
   .card__image {
     width: get_rem(160px);
-    aspect-ratio: 160 / 110;
-    background: rgb(80, 80, 80, 10%);
 
     @include mq_up {
       width: get_rem(95px);
-      height: get_rem(75px);
+    }
+  }
+
+  .card__img {
+    aspect-ratio: 160 / 110;
+
+    @include mq_up {
+      aspect-ratio: 95 / 75;
     }
   }
 

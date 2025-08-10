@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css?date=250805173852">
+  <link rel="stylesheet" href="../assets/css/style.css?date=250811010544">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="../assets/js/default.js?date=250801010935" defer></script>
 </head>
@@ -25,7 +25,8 @@
 <body>
   <header class="header">
     <div class="header__inner inner">
-      <h1 class="header__box"> <a class="header__link" href="../top/">
+      <h1 class="header__box">
+        <a class="header__link" href="../top/">
           <svg class="header__logo">
             <use xlink:href="#logo"></use>
           </svg>
@@ -57,10 +58,12 @@
   </header>
   <main class="top">
     <section class="top__hero top-hero hero">
-      <picture class="top-hero__image hero__image">
-        <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
-        <img class="img-w-100" src="../assets/img/top/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
-      </picture>
+      <div class="top-hero__image hero__image">
+        <picture>
+          <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
+          <img class="img-w-100" src="../assets/img/top/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
+        </picture>
+      </div>
       <h2 class="top-hero__head hero__head">「音楽で生きる」<br class="br-sp">を叶える<br>
         ミュージックスクール</h2>
     </section>
@@ -101,7 +104,7 @@
             <div class="top-reason__image">
               <picture>
                 <source srcset="../assets/img/top/reason/01-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="../assets/img/top/reason/01-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                <img class="top-reason__img img-100" src="../assets/img/top/reason/01-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
             </div>
             <div class="top-reason__box">
@@ -115,7 +118,7 @@
             <div class="top-reason__image">
               <picture>
                 <source srcset="../assets/img/top/reason/02-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="../assets/img/top/reason/02-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                <img class="top-reason__img img-100" src="../assets/img/top/reason/02-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
             </div>
             <div class="top-reason__box">
@@ -129,7 +132,7 @@
             <div class="top-reason__image">
               <picture>
                 <source srcset="../assets/img/top/reason/03-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="../assets/img/top/reason/03-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                <img class="top-reason__img img-100" src="../assets/img/top/reason/03-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
             </div>
             <div class="top-reason__box">
@@ -150,42 +153,42 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.html">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/01.jpg" alt="丸山" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/01.jpg" alt="丸山" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job">証券会社勤務</span>丸山さん</h3>
                   <p class="top-voice__text ellipsis">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.html">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/02.jpg" alt="S.E" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/02.jpg" alt="S.E" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job">IT会社勤務</span>S.Eさん</h3>
                   <p class="top-voice__text ellipsis">プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.html">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/03.jpg" alt="田森" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/03.jpg" alt="田森" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job">都内大学生</span>田森さん</h3>
                   <p class="top-voice__text ellipsis">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.html">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/01.jpg" alt="丸山" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/01.jpg" alt="丸山" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job">証券会社勤務</span>丸山さん</h3>
                   <p class="top-voice__text ellipsis">昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.html">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/02.jpg" alt="S.E" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/02.jpg" alt="S.E" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job">IT会社勤務</span>S.Eさん</h3>
                   <p class="top-voice__text ellipsis">プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.html">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/03.jpg" alt="田森" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/03.jpg" alt="田森" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job">都内大学生</span>田森さん</h3>
                   <p class="top-voice__text ellipsis">就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
                 </a>
@@ -293,10 +296,12 @@
           <li class="top-blog__item">
             <a class="top-blog__card card" href="../blog/details.html">
               <div class="card__image-box">
-                <picture class="card__image">
-                  <source srcset="../assets/img/blog/03-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="../assets/img/blog/03-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                </picture>
+                <div class="card__image">
+                  <picture>
+                    <source srcset="../assets/img/blog/03-pc.jpg" media="(min-width: 768px)">
+                    <img class="card__img img-100" src="../assets/img/blog/03-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                  </picture>
+                </div>
                 <p class="card__tag">SNS</p>
               </div>
               <h3 class="card__title ellipsis">フォロワーではなくファンを増やせとは？</h3>
@@ -306,10 +311,12 @@
           <li class="top-blog__item">
             <a class="top-blog__card card" href="../blog/details.html">
               <div class="card__image-box">
-                <picture class="card__image">
-                  <source srcset="../assets/img/blog/02-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="../assets/img/blog/02-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                </picture>
+                <div class="card__image">
+                  <picture>
+                    <source srcset="../assets/img/blog/02-pc.jpg" media="(min-width: 768px)">
+                    <img class="card__img img-100" src="../assets/img/blog/02-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                  </picture>
+                </div>
                 <p class="card__tag">集客方法</p>
               </div>
               <h3 class="card__title ellipsis">集客してる間は売れないという法則</h3>
@@ -319,10 +326,12 @@
           <li class="top-blog__item">
             <a class="top-blog__card card" href="../blog/details.html">
               <div class="card__image-box">
-                <picture class="card__image">
-                  <source srcset="../assets/img/blog/01-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="../assets/img/blog/01-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                </picture>
+                <div class="card__image">
+                  <picture>
+                    <source srcset="../assets/img/blog/01-pc.jpg" media="(min-width: 768px)">
+                    <img class="card__img img-100" src="../assets/img/blog/01-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                  </picture>
+                </div>
                 <p class="card__tag">ギター</p>
               </div>
               <h3 class="card__title ellipsis">アルペジオが劇的に向上する3つの習慣</h3>
@@ -386,8 +395,8 @@
           </a>
         </li>
       </ul>
-      <a class="footer__logo" href="../top/">
-        <svg class="img-100">
+      <a class="footer__logo-link" href="../top/">
+        <svg class="footer__logo img-100">
           <use href="#logo"></use>
         </svg>
       </a>

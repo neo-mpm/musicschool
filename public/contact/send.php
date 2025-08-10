@@ -11,10 +11,12 @@ require_once $header_path;
 ?>
 <main class="<?= $class_name; ?> contact--send">
   <section class="contact__hero contact-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/contact/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
-    </picture>
+    <div class="index-hero__image hero__image">
+      <picture>
+        <source srcset="../assets/img/contact/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/contact/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
+      </picture>
+    </div>
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="contact__breadcrumb breadcrumb">

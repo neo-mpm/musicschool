@@ -11,11 +11,12 @@ details-content
   .card__image-box {
     @include mq_up {
       width: 100%;
-      max-width: unset;
     }
   }
 
-  .card__image {
+  .card__img {
+    aspect-ratio: 335 / 200;
+
     @include mq_up {
       aspect-ratio: 600 / 350;
     }
@@ -68,18 +69,16 @@ details-content
 }
 
 .details-content__image {
-  display: block;
   margin-top: get_rem(39px);
 
   @include mq_up {
     max-width: 334px;
     margin-top: get_rem(16px);
-
-    .img-w-100 {
-      height: get_rem(200px);
-      object-fit: cover;
-    }
   }
+}
+
+.details-content__img {
+  aspect-ratio: 335 / 200;
 }
 
 .details-content__list {
@@ -185,12 +184,18 @@ details-bottom
   }
 }
 
-.details-bottom__image-link {
+.details-bottom__image {
   display: none;
 
   @include mq_up {
     display: block;
     width: get_rem(98px);
+  }
+}
+
+.details-bottom__img {
+  @include mq_up {
+    aspect-ratio: 98 / 69;
   }
 }
 
@@ -273,10 +278,16 @@ details-related
 
   .card__image {
     width: get_rem(160px);
-    aspect-ratio: 160 / 110;
 
     @include mq_up {
       width: get_rem(200px);
+    }
+  }
+
+  .card__img {
+    aspect-ratio: 160 / 110;
+
+    @include mq_up {
       aspect-ratio: 200 / 140;
     }
   }

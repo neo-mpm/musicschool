@@ -34,10 +34,12 @@ require_once $header_path;
           <article class="blog-content__item">
             <a class="blog-content__card card" href="../blog/details.php">
               <div class="card__image-box">
-                <picture class="card__image">
-                  <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                </picture>
+                <div class="card__image">
+                  <picture>
+                    <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                    <img class="card__img img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                  </picture>
+                </div>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </div>
               <h2 class="card__title ellipsis"><?= $value['title'] ?></h2>

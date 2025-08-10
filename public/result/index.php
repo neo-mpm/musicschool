@@ -22,10 +22,12 @@ require_once $header_path;
 ?>
 <main class="<?= $class_name; ?>">
   <section class="result__hero result-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="../assets/img/result/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/result/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
-    </picture>
+    <div class="index-hero__image hero__image">
+      <picture>
+        <source srcset="../assets/img/result/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/result/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
+      </picture>
+    </div>
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="result__breadcrumb breadcrumb">
@@ -48,7 +50,7 @@ require_once $header_path;
           <article class="result-content__item">
             <a class="result-content__card card" href="../result/details.php">
               <div class="card__image-box">
-                <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="1161" height="819" loading="lazy"></div>
+                <div class="card__image"><img class="card__img img-100" src="../assets/img/result/<?= $index ?>.jpg" alt="" width="335" height="236" loading="lazy"></div>
                 <p class="card__tag"><?= $value ?></p>
               </div>
               <h3 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>

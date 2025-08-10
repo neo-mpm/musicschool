@@ -202,14 +202,19 @@ top-reason
 }
 
 .top-reason__image {
+  width: get_rem(335px);
+
   @include mq_up {
     flex-shrink: 0;
+    width: get_rem(350px);
+  }
+}
 
-    .img-w-100 {
-      width: get_rem(350px);
-      height: get_rem(247px);
-      object-fit: cover;
-    }
+.top-reason__img {
+  aspect-ratio: 335 / 200;
+
+  @include mq_up {
+    aspect-ratio: 350 / 247;
   }
 }
 
@@ -346,21 +351,26 @@ top-voice
 }
 
 .top-voice__image {
+  width: get_rem(335px);
+
+  @include mq_up {
+    width: get_rem(270px);
+    overflow: hidden;
+  }
+}
+
+.top-voice__img {
   aspect-ratio: 335 / 200;
-  overflow: hidden;
+  transition: 0.3s all;
 
   @include mq_up {
     aspect-ratio: 270 / 190;
   }
 
-  .img-100 {
-    transition: 0.3s all;
-
-    .top-voice__link:hover &,
-    .top-voice__link:active & {
-      transform: scale(1.1);
-      transform-origin: center;
-    }
+  .top-voice__link:hover &,
+  .top-voice__link:active & {
+    transform: scale(1.1);
+    transform-origin: center;
   }
 }
 
@@ -650,10 +660,17 @@ top-blog
   }
 
   .card__image {
-    aspect-ratio: 335 / 200;
+    width: get_rem(335px);
 
     @include mq_up {
       width: get_rem(260px);
+    }
+  }
+
+  .card__img {
+    aspect-ratio: 335 / 200;
+
+    @include mq_up {
       aspect-ratio: 260 / 200;
     }
   }

@@ -18,10 +18,12 @@ require_once $header_path;
 ?>
 <main class="<?= $class_name; ?>">
   <section class="top__hero top-hero hero">
-    <picture class="top-hero__image hero__image">
-      <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/top/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
-    </picture>
+    <div class="top-hero__image hero__image">
+      <picture>
+        <source srcset="../assets/img/top/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/top/hero-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール" width="1125" height="1650">
+      </picture>
+    </div>
     <h2 class="top-hero__head hero__head">「音楽で生きる」<br class="br-sp">を叶える<br>
       ミュージックスクール</h2>
   </section>
@@ -82,7 +84,7 @@ require_once $header_path;
             <div class="top-reason__image">
               <picture>
                 <source srcset="../assets/img/top/reason/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                <img class="img-w-100" src="../assets/img/top/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                <img class="top-reason__img img-100" src="../assets/img/top/reason/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
               </picture>
             </div>
             <div class="top-reason__box">
@@ -130,7 +132,7 @@ require_once $header_path;
             ?>
               <div class="swiper-slide">
                 <a class="top-voice__link" href="../result/details.php">
-                  <div class="top-voice__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></div>
+                  <div class="top-voice__image"><img class="top-voice__img img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="<?= $value['name'] ?>" width="335" height="200" loading="lazy"></div>
                   <h3 class="top-voice__title ellipsis"><span class="top-voice__job"><?= $value['occupation'] ?></span><?= $value['name'] ?>さん</h3>
                   <p class="top-voice__text ellipsis"><?= $value['text'] ?></p>
                 </a>
@@ -242,10 +244,12 @@ require_once $header_path;
           <li class="top-blog__item">
             <a class="top-blog__card card" href="../blog/details.php">
               <div class="card__image-box">
-                <picture class="card__image">
-                  <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                </picture>
+                <div class="card__image">
+                  <picture>
+                    <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                    <img class="card__img img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                  </picture>
+                </div>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </div>
               <h3 class="card__title ellipsis"><?= $value['title'] ?></h3>

@@ -12,10 +12,12 @@ require_once $header_path;
 ?>
 <main class="<?= $class_name; ?>">
   <section class="blog__hero blog-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="../assets/img/blog/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/blog/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
-    </picture>
+    <div class="index-hero__image hero__image">
+      <picture>
+        <source srcset="../assets/img/blog/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/blog/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
+      </picture>
+    </div>
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <nav class="blog__breadcrumb breadcrumb">
@@ -39,10 +41,12 @@ require_once $header_path;
           <article class="blog-content__item">
             <a class="blog-content__card card" href="details.php">
               <div class="card__image-box">
-                <picture class="card__image">
-                  <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                  <img class="img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                </picture>
+                <div class="card__image">
+                  <picture>
+                    <source srcset="../assets/img/blog/<?= $value['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                    <img class="card__img img-100" src="../assets/img/blog/<?= $value['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                  </picture>
+                </div>
                 <p class="card__tag"><?= $value['tag'] ?></p>
               </div>
               <h3 class="card__title ellipsis"><?= $value['title'] ?></h3>

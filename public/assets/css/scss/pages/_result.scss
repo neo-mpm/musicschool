@@ -42,6 +42,12 @@ result-content
   }
 }
 
-.result-content__card .card__tag {
-  min-width: get_rem(100px);
+.result-content__card.card {
+  .card__img {
+    aspect-ratio: 335 / 236;
+  }
+
+  .card__tag {
+    min-width: get_rem(100px);
+  }
 }

@@ -31,10 +31,12 @@ require_once $header_path;
             <div class="details-content__container">
               <div class="details-content__card card">
                 <div class="card__image-box">
-                  <picture class="card__image">
-                    <source srcset="../assets/img/blog/<?= $blog[0]['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                    <img class="img-100" src="../assets/img/blog/<?= $blog[0]['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                  </picture>
+                  <div class="card__image">
+                    <picture>
+                      <source srcset="../assets/img/blog/<?= $blog[0]['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                      <img class="card__img img-100" src="../assets/img/blog/<?= $blog[0]['src'] ?>-sp.jpg" alt="" width="335" height="200" loading="lazy">
+                    </picture>
+                  </div>
                   <p class="card__tag"><?= $blog[0]['tag'] ?></p>
                 </div>
                 <h1 class="card__title page-title">
@@ -91,10 +93,12 @@ require_once $header_path;
             </div>
             <h2 class="details-content__head2">H2見出しが入ります。H2見出しが入ります。</h2>
             <p class="details-content__text details-content__text">本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
-            <picture class="details-content__image">
-              <source srcset="../assets/img/top/reason/01-pc.jpg" media="(min-width: 768px)">
-              <img class="img-w-100" src="../assets/img/top/reason/01-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-            </picture>
+            <div class="details-content__image">
+              <picture>
+                <source srcset="../assets/img/top/reason/01-pc.jpg" media="(min-width: 768px)">
+                <img class="details-content__img img-100" src="../assets/img/top/reason/01-sp.jpg" alt="" width="335" height="200" loading="lazy">
+              </picture>
+            </div>
             <ul class="details-content__list">
               <?php
               for ($i = 0; $i < 3; $i++) :
@@ -115,12 +119,12 @@ require_once $header_path;
           <div class="details-content__bottom details-bottom">
             <a class="details-bottom__box details-bottom__prev" href="details.php">
               <p class="details-bottom__link">◀︎ 前の記事</p>
-              <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></div>
+              <div class="details-bottom__image"><img class="details-bottom__img img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="98" height="69" loading="lazy"></div>
               <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
             </a>
             <a class="details-bottom__box details-bottom__next" href="details.php">
               <p class="details-bottom__link">次の記事 ▶︎</p>
-              <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600" loading="lazy"></div>
+              <div class="details-bottom__image"><img class="details-bottom__img img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="98" height="69" loading="lazy"></div>
               <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
             </a>
           </div>
@@ -134,10 +138,12 @@ require_once $header_path;
               <li class="details-related__item">
                 <a class="details-related__card card" href="details.php">
                   <div class="card__image-box">
-                    <picture class="card__image">
-                      <source srcset="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" media="(min-width: 768px)">
-                      <img class="img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-sp.jpg" alt="" width="1005" height="600" loading="lazy">
-                    </picture>
+                    <div class="card__image">
+                      <picture>
+                        <source srcset="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" media="(min-width: 768px)">
+                        <img class="card__img img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-sp.jpg" alt="" width="160" height="110" loading="lazy">
+                      </picture>
+                    </div>
                     <p class="card__tag">ギター</p>
                   </div>
                   <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
@@ -177,7 +183,7 @@ require_once $header_path;
               <li class="blog-details-recommend__item">
                 <a class="blog-details-recommend__card card" href="details.php">
                   <div class="card__image-box">
-                    <div class="card__image"></div>
+                    <div class="card__image"><img class="card__img img-100" src="https://placehold.jp/e8e8e8/e8e8e8/160x110.png" alt="" width="160" height="110" loading="lazy"></div>
                   </div>
                   <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>
                 </a>

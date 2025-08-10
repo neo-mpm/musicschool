@@ -11,10 +11,12 @@ require_once $header_path;
 ?>
 <main class="<?= $class_name; ?>">
   <section class="page404__hero page404-hero hero">
-    <picture class="index-hero__image hero__image">
-      <source srcset="../assets/img/404/hero-pc.jpg" media="(min-width: 768px)">
-      <img class="img-w-100" src="../assets/img/404/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
-    </picture>
+    <div class="index-hero__image hero__image">
+      <picture>
+        <source srcset="../assets/img/404/hero-pc.jpg" media="(min-width: 768px)">
+        <img class="img-w-100" src="../assets/img/404/hero-sp.jpg" alt="<?= $title; ?>" width="1125" height="1650">
+      </picture>
+    </div>
     <h1 class="hero__head"><?= $title; ?></h1>
   </section>
   <div class="page404__inner inner">

@@ -30,7 +30,7 @@ require_once $header_path;
           <div class="details-content__container">
             <div class="details-content__card card">
               <div class="card__image-box">
-                <div class="card__image"><img class="img-100" src="../assets/img/result/01.jpg" alt="" width="1161" height="819" loading="lazy"></div>
+                <div class="card__image"><img class="card__img img-100" src="../assets/img/result/01.jpg" alt="" width="335" height="200" loading="lazy"></div>
                 <p class="card__tag">ポップス</p>
               </div>
               <h1 class="card__title page-title"><span class="card__title-text"><?= $title ?></span></h1>
@@ -63,12 +63,12 @@ require_once $header_path;
         <div class="result-details__bottom details-bottom">
           <a class="details-bottom__box details-bottom__prev" href="./">
             <p class="details-bottom__link">◀︎ 前の記事</p>
-            <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600"></div>
+            <div class="details-bottom__image"><img class="details-bottom__img img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="98" height="69"></div>
             <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
           </a>
           <a class="details-bottom__box details-bottom__next" href="./">
             <p class="details-bottom__link">次の記事 ▶︎</p>
-            <div class="details-bottom__image-link"><img class="img-w-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="1005" height="600"></div>
+            <div class="details-bottom__image"><img class="details-bottom__img img-100" src="../assets/img/blog/<?= $blog[2]['src'] ?>-pc.jpg" alt="" width="98" height="69"></div>
             <p class="details-bottom__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
           </a>
         </div>
@@ -97,7 +97,7 @@ require_once $header_path;
             <li class="details-related__item">
               <a class="details-related__card card" href="details.php">
                 <div class="card__image-box">
-                  <div class="card__image"><img class="img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="" width="1161" height="819" loading="lazy"></div>
+                  <div class="card__image"><img class="card__img img-100" src="../assets/img/result/<?= $value['src'] ?>" alt="" width="160" height="113" loading="lazy"></div>
                   <p class="card__tag"><?= $value['genre'] ?></p>
                 </div>
                 <h5 class="card__title ellipsis">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h5>

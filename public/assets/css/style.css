@@ -1506,9 +1506,6 @@ top-reason
   }
 }
 
-.top-reason__image {
-  width: 20.9375rem;
-}
 @media (width >= 768px) {
   .top-reason__image {
     -ms-flex-negative: 0;
@@ -1569,31 +1566,31 @@ top-voice
 .top-voice {
   --swiper-navigation-sides-offset: 0;
   --swiper-navigation-top-offset: 42%;
-  padding: 3em 0 3.125em;
+  padding: 3rem 0 3.125rem;
   font-size: 1rem;
   color: white;
   background: var(--main-color);
 }
 @media (width >= 768px) {
   .top-voice {
-    padding: 2.75em 0 5em;
+    padding: 2.75rem 0 5rem;
     font-size: min(1.5905vw, 16px);
-    --swiper-navigation-top-offset: 9.0625em;
+    --swiper-navigation-top-offset: 9.0625rem;
   }
 }
 .top-voice .swiper {
-  margin-top: 2.4375em;
+  margin-top: 2.4375rem;
 }
 @media (width >= 768px) {
   .top-voice .swiper {
-    max-width: 55.125em;
-    margin-top: 2.25em;
+    max-width: 55.125rem;
+    margin-top: 2.25rem;
   }
 }
 @media (width >= 768px) {
   .top-voice .swiper-slide {
-    width: 16.875em;
-    margin-right: 2.1875em;
+    width: 16.875rem;
+    margin-right: 2.1875rem;
   }
 }
 .top-voice .swiper-slide:last-child {
@@ -1609,7 +1606,7 @@ top-voice
 @media (width >= 768px) {
   .top-voice .swiper-button-prev,
   .top-voice .swiper-button-next {
-    width: 1.75em;
+    width: 1.75rem;
   }
 }
 .top-voice .swiper-button-prev:hover, .top-voice .swiper-button-prev:active,
@@ -1637,7 +1634,7 @@ top-voice
 
 @media (width >= 768px) {
   .top-voice__head.title {
-    font-size: 1.875em;
+    font-size: 1.875rem;
   }
 }
 
@@ -1655,9 +1652,6 @@ top-voice
   opacity: unset;
 }
 
-.top-voice__image {
-  width: 20.9375rem;
-}
 @media (width >= 768px) {
   .top-voice__image {
     width: 16.875rem;
@@ -1693,11 +1687,11 @@ top-voice
 }
 @media (width >= 768px) {
   .top-voice__title {
-    -webkit-column-gap: 1em;
-       -moz-column-gap: 1em;
-            column-gap: 1em;
-    margin-top: 0.7273em;
-    font-size: 1.375em;
+    -webkit-column-gap: 1.375rem;
+       -moz-column-gap: 1.375rem;
+            column-gap: 1.375rem;
+    margin-top: 1rem;
+    font-size: 1.375rem;
   }
 }
 
@@ -1710,12 +1704,6 @@ top-voice
   -webkit-line-clamp: 3;
   font-size: 1.125rem;
   line-height: 1.6667;
-}
-@media (width >= 768px) {
-  .top-voice__text {
-    margin-top: 0.625em;
-    font-size: 1.125em;
-  }
 }
 
 .top-voice__title,
@@ -2010,9 +1998,6 @@ top-blog
   .top-blog {
     padding-top: 4.25rem;
   }
-}
-.top-blog .card__image {
-  width: 20.9375rem;
 }
 @media (width >= 768px) {
   .top-blog .card__image {
